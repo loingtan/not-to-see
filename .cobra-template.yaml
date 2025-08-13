@@ -1,0 +1,32 @@
+app:
+  name: "cobra-template"
+  version: "1.0.0"
+  environment: "development"
+
+server:
+  host: "localhost"
+  port: "8080"
+  read_timeout: 15
+  write_timeout: 15
+  max_header_bytes: 1048576
+
+database:
+  driver: "postgres"
+  host: "localhost"
+  port: 5432
+  username: "postgres"
+  password: ""
+  name: "cobra_template"
+  ssl_mode: "disable"
+
+cache:
+  type: "redis"
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+
+log:
+  level: "info"
+  format: "json"
+  output: "stdout"
