@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	domain "cobra-template/internal/domain/registration"
+	interfaces "cobra-template/internal/interfaces/infrastructure"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"
@@ -16,7 +17,7 @@ type SectionRepository struct {
 }
 
 // NewSectionRepository creates a new GORM section repository
-func NewSectionRepository(db *gorm.DB) domain.SectionRepository {
+func NewSectionRepository(db *gorm.DB) interfaces.SectionRepository {
 	return &SectionRepository{
 		db: db,
 	}

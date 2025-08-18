@@ -21,7 +21,6 @@ func Logger() gin.HandlerFunc {
 
 		// Log only when path is not being skipped
 		param := gin.LogFormatterParams{
-			Request:    c.Request,
 			StatusCode: c.Writer.Status(),
 			Latency:    time.Since(start),
 			ClientIP:   c.ClientIP(),

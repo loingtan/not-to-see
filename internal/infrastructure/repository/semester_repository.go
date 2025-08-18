@@ -5,29 +5,26 @@ import (
 	"time"
 
 	domain "cobra-template/internal/domain/registration"
+	interfaces "cobra-template/internal/interfaces/infrastructure"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
 
-// SemesterRepository implements SemesterRepository using GORM
 type SemesterRepository struct {
 	db *gorm.DB
 }
 
-// NewSemesterRepository creates a new GORM semester repository
-func NewSemesterRepository(db *gorm.DB) domain.SemesterRepository {
+func NewSemesterRepository(db *gorm.DB) interfaces.SemesterRepository {
 	return &SemesterRepository{
 		db: db,
 	}
 }
 
-// Create creates a new semester
 func (r *SemesterRepository) Create(ctx context.Context, semester *domain.Semester) error {
 	return r.db.WithContext(ctx).Create(semester).Error
 }
 
-// GetByID retrieves a semester by ID
 func (r *SemesterRepository) GetByID(ctx context.Context, id uuid.UUID) (*domain.Semester, error) {
 	var semester domain.Semester
 	err := r.db.WithContext(ctx).First(&semester, "semester_id = ?", id).Error
@@ -40,7 +37,6 @@ func (r *SemesterRepository) GetByID(ctx context.Context, id uuid.UUID) (*domain
 	return &semester, nil
 }
 
-// GetCurrent retrieves the current active semester
 func (r *SemesterRepository) GetCurrent(ctx context.Context) (*domain.Semester, error) {
 	var semester domain.Semester
 	now := time.Now()

@@ -1,24 +1,21 @@
 package cache
 
 import (
+	interfaces "cobra-template/internal/interfaces/infrastructure"
 	"context"
 	"encoding/json"
 	"fmt"
 	"strconv"
 	"time"
 
-	"cobra-template/internal/service"
-
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
 )
 
-// RedisCache implements the CacheService interface using Redis
 type RedisCache struct {
 	client *redis.Client
 }
 
-// NewRedisCache creates a new Redis cache instance
 func NewRedisCache(addr, password string, db int) *RedisCache {
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     addr,
@@ -31,10 +28,9 @@ func NewRedisCache(addr, password string, db int) *RedisCache {
 	}
 }
 
-// GetAvailableSeats gets the available seats for a section from cache
 func (r *RedisCache) GetAvailableSeats(ctx context.Context, sectionID uuid.UUID) (int, error) {
 	key := fmt.Sprintf("section:seats:%s", sectionID.String())
-	
+
 	val, err := r.client.Get(ctx, key).Result()
 	if err != nil {
 		if err == redis.Nil {
@@ -51,10 +47,9 @@ func (r *RedisCache) GetAvailableSeats(ctx context.Context, sectionID uuid.UUID)
 	return seats, nil
 }
 
-// SetAvailableSeats sets the available seats for a section in cache
 func (r *RedisCache) SetAvailableSeats(ctx context.Context, sectionID uuid.UUID, seats int, ttl time.Duration) error {
 	key := fmt.Sprintf("section:seats:%s", sectionID.String())
-	
+
 	err := r.client.Set(ctx, key, seats, ttl).Err()
 	if err != nil {
 		return fmt.Errorf("failed to set seats in cache: %w", err)
@@ -63,11 +58,9 @@ func (r *RedisCache) SetAvailableSeats(ctx context.Context, sectionID uuid.UUID,
 	return nil
 }
 
-// DecrementAvailableSeats atomically decrements available seats
 func (r *RedisCache) DecrementAvailableSeats(ctx context.Context, sectionID uuid.UUID) error {
 	key := fmt.Sprintf("section:seats:%s", sectionID.String())
-	
-	// Use Lua script for atomic decrement with bounds checking
+
 	luaScript := `
 		local key = KEYS[1]
 		local current = redis.call("GET", key)
@@ -80,7 +73,7 @@ func (r *RedisCache) DecrementAvailableSeats(ctx context.Context, sectionID uuid
 		end
 		return redis.call("DECR", key)
 	`
-	
+
 	err := r.client.Eval(ctx, luaScript, []string{key}).Err()
 	if err != nil {
 		return fmt.Errorf("failed to decrement seats: %w", err)
@@ -89,10 +82,9 @@ func (r *RedisCache) DecrementAvailableSeats(ctx context.Context, sectionID uuid
 	return nil
 }
 
-// IncrementAvailableSeats atomically increments available seats
 func (r *RedisCache) IncrementAvailableSeats(ctx context.Context, sectionID uuid.UUID) error {
 	key := fmt.Sprintf("section:seats:%s", sectionID.String())
-	
+
 	err := r.client.Incr(ctx, key).Err()
 	if err != nil {
 		return fmt.Errorf("failed to increment seats: %w", err)
@@ -101,10 +93,9 @@ func (r *RedisCache) IncrementAvailableSeats(ctx context.Context, sectionID uuid
 	return nil
 }
 
-// GetSectionDetails gets section details from cache
 func (r *RedisCache) GetSectionDetails(ctx context.Context, sectionID uuid.UUID) (interface{}, error) {
 	key := fmt.Sprintf("section:details:%s", sectionID.String())
-	
+
 	val, err := r.client.Get(ctx, key).Result()
 	if err != nil {
 		if err == redis.Nil {
@@ -121,10 +112,9 @@ func (r *RedisCache) GetSectionDetails(ctx context.Context, sectionID uuid.UUID)
 	return details, nil
 }
 
-// SetSectionDetails sets section details in cache
 func (r *RedisCache) SetSectionDetails(ctx context.Context, sectionID uuid.UUID, data interface{}, ttl time.Duration) error {
 	key := fmt.Sprintf("section:details:%s", sectionID.String())
-	
+
 	jsonData, err := json.Marshal(data)
 	if err != nil {
 		return fmt.Errorf("failed to marshal section details: %w", err)
@@ -138,10 +128,9 @@ func (r *RedisCache) SetSectionDetails(ctx context.Context, sectionID uuid.UUID,
 	return nil
 }
 
-// GetCourseDetails gets course details from cache
 func (r *RedisCache) GetCourseDetails(ctx context.Context, courseID uuid.UUID) (interface{}, error) {
 	key := fmt.Sprintf("course:details:%s", courseID.String())
-	
+
 	val, err := r.client.Get(ctx, key).Result()
 	if err != nil {
 		if err == redis.Nil {
@@ -158,10 +147,9 @@ func (r *RedisCache) GetCourseDetails(ctx context.Context, courseID uuid.UUID) (
 	return details, nil
 }
 
-// SetCourseDetails sets course details in cache
 func (r *RedisCache) SetCourseDetails(ctx context.Context, courseID uuid.UUID, data interface{}, ttl time.Duration) error {
 	key := fmt.Sprintf("course:details:%s", courseID.String())
-	
+
 	jsonData, err := json.Marshal(data)
 	if err != nil {
 		return fmt.Errorf("failed to marshal course details: %w", err)
@@ -175,7 +163,6 @@ func (r *RedisCache) SetCourseDetails(ctx context.Context, courseID uuid.UUID, d
 	return nil
 }
 
-// Delete removes a key from cache
 func (r *RedisCache) Delete(ctx context.Context, key string) error {
 	err := r.client.Del(ctx, key).Err()
 	if err != nil {
@@ -185,7 +172,6 @@ func (r *RedisCache) Delete(ctx context.Context, key string) error {
 	return nil
 }
 
-// Clear removes all keys matching a pattern
 func (r *RedisCache) Clear(ctx context.Context, pattern string) error {
 	keys, err := r.client.Keys(ctx, pattern).Result()
 	if err != nil {
@@ -202,15 +188,12 @@ func (r *RedisCache) Clear(ctx context.Context, pattern string) error {
 	return nil
 }
 
-// Close closes the Redis connection
 func (r *RedisCache) Close() error {
 	return r.client.Close()
 }
 
-// Health checks Redis connectivity
 func (r *RedisCache) Health(ctx context.Context) error {
 	return r.client.Ping(ctx).Err()
 }
 
-// Compile-time check to ensure RedisCache implements CacheService
-var _ service.CacheService = (*RedisCache)(nil)
+var _ interfaces.CacheService = (*RedisCache)(nil)

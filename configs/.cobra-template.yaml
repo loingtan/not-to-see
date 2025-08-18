@@ -1,0 +1,33 @@
+app:
+  name: "cobra-template"
+  version: "1.0.0"
+  environment: "docker"
+
+server:
+  host: "0.0.0.0"
+  port: "8080"
+  read_timeout: 15
+  write_timeout: 15
+  max_header_bytes: 1048576
+
+database:
+  driver: "postgres"
+  host: "postgres"   # docker-compose service name
+  port: 5432
+  username: "postgres"
+  password: ""
+  name: "cobra_template"
+  ssl_mode: "disable"
+
+cache:
+  type: "redis"
+  host: "redis"      # docker-compose service name
+  port: 6379
+  password: ""
+  db: 0
+
+log:
+  level: "info"
+  format: "json"
+  output: "stdout"
+

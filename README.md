@@ -38,6 +38,7 @@ This project follows Domain-Driven Design (DDD) principles and clean architectur
 ### Prerequisites
 
 - Go 1.21+
+- Docker + Docker Compose (optional, for Postgres/Redis)
 - Make (optional)
 
 ### Installation
@@ -62,20 +63,48 @@ go build -o bin/cobra-template
 
 #### Start the HTTP server:
 ```bash
-go run main.go server
+go run main.go registration
 # or
-./bin/cobra-template server
+./bin/cobra-template registration
 ```
 
 #### With custom port:
 ```bash
-go run main.go server --port 3000
+go run main.go registration --port 3000
 ```
 
 #### With verbose logging:
 ```bash
-go run main.go server --verbose
+go run main.go registration --verbose
 ```
+
+### Using Docker Compose (recommended for local DB/Cache)
+
+Start Postgres and Redis locally via Docker:
+
+```bash
+make up
+# or
+docker compose up -d postgres redis
+```
+
+Then run the app (from your host):
+
+```bash
+make run
+# or
+./bin/cobra-template registration -v
+```
+
+Stop services when done:
+
+```bash
+make down
+# or
+docker compose down
+```
+
+
 
 ## 📚 API Documentation
 

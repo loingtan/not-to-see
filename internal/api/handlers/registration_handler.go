@@ -160,10 +160,10 @@ func (h *RegistrationHandler) GetAvailableSections(c *gin.Context) {
 	c.JSON(http.StatusOK, APIResponse{
 		Success: true,
 		Message: "Available sections retrieved successfully",
-		Data: map[string]interface{}{
+		Data: map[string]any{
 			"semester_id": semesterID,
 			"course_id":   courseID,
-			"sections":    []interface{}{},
+			"sections":    []any{},
 		},
 	})
 }

@@ -30,10 +30,10 @@ func (h *HealthHandler) HealthCheck(c *gin.Context) {
 	cfg := config.Get()
 
 	services := make(map[string]string)
-	
+
 	// Check database (mock for now)
 	services["database"] = "healthy"
-	
+
 	// Check cache (mock for now)
 	services["cache"] = "healthy"
 
@@ -51,7 +51,7 @@ func (h *HealthHandler) HealthCheck(c *gin.Context) {
 func (h *HealthHandler) ReadinessCheck(c *gin.Context) {
 	// In a real application, you would check if all dependencies are ready
 	// For now, we'll just return ready
-	
+
 	response := map[string]interface{}{
 		"ready":     true,
 		"timestamp": time.Now(),
@@ -64,7 +64,7 @@ func (h *HealthHandler) ReadinessCheck(c *gin.Context) {
 func (h *HealthHandler) LivenessCheck(c *gin.Context) {
 	// In a real application, you would check if the application is alive
 	// For now, we'll just return alive
-	
+
 	response := map[string]interface{}{
 		"alive":     true,
 		"timestamp": time.Now(),

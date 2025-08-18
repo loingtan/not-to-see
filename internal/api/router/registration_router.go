@@ -8,6 +8,7 @@ import (
 	"cobra-template/internal/infrastructure/repository"
 	"cobra-template/internal/service"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
@@ -19,20 +20,14 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 	r := gin.New()
 
 	r.Use(middleware.Logger())
-	r.Use(middleware.CORS())
+	r.Use(cors.Default())
 	r.Use(gin.Recovery())
-
-	// Initialize real repositories
 	studentRepo := repository.NewStudentRepository(db)
 	sectionRepo := repository.NewSectionRepository(db)
 	registrationRepo := repository.NewRegistrationRepository(db)
 	waitlistRepo := repository.NewWaitlistRepository(db)
-
-	// Initialize cache and queue services
 	cacheService := cache.NewRedisCache("localhost:6379", "", 0)
 	queueService := queue.NewInMemoryQueue(1000, 10)
-
-	// Initialize registration service
 	registrationService := service.NewRegistrationService(
 		studentRepo,
 		sectionRepo,
@@ -73,17 +68,14 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 	return r
 }
 
-// NewRouter creates the default router (for backward compatibility)
 func NewRouter() *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 
 	r := gin.New()
 
 	r.Use(middleware.Logger())
-	r.Use(middleware.CORS())
+	r.Use(cors.Default())
 	r.Use(gin.Recovery())
-
-	// Health endpoints only for basic router
 	healthHandler := handlers.NewHealthHandler()
 
 	r.GET("/health", healthHandler.HealthCheck)

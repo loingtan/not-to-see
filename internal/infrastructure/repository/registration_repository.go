@@ -1,32 +1,28 @@
 package repository
 
 import (
-	"context"
-
 	domain "cobra-template/internal/domain/registration"
+	interfaces "cobra-template/internal/interfaces/infrastructure"
+	"context"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
 
-// RegistrationRepository implements RegistrationRepository using GORM
 type RegistrationRepository struct {
 	db *gorm.DB
 }
 
-// NewRegistrationRepository creates a new GORM registration repository
-func NewRegistrationRepository(db *gorm.DB) domain.RegistrationRepository {
+func NewRegistrationRepository(db *gorm.DB) interfaces.RegistrationRepository {
 	return &RegistrationRepository{
 		db: db,
 	}
 }
 
-// Create creates a new registration
 func (r *RegistrationRepository) Create(ctx context.Context, registration *domain.Registration) error {
 	return r.db.WithContext(ctx).Create(registration).Error
 }
 
-// GetByStudentAndSection retrieves a registration by student and section
 func (r *RegistrationRepository) GetByStudentAndSection(ctx context.Context, studentID, sectionID uuid.UUID) (*domain.Registration, error) {
 	var registration domain.Registration
 	err := r.db.WithContext(ctx).
@@ -43,12 +39,10 @@ func (r *RegistrationRepository) GetByStudentAndSection(ctx context.Context, stu
 	return &registration, nil
 }
 
-// Update updates an existing registration
 func (r *RegistrationRepository) Update(ctx context.Context, registration *domain.Registration) error {
 	return r.db.WithContext(ctx).Save(registration).Error
 }
 
-// GetByStudentID retrieves all registrations for a student
 func (r *RegistrationRepository) GetByStudentID(ctx context.Context, studentID uuid.UUID) ([]*domain.Registration, error) {
 	var registrations []*domain.Registration
 	err := r.db.WithContext(ctx).
@@ -62,7 +56,6 @@ func (r *RegistrationRepository) GetByStudentID(ctx context.Context, studentID u
 	return registrations, nil
 }
 
-// GetBySectionID retrieves all registrations for a section
 func (r *RegistrationRepository) GetBySectionID(ctx context.Context, sectionID uuid.UUID) ([]*domain.Registration, error) {
 	var registrations []*domain.Registration
 	err := r.db.WithContext(ctx).

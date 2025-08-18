@@ -12,7 +12,6 @@ import (
 	"gorm.io/gorm/logger"
 )
 
-// Config represents database configuration
 type Config struct {
 	Host     string
 	Port     int
@@ -22,7 +21,6 @@ type Config struct {
 	SSLMode  string
 }
 
-// NewConnection creates a new GORM database connection
 func NewConnection(config Config) (*gorm.DB, error) {
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=%s",
 		config.Host, config.User, config.Password, config.DBName, config.Port, config.SSLMode)
@@ -37,7 +35,6 @@ func NewConnection(config Config) (*gorm.DB, error) {
 		return nil, fmt.Errorf("failed to connect to database: %w", err)
 	}
 
-	// Configure connection pool
 	sqlDB, err := db.DB()
 	if err != nil {
 		return nil, fmt.Errorf("failed to get sql.DB: %w", err)
@@ -50,14 +47,12 @@ func NewConnection(config Config) (*gorm.DB, error) {
 	return db, nil
 }
 
-// AutoMigrate runs database migrations
 func AutoMigrate(db *gorm.DB) error {
 	log.Println("Running database migrations...")
 	if err := db.Exec("CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\"").Error; err != nil {
 		return fmt.Errorf("failed to create uuid extension: %w", err)
 	}
 
-	// Auto migrate all models
 	err := db.AutoMigrate(
 		&domain.Student{},
 		&domain.Course{},
@@ -70,7 +65,6 @@ func AutoMigrate(db *gorm.DB) error {
 		return fmt.Errorf("failed to run migrations: %w", err)
 	}
 
-	// Add custom constraints and indexes
 	if err := addConstraintsAndIndexes(db); err != nil {
 		return fmt.Errorf("failed to add constraints and indexes: %w", err)
 	}
@@ -79,9 +73,8 @@ func AutoMigrate(db *gorm.DB) error {
 	return nil
 }
 
-// addConstraintsAndIndexes adds custom constraints and indexes
 func addConstraintsAndIndexes(db *gorm.DB) error {
-	// Add unique constraint for student-section registration
+
 	if err := db.Exec(`
 		ALTER TABLE registrations 
 		ADD CONSTRAINT IF NOT EXISTS unique_student_section 
@@ -90,7 +83,6 @@ func addConstraintsAndIndexes(db *gorm.DB) error {
 		log.Printf("Warning: failed to add unique constraint: %v", err)
 	}
 
-	// Add unique constraint for course-semester-section
 	if err := db.Exec(`
 		ALTER TABLE sections 
 		ADD CONSTRAINT IF NOT EXISTS unique_course_semester_section 
@@ -99,7 +91,6 @@ func addConstraintsAndIndexes(db *gorm.DB) error {
 		log.Printf("Warning: failed to add section unique constraint: %v", err)
 	}
 
-	// Add seat consistency check constraint
 	if err := db.Exec(`
 		ALTER TABLE sections 
 		ADD CONSTRAINT IF NOT EXISTS check_seat_consistency 
@@ -108,7 +99,6 @@ func addConstraintsAndIndexes(db *gorm.DB) error {
 		log.Printf("Warning: failed to add seat consistency constraint: %v", err)
 	}
 
-	// Add indexes for frequently queried columns
 	indexes := []string{
 		"CREATE INDEX IF NOT EXISTS idx_registrations_student_id ON registrations(student_id)",
 		"CREATE INDEX IF NOT EXISTS idx_registrations_section_id ON registrations(section_id)",
@@ -129,7 +119,6 @@ func addConstraintsAndIndexes(db *gorm.DB) error {
 	return nil
 }
 
-// HealthCheck checks database connectivity
 func HealthCheck(db *gorm.DB) error {
 	sqlDB, err := db.DB()
 	if err != nil {

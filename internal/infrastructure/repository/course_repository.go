@@ -4,6 +4,7 @@ import (
 	"context"
 
 	domain "cobra-template/internal/domain/registration"
+	interfaces "cobra-template/internal/interfaces/infrastructure"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"
@@ -15,7 +16,7 @@ type CourseRepository struct {
 }
 
 // NewCourseRepository creates a new GORM course repository
-func NewCourseRepository(db *gorm.DB) domain.CourseRepository {
+func NewCourseRepository(db *gorm.DB) interfaces.CourseRepository {
 	return &CourseRepository{
 		db: db,
 	}

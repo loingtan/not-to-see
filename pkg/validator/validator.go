@@ -9,32 +9,24 @@ import (
 
 var validate *validator.Validate
 
-// Init initializes the validator
 func init() {
 	validate = validator.New()
 }
-
-// GetValidator returns the validator instance
 func GetValidator() *validator.Validate {
 	return validate
 }
-
-// ValidateStruct validates a struct
 func ValidateStruct(s interface{}) error {
 	return validate.Struct(s)
 }
 
-// ValidationError represents a validation error
 type ValidationError struct {
 	Field   string `json:"field"`
 	Tag     string `json:"tag"`
 	Message string `json:"message"`
 }
 
-// FormatValidationError formats validation errors into a readable format
 func FormatValidationError(err error) []ValidationError {
 	var errors []ValidationError
-
 	if validationErrors, ok := err.(validator.ValidationErrors); ok {
 		for _, fieldError := range validationErrors {
 			errors = append(errors, ValidationError{
@@ -47,11 +39,9 @@ func FormatValidationError(err error) []ValidationError {
 
 	return errors
 }
-
-// getErrorMessage returns a human-readable error message for validation errors
 func getErrorMessage(fieldError validator.FieldError) string {
 	field := strings.ToLower(fieldError.Field())
-	
+
 	switch fieldError.Tag() {
 	case "required":
 		return fmt.Sprintf("%s is required", field)
