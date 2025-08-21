@@ -67,6 +67,18 @@ func startRegistrationServer() {
 		os.Exit(1)
 	}
 
+	// Run database migrations
+	if err := database.AutoMigrate(db); err != nil {
+		logger.Error("Failed to run database migrations: %v", err)
+		os.Exit(1)
+	}
+
+	// Health check database connection
+	if err := database.HealthCheck(db); err != nil {
+		logger.Error("Database health check failed: %v", err)
+		os.Exit(1)
+	}
+
 	// Create registration router with full system
 	r := router.NewRegistrationRouter(db)
 

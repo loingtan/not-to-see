@@ -29,13 +29,13 @@ run: build
 	$(BINARY) registration -v
 
 up:
-	docker compose up -d postgres redis
+	docker-compose up -d postgres redis
 
 down:
-	docker compose down
+	docker-compose down
 
 logs:
-	docker compose logs -f
+	docker-compose logs -f
 
 test:
 	$(GO) test $(PKG)

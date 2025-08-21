@@ -92,7 +92,6 @@ func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 		return
 	}
 
-	// Validate request
 	if err := validator.ValidateStruct(&req); err != nil {
 		validationErrors := validator.FormatValidationError(err)
 		c.JSON(http.StatusBadRequest, APIResponse{
@@ -102,8 +101,6 @@ func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 		})
 		return
 	}
-
-	// Process course drop
 	err := h.registrationService.DropCourse(c.Request.Context(), req.StudentID, req.SectionID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, APIResponse{
@@ -120,34 +117,13 @@ func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 	})
 }
 
-// GetRegistrations handles GET /api/students/:student_id/registrations
-func (h *RegistrationHandler) GetRegistrations(c *gin.Context) {
-	studentIDStr := c.Param("student_id")
-	studentID, err := uuid.Parse(studentIDStr)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, APIResponse{
-			Success: false,
-			Message: "Invalid student ID format",
-		})
-		return
-	}
-
-	// This would typically call a service method to get registrations
-	// For now, returning a placeholder response
-	c.JSON(http.StatusOK, APIResponse{
-		Success: true,
-		Message: "Registrations retrieved successfully",
-		Data:    map[string]interface{}{"student_id": studentID, "registrations": []interface{}{}},
-	})
-}
-
 // GetAvailableSections handles GET /api/sections/available
 func (h *RegistrationHandler) GetAvailableSections(c *gin.Context) {
-	semesterID := c.Query("semester_id")
-	courseID := c.Query("course_id")
+	semesterIDStr := c.Query("semester_id")
+	courseIDStr := c.Query("course_id")
 
 	// Validate query parameters
-	if semesterID == "" {
+	if semesterIDStr == "" {
 		c.JSON(http.StatusBadRequest, APIResponse{
 			Success: false,
 			Message: "semester_id is required",
@@ -155,16 +131,42 @@ func (h *RegistrationHandler) GetAvailableSections(c *gin.Context) {
 		return
 	}
 
-	// This would typically call a service method to get available sections
-	// For now, returning a placeholder response
+	semesterID, err := uuid.Parse(semesterIDStr)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, APIResponse{
+			Success: false,
+			Message: "Invalid semester_id format",
+		})
+		return
+	}
+
+	var courseID *uuid.UUID
+	if courseIDStr != "" {
+		parsedCourseID, err := uuid.Parse(courseIDStr)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, APIResponse{
+				Success: false,
+				Message: "Invalid course_id format",
+			})
+			return
+		}
+		courseID = &parsedCourseID
+	}
+
+	sections, err := h.registrationService.GetAvailableSections(c.Request.Context(), semesterID, courseID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, APIResponse{
+			Success: false,
+			Message: "Failed to retrieve available sections",
+			Errors:  err.Error(),
+		})
+		return
+	}
+
 	c.JSON(http.StatusOK, APIResponse{
 		Success: true,
 		Message: "Available sections retrieved successfully",
-		Data: map[string]any{
-			"semester_id": semesterID,
-			"course_id":   courseID,
-			"sections":    []any{},
-		},
+		Data:    map[string]interface{}{"sections": sections},
 	})
 }
 
@@ -180,11 +182,48 @@ func (h *RegistrationHandler) GetWaitlistStatus(c *gin.Context) {
 		return
 	}
 
-	// This would typically call a service method to get waitlist status
-	// For now, returning a placeholder response
+	waitlistEntries, err := h.registrationService.GetStudentWaitlistStatus(c.Request.Context(), studentID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, APIResponse{
+			Success: false,
+			Message: "Failed to retrieve waitlist status",
+			Errors:  err.Error(),
+		})
+		return
+	}
+
 	c.JSON(http.StatusOK, APIResponse{
 		Success: true,
 		Message: "Waitlist status retrieved successfully",
-		Data:    map[string]interface{}{"student_id": studentID, "waitlist_entries": []interface{}{}},
+		Data:    map[string]interface{}{"waitlist_entries": waitlistEntries},
+	})
+}
+
+// GetStudentRegistrations handles GET /api/students/:student_id/registrations
+func (h *RegistrationHandler) GetStudentRegistrations(c *gin.Context) {
+	studentIDStr := c.Param("student_id")
+	studentID, err := uuid.Parse(studentIDStr)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, APIResponse{
+			Success: false,
+			Message: "Invalid student ID format",
+		})
+		return
+	}
+
+	registrations, err := h.registrationService.GetStudentRegistrations(c.Request.Context(), studentID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, APIResponse{
+			Success: false,
+			Message: "Failed to retrieve student registrations",
+			Errors:  err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, APIResponse{
+		Success: true,
+		Message: "Student registrations retrieved successfully",
+		Data:    map[string]interface{}{"registrations": registrations},
 	})
 }

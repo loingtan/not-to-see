@@ -11,15 +11,13 @@ import (
 
 func Logger() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		// Start timer
+
 		start := time.Now()
 		path := c.Request.URL.Path
 		raw := c.Request.URL.RawQuery
 
-		// Process request
 		c.Next()
 
-		// Log only when path is not being skipped
 		param := gin.LogFormatterParams{
 			StatusCode: c.Writer.Status(),
 			Latency:    time.Since(start),
@@ -28,7 +26,6 @@ func Logger() gin.HandlerFunc {
 			Path:       path,
 		}
 
-		// Log using structured logging
 		if raw != "" {
 			param.Path = path + "?" + raw
 		}
@@ -42,11 +39,11 @@ func Logger() gin.HandlerFunc {
 		}
 
 		if len(c.Errors) > 0 {
-			// Log error details
+
 			logFields["error"] = c.Errors.String()
 			logger.WithFields(logFields).Error("Request completed with errors")
 		} else {
-			// Log based on status code
+
 			if param.StatusCode >= 500 {
 				logger.WithFields(logFields).Error("Request completed with server error")
 			} else if param.StatusCode >= 400 {

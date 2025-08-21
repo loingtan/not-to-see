@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/spf13/cobra"
 )
 
 // LoadTestConfig holds configuration for load testing
@@ -150,7 +151,7 @@ func (lt *LoadTester) simulateUserRegistration(requestID int) {
 	}
 
 	// Make HTTP request
-	url := fmt.Sprintf("%s/api/register", lt.config.BaseURL)
+	url := fmt.Sprintf("%s/api/v1/register", lt.config.BaseURL)
 	resp, err := lt.client.Post(url, "application/json", bytes.NewBuffer(jsonData))
 
 	responseTime := time.Since(startTime)
@@ -338,15 +339,56 @@ func (lt *LoadTester) RunConcurrencyStressTest() {
 	}
 }
 
-func main() {
+// loadtestCmd represents the loadtest command
+var loadtestCmd = &cobra.Command{
+	Use:   "loadtest",
+	Short: "Run load tests against the Course Registration API",
+	Long: `Run comprehensive load tests against the Course Registration API.
+This includes:
+- Concurrent user simulation
+- Registration performance testing
+- Contention analysis
+- Throughput and response time metrics
+- Optional stress testing with increasing concurrency levels`,
+	Run: func(cmd *cobra.Command, args []string) {
+		runLoadTest()
+	},
+}
+
+var (
+	baseURL         string
+	numStudents     int
+	numSections     int
+	concurrentUsers int
+	requestsPerUser int
+	testDurationSec int
+	sectionCapacity int
+	stressTest      bool
+)
+
+func init() {
+	rootCmd.AddCommand(loadtestCmd)
+
+	// Flags for loadtest command
+	loadtestCmd.Flags().StringVar(&baseURL, "url", "http://localhost:8080", "Base URL of the registration API")
+	loadtestCmd.Flags().IntVar(&numStudents, "students", 1000, "Number of students to simulate")
+	loadtestCmd.Flags().IntVar(&numSections, "sections", 50, "Number of course sections")
+	loadtestCmd.Flags().IntVar(&concurrentUsers, "concurrent", 100, "Number of concurrent users")
+	loadtestCmd.Flags().IntVar(&requestsPerUser, "requests", 10, "Number of requests per user")
+	loadtestCmd.Flags().IntVar(&testDurationSec, "duration", 60, "Test duration in seconds")
+	loadtestCmd.Flags().IntVar(&sectionCapacity, "capacity", 30, "Capacity per section")
+	loadtestCmd.Flags().BoolVar(&stressTest, "stress", false, "Run concurrency stress test")
+}
+
+func runLoadTest() {
 	config := LoadTestConfig{
-		BaseURL:         "http://localhost:8080",
-		NumStudents:     1000,
-		NumSections:     50,
-		ConcurrentUsers: 100,
-		RequestsPerUser: 10,
-		TestDurationSec: 60,
-		SectionCapacity: 30, // 30 seats per section = 1500 total seats
+		BaseURL:         baseURL,
+		NumStudents:     numStudents,
+		NumSections:     numSections,
+		ConcurrentUsers: concurrentUsers,
+		RequestsPerUser: requestsPerUser,
+		TestDurationSec: testDurationSec,
+		SectionCapacity: sectionCapacity,
 	}
 
 	loadTester := NewLoadTester(config)
@@ -358,6 +400,8 @@ func main() {
 	// Run standard load test
 	loadTester.RunLoadTest()
 
-	// Uncomment to run stress test
-	// loadTester.RunConcurrencyStressTest()
+	// Run stress test if requested
+	if stressTest {
+		loadTester.RunConcurrencyStressTest()
+	}
 }

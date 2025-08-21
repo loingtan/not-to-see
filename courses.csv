@@ -1,0 +1,321 @@
+course_id,course_code,course_name,department,credits,total_slots,available_slots,instructor,course_type,schedule_days,schedule_time,schedule_room,semester
+54c08202-8cc2-4d21-96be-2a33ab2ddd91,MGMT561,Contemporary Programming III,Business Administration,6,30,30,Prof. Robert Perez,Lab,TTH,11:00-12:30,C208,Fall 2024
+67130a94-d493-419c-af20-1af898944b98,PHY214,Applied Networks,Physics,3,30,30,Prof. Megan Martin,Lecture,MWF,13:30-15:00,C716,Fall 2024
+d1fcb720-6411-4c1a-bf21-e634233c0cac,CHEM304,Practical Machine Learning I,Chemistry,6,30,30,Prof. Jennifer Gonzalez,Workshop,TH,08:00-09:30,C696,Fall 2024
+296f1cfd-58c5-4b55-94a1-52800bd7f85a,CHM256,Modern Data Structures I,Chemistry,3,30,30,Prof. Jessica Gonzalez,Seminar,TTH,11:00-12:30,C729,Fall 2024
+cfe005eb-2c80-4089-a8f3-470046cee9fd,BIOL428,Fundamentals of Linear Algebra,Biology,3,30,30,Prof. Stephanie Brown,Workshop,MW,09:30-11:00,C683,Fall 2024
+41a35d36-1ba6-4791-85b4-33fab46a8ab1,ENG296,Contemporary Database Systems,Engineering,6,30,30,Prof. Samantha Taylor,Tutorial,WF,15:00-16:30,D690,Fall 2024
+aee4a27f-e9ae-469c-9b97-fd0705508266,ENG381,Classical Statistics,Literature,4,30,30,Prof. Andrew Martinez,Workshop,WF,16:30-18:00,B298,Fall 2024
+82b720af-d107-45ed-b23c-a109b3342e60,HIS306,Introduction to Statistics,History,4,30,30,Prof. Steven Brown,Workshop,MW,11:00-12:30,D495,Fall 2024
+8fdb81f5-cecf-411a-b877-22f185f579a5,ENGR560,Practical Calculus,Engineering,3,30,30,Prof. Stephanie Sanchez,Workshop,MW,13:30-15:00,C597,Fall 2024
+e651145f-0a94-4190-a786-aefde0b3d94b,PHI491,Contemporary Database Systems,Philosophy,3,30,30,Prof. Andrew Jackson,Lab,TTH,09:30-11:00,C522,Fall 2024
+34b89614-1c39-454a-9eb6-9db868df6dc3,PHIL448,Theory of Programming II,Philosophy,3,30,30,Prof. Jessica Gonzalez,Lecture,WF,09:30-11:00,B752,Fall 2024
+f3de43e6-3d43-4f60-9e3e-3500619c0894,BIO503,Practical Analysis II,Biology,4,30,30,Prof. Andrew Lewis,Workshop,MWF,11:00-12:30,A384,Fall 2024
+435fc910-83ec-408c-8210-53d643e10d71,PHI148,Practical Calculus,Philosophy,6,30,30,Prof. Rachel Taylor,Tutorial,MW,11:00-12:30,C954,Fall 2024
+4fd323ea-5ac6-4f34-9ab5-4184a73767f6,ENG458,Fundamentals of Database Systems,Literature,3,30,30,Prof. Stephanie Robinson,Lab,WF,16:30-18:00,A388,Fall 2024
+936b044d-b6e9-4fbb-a8f9-f276e3757354,STAT191,Fundamentals of Research Methods III,Mathematics,4,30,30,Prof. Jessica Ramirez,Seminar,MW,09:30-11:00,A371,Fall 2024
+1485cc80-556d-46e6-8e14-cc99944ce45d,CHM224,Contemporary Machine Learning II,Chemistry,3,30,30,Prof. Jane Lewis,Workshop,MW,13:30-15:00,B303,Fall 2024
+0296b766-7924-49e1-a739-31a0fc548d39,LIT239,Fundamentals of Linear Algebra II,Literature,3,30,30,Prof. Matthew White,Tutorial,WF,09:30-11:00,D434,Fall 2024
+29ca408a-8b08-4e00-9e4d-ea24912a8413,BUS159,Applied Networks,Business Administration,6,30,30,Prof. Jennifer Clark,Workshop,MW,11:00-12:30,A631,Fall 2024
+32143589-d666-4b92-b938-bd176c45b93e,ENG462,Fundamentals of Research Methods,Engineering,4,30,30,Prof. Ashley Jones,Workshop,TTH,15:00-16:30,C164,Fall 2024
+706536de-c85f-4653-b78f-6c1e1f320ee0,PHIL239,Contemporary Linear Algebra,Philosophy,3,30,30,Prof. Anthony Jones,Tutorial,TH,16:30-18:00,B914,Fall 2024
+9acb65b5-63ec-43fa-800d-394c446fef99,PHI477,Introduction to Algorithms,Philosophy,6,30,30,Prof. Sarah Clark,Lecture,MWF,15:00-16:30,A384,Fall 2024
+aacf62ad-105d-4fc7-a880-38d21df67544,PSY545,Modern Networks,Psychology,4,30,30,Prof. Amy Gonzalez,Lab,MWF,09:30-11:00,A619,Fall 2024
+8c7bd57a-7229-41e8-9ef5-91f6b5fed121,BIO159,Practical Programming III,Biology,4,30,30,Prof. Elizabeth Brown,Tutorial,MW,08:00-09:30,D333,Fall 2024
+5f2d5400-5d56-4ed1-a9fb-3d72e037e907,ENG585,Fundamentals of Machine Learning I,Literature,6,30,30,Prof. Jane Davis,Lab,MWF,08:00-09:30,D692,Fall 2024
+18f710c6-9ad4-48d4-a33f-c36aa1dad5f2,PSY372,Classical Statistics,Psychology,3,30,30,Prof. David Lewis,Lecture,MW,09:30-11:00,A923,Fall 2024
+a840a233-120f-4c5b-bce5-16294cefd0b7,BUS562,Classical Algorithms,Business Administration,3,30,30,Prof. Emily Perez,Seminar,MW,15:00-16:30,C759,Fall 2024
+d076be25-bf5a-47b6-8038-74e012808a30,PHIL425,Fundamentals of Statistics,Philosophy,6,30,30,Prof. Megan Perez,Workshop,WF,13:30-15:00,C116,Fall 2024
+2eed2132-3c7a-4924-b92f-0ca1d71c1533,PSY193,Introduction to Database Systems,Psychology,6,30,30,Prof. James Johnson,Tutorial,MWF,13:30-15:00,B945,Fall 2024
+aa3838b4-4500-4c19-b65c-75925d9711e3,BIOL496,Applied Database Systems I,Biology,6,30,30,Prof. James Davis,Lab,MWF,16:30-18:00,C820,Fall 2024
+ffc1540d-489f-48d3-9369-3de3cf5264cf,HIST333,Advanced Database Systems,History,6,30,30,Prof. John Garcia,Tutorial,TH,13:30-15:00,C255,Fall 2024
+21ec7ef8-41f2-4702-bc8e-5e22dc95580e,STAT292,Theory of Calculus,Statistics,6,30,30,Prof. Jennifer Gonzalez,Seminar,MWF,15:00-16:30,B677,Fall 2024
+8798bb4e-6c5d-45e8-bb56-ea2667c8e85e,PSY297,Practical Algorithms,Psychology,6,30,30,Prof. Samantha Clark,Workshop,MW,11:00-12:30,B218,Fall 2024
+cff17f25-1c0a-4b3d-ae5e-a43b11f48f5f,PHY129,Advanced Calculus,Physics,6,30,30,Prof. Jane Ramirez,Lab,TTH,15:00-16:30,A743,Fall 2024
+9288419a-6115-47ac-9f4e-d6fcba465da1,ENG416,Classical Calculus II,Engineering,4,30,30,Prof. Nicole Davis,Tutorial,MW,09:30-11:00,D299,Fall 2024
+ddfaf99a-dedd-4fdf-9360-5fa283597b2d,LIT377,Modern Database Systems,Literature,6,30,30,Prof. Stephanie Lewis,Workshop,WF,13:30-15:00,B653,Fall 2024
+d5fc9aec-2d69-475d-9e17-3330a2f1e2ad,CS322,Practical Database Systems II,Computer Science,6,30,30,Prof. Megan Hernandez,Lecture,TH,15:00-16:30,B180,Fall 2024
+3f95c27e-608c-41a7-b1b2-0aaaa1f6e104,BIOL567,Practical Design,Biology,6,30,30,Prof. Sarah White,Seminar,TTH,11:00-12:30,C851,Fall 2024
+719edad5-761b-4387-b2f4-bbdb641ccf1c,PHI584,Contemporary Programming I,Philosophy,4,30,30,Prof. Elizabeth Gonzalez,Workshop,MW,16:30-18:00,D886,Fall 2024
+302ee05d-3c4b-4e07-8d2f-76ac430b4c66,ENG511,Applied Networks,Engineering,4,30,30,Prof. Michael Brown,Lab,TTH,08:00-09:30,C397,Fall 2024
+671fb846-169a-4c75-a930-0bb93b2a1589,COMP285,Modern Calculus II,Computer Science,3,30,30,Prof. Michael Perez,Workshop,MWF,08:00-09:30,C894,Fall 2024
+0e0ca811-01ee-4c2b-ada7-402b70064fc4,ECON359,Introduction to Database Systems III,Economics,3,30,30,Prof. Steven Moore,Tutorial,MW,09:30-11:00,B222,Fall 2024
+42ed31e7-a924-430a-ac35-6ffdc2f59a8f,BIO352,Theory of Linear Algebra,Biology,4,30,30,Prof. Jane Miller,Workshop,MW,08:00-09:30,B919,Fall 2024
+b3d5b979-a242-476c-b6ce-de9a842948f4,HIS551,Modern Systems,History,6,30,30,Prof. Michael Lee,Lab,MW,15:00-16:30,C861,Fall 2024
+ca030be4-7fb2-4aca-a68f-c0f39d8f9f70,CALC206,Applied Analysis III,Mathematics,4,30,30,Prof. Matthew Miller,Workshop,WF,11:00-12:30,A973,Fall 2024
+efcf1878-2f87-4764-822b-e13d37967245,CHM341,Modern Database Systems,Chemistry,4,30,30,Prof. Jessica Ramirez,Lab,MW,11:00-12:30,B683,Fall 2024
+4f7e4d1b-c01c-4533-8320-d0bc75c977a9,CS551,Applied Database Systems III,Computer Science,4,30,30,Prof. Matthew Thompson,Tutorial,TH,15:00-16:30,A315,Fall 2024
+0d50ed4c-ca7b-4e8a-9a9f-f914cc1b1b00,CHM264,Introduction to Networks III,Chemistry,3,30,30,Prof. Megan Sanchez,Workshop,TTH,15:00-16:30,A383,Fall 2024
+290dca8c-50f8-4390-b133-b945f2cce1bc,PSYC457,Applied Database Systems,Psychology,3,30,30,Prof. Jessica Johnson,Tutorial,TH,16:30-18:00,D563,Fall 2024
+4a1e13af-d7be-4e96-8bc7-2ba73e98a6e4,ECO523,Modern Statistics,Economics,3,30,30,Prof. Daniel Johnson,Tutorial,WF,13:30-15:00,B694,Fall 2024
+b70c415b-7483-45f0-a028-d2f5ff2894a0,BUS399,Contemporary Data Structures,Business Administration,3,30,30,Prof. Christopher Sanchez,Seminar,WF,15:00-16:30,A507,Fall 2024
+e63b3c31-b4d9-49a5-96c8-af4e854fd09f,CHEM480,Classical Systems,Chemistry,4,30,30,Prof. David Jones,Lecture,TTH,13:30-15:00,D868,Fall 2024
+7fc158c1-adc1-40ec-84cc-2034df2eb98c,MGMT483,Advanced Systems,Business Administration,3,30,30,Prof. Joshua Wilson,Lecture,WF,09:30-11:00,A551,Fall 2024
+43753e67-a9da-4b83-956c-e005036f7e54,STA240,Advanced Programming,Statistics,3,30,30,Prof. William Martin,Workshop,MW,08:00-09:30,D232,Fall 2024
+6d7a439c-1856-4f9a-8dc2-59fb440e3b32,CHEM361,Practical Linear Algebra,Chemistry,4,30,30,Prof. Nicole Martin,Lab,MWF,13:30-15:00,D417,Fall 2024
+1ea11aa0-47a7-4a94-b5bb-324d70133af3,PHYS336,Practical Networks,Physics,4,30,30,Prof. Emily Thomas,Workshop,MW,08:00-09:30,D695,Fall 2024
+735d2a45-b5ee-4a68-b045-4b878f28353c,CHM505,Practical Networks,Chemistry,3,30,30,Prof. Joshua Harris,Seminar,WF,11:00-12:30,C964,Fall 2024
+c2a6de0d-592b-497a-ac53-3a03c27c1136,ENG499,Fundamentals of Research Methods II,Literature,3,30,30,Prof. Emily Robinson,Seminar,WF,13:30-15:00,A772,Fall 2024
+4ef561c7-d8bd-4383-8271-a6f78cc130ea,PHIL458,Fundamentals of Systems,Philosophy,6,30,30,Prof. Amy Lee,Lab,MW,16:30-18:00,D317,Fall 2024
+ee622b2e-8846-473a-abc9-6ebf4e72d834,LIT504,Classical Calculus II,Literature,4,30,30,Prof. John Lee,Lecture,MW,15:00-16:30,A291,Fall 2024
+960bd476-72e3-4ee6-9dbb-123d62ed1f86,CHEM577,Modern Calculus,Chemistry,6,30,30,Prof. William Ramirez,Tutorial,TTH,15:00-16:30,B143,Fall 2024
+2a0b1c67-881d-44e4-a9a4-47240d492c7a,ENGR264,Theory of Machine Learning I,Engineering,4,30,30,Prof. Stephanie Moore,Lecture,MWF,08:00-09:30,D832,Fall 2024
+5fc07205-d05c-4287-98d0-cc61581e5f30,HIST189,Modern Design,History,6,30,30,Prof. Sarah Lee,Lecture,WF,09:30-11:00,C903,Fall 2024
+6fa8e210-29b3-4068-b8cd-78916756b3bb,PHIL237,Introduction to Systems,Philosophy,6,30,30,Prof. Jessica White,Lecture,MW,15:00-16:30,B477,Fall 2024
+10d1848e-dec6-4899-85b1-3d8b678f8c2e,PHYS222,Applied Database Systems,Physics,6,30,30,Prof. Steven Moore,Seminar,MWF,15:00-16:30,A936,Fall 2024
+bb2d2ba7-f50d-4245-8e6a-378610b825ed,BUS258,Applied Programming,Business Administration,6,30,30,Prof. Andrew Wilson,Lab,MWF,09:30-11:00,A345,Fall 2024
+3db7f756-ae94-4ee1-817c-0d6111dedf4f,PHI361,Theory of Database Systems II,Philosophy,3,30,30,Prof. Jane Hernandez,Seminar,MW,16:30-18:00,B433,Fall 2024
+8a523152-48ea-41ed-a48e-44adece7c2de,HIS235,Theory of Systems,History,4,30,30,Prof. Megan Hernandez,Seminar,WF,08:00-09:30,C201,Fall 2024
+7d87e020-7f1a-42d0-9110-773553749d0b,LIT144,Contemporary Algorithms,Literature,4,30,30,Prof. Jessica Moore,Workshop,TTH,08:00-09:30,B848,Fall 2024
+2da9a5f1-4741-4428-84f4-fc743fe74dfc,STA197,Theory of Database Systems,Statistics,4,30,30,Prof. Sarah Harris,Tutorial,TTH,08:00-09:30,A789,Fall 2024
+364c93a5-5bdb-49a9-959c-1a0a759aeaf0,CHM439,Contemporary Design II,Chemistry,3,30,30,Prof. Mark White,Seminar,TTH,11:00-12:30,B788,Fall 2024
+96cda7e2-2998-4a58-a8a3-85804147f302,ECO251,Theory of Machine Learning,Economics,3,30,30,Prof. Megan Perez,Tutorial,TH,11:00-12:30,D711,Fall 2024
+68478bfc-29ae-4d84-973f-f3f27ecd0bfd,ECON529,Contemporary Statistics,Economics,4,30,30,Prof. William Garcia,Tutorial,TTH,15:00-16:30,D305,Fall 2024
+35d1d6ae-7262-45d7-b9e2-44b35d95c688,PHYS180,Classical Networks,Physics,3,30,30,Prof. Mark Jackson,Lecture,TH,16:30-18:00,B499,Fall 2024
+84b0e626-5601-46fd-a349-6a9e7ee912d8,STAT186,Introduction to Research Methods,Mathematics,3,30,30,Prof. Nicole Rodriguez,Workshop,TTH,11:00-12:30,A167,Fall 2024
+5d17c256-f148-4d6f-ba37-f22ef9c4f941,PSY517,Classical Machine Learning I,Psychology,4,30,30,Prof. William Miller,Workshop,MWF,08:00-09:30,B553,Fall 2024
+bebb2e57-5214-4d31-a5cc-e10ea24ebe43,MGMT218,Introduction to Database Systems,Business Administration,4,30,30,Prof. Robert Jones,Lab,TH,11:00-12:30,C286,Fall 2024
+fac679bc-1f04-4834-887f-da0033fae1a8,ECON517,Fundamentals of Programming,Economics,4,30,30,Prof. Rachel Harris,Seminar,TH,08:00-09:30,D556,Fall 2024
+b28b0bdc-1052-40e5-b0d3-8255168d09b6,ENG113,Theory of Linear Algebra,Literature,3,30,30,Prof. Robert Lee,Lecture,MWF,11:00-12:30,D974,Fall 2024
+b54eaa28-9edf-471f-bcbf-ec1ff51c6a6c,CHEM598,Practical Calculus,Chemistry,3,30,30,Prof. Jennifer White,Workshop,TTH,16:30-18:00,C824,Fall 2024
+2ee550ab-623c-49d0-b5e5-d2f95304c278,HIS498,Modern Machine Learning I,History,6,30,30,Prof. Daniel Robinson,Workshop,WF,11:00-12:30,C912,Fall 2024
+031ec556-70a9-4d16-a10e-619bd05b2649,PSY526,Advanced Programming II,Psychology,6,30,30,Prof. Emily Brown,Workshop,WF,16:30-18:00,B182,Fall 2024
+128bed6a-16be-40d7-8a5b-85e339cd2081,BIO240,Modern Systems,Biology,4,30,30,Prof. Elizabeth Jackson,Lecture,TH,09:30-11:00,C629,Fall 2024
+c6b3bb1f-c0c1-4ef8-ab72-6adec65c1579,HIST582,Fundamentals of Linear Algebra III,History,6,30,30,Prof. Emily Miller,Workshop,WF,15:00-16:30,B410,Fall 2024
+6814b039-939f-40d4-88e0-c7304aca52d4,LIT238,Practical Algorithms,Literature,3,30,30,Prof. Amy Thomas,Lecture,MW,15:00-16:30,B729,Fall 2024
+e53d8bb7-00a7-4a2c-b121-013784db8c1e,PSYC206,Modern Data Structures I,Psychology,4,30,30,Prof. John Thomas,Lecture,TH,13:30-15:00,B752,Fall 2024
+5360df72-e6e0-42a4-989d-a058a9c0cd46,BIOL361,Applied Systems,Biology,6,30,30,Prof. Jessica Gonzalez,Lecture,TH,15:00-16:30,A877,Fall 2024
+bb6369ea-df85-4b48-8022-e1d892405d5b,BUS401,Theory of Machine Learning,Business Administration,6,30,30,Prof. Daniel Thompson,Workshop,TH,08:00-09:30,D713,Fall 2024
+37963f4f-f254-477f-85a1-317f5cd2bd9e,STA279,Modern Calculus,Statistics,4,30,30,Prof. Paul Taylor,Seminar,WF,16:30-18:00,C384,Fall 2024
+7ea1c7f4-1c5f-494c-a0f3-53390d1dcda6,ECON388,Practical Design I,Economics,3,30,30,Prof. Jennifer Brown,Seminar,MW,16:30-18:00,A277,Fall 2024
+d6a3e6e9-a816-40b5-b29c-dfab62b71c6a,LIT239,Practical Algorithms I,Literature,6,30,30,Prof. Amy Martinez,Lab,WF,08:00-09:30,C295,Fall 2024
+0be310a7-c69e-41a4-a140-db2377581a66,CSE295,Practical Systems,Computer Science,4,30,30,Prof. Emily Sanchez,Lecture,MW,09:30-11:00,C913,Fall 2024
+41b64ed4-d958-4164-85ca-349a82822f7e,PHYS286,Classical Networks,Physics,6,30,30,Prof. Megan Sanchez,Tutorial,WF,09:30-11:00,A268,Fall 2024
+b6d1bf34-9323-438f-a013-31d3af48de2d,ECON189,Contemporary Research Methods,Economics,4,30,30,Prof. William Anderson,Lab,TTH,16:30-18:00,B137,Fall 2024
+426d5f57-d2f9-4c12-a3ae-1987730370bb,PHY143,Contemporary Analysis I,Physics,4,30,30,Prof. Rachel Thomas,Workshop,MW,09:30-11:00,A232,Fall 2024
+3234550d-dfd8-4ce5-a1ad-3e79c2196eb6,MGMT506,Theory of Database Systems,Business Administration,4,30,30,Prof. James Sanchez,Tutorial,WF,15:00-16:30,C830,Fall 2024
+9a895e46-5c65-4a60-a8e4-1ee290f202f2,CS395,Contemporary Machine Learning II,Computer Science,6,30,30,Prof. Nicole Martinez,Workshop,MWF,16:30-18:00,C901,Fall 2024
+32334fcf-9e78-41ae-a255-dc06fcda33a4,MATH259,Advanced Data Structures,Mathematics,3,30,30,Prof. Paul Martin,Tutorial,WF,11:00-12:30,D956,Fall 2024
+e132a90b-3656-49d6-b7f5-a38b58811d91,STAT482,Modern Database Systems,Statistics,4,30,30,Prof. Jessica Thomas,Lecture,TH,15:00-16:30,B635,Fall 2024
+65d2c83a-2e2d-4dfe-b2eb-def84ff2f3c4,PHYS350,Theory of Linear Algebra,Physics,6,30,30,Prof. Samantha Sanchez,Workshop,MWF,15:00-16:30,D987,Fall 2024
+e410b1fa-1d89-4e0f-a78b-7e6746262f3b,CS567,Introduction to Database Systems,Computer Science,4,30,30,Prof. Samantha Ramirez,Tutorial,TH,15:00-16:30,A774,Fall 2024
+a42300b5-6e99-4d00-8872-029c0f0734c8,CALC384,Theory of Database Systems,Mathematics,3,30,30,Prof. Joshua Rodriguez,Lecture,MWF,16:30-18:00,A334,Fall 2024
+ba21e0d8-c69e-4af8-97f2-b7af61efa481,ENG273,Theory of Calculus,Literature,6,30,30,Prof. Steven White,Seminar,TH,15:00-16:30,C247,Fall 2024
+cc46b8fc-8e48-4ae2-a21d-6e6f978d6c8d,HIST182,Applied Calculus,History,4,30,30,Prof. Anthony Miller,Lab,MWF,08:00-09:30,C866,Fall 2024
+3506101e-f069-4ff2-9ca1-cb4c989513b8,CSE395,Modern Research Methods,Computer Science,3,30,30,Prof. John Johnson,Tutorial,MW,15:00-16:30,B850,Fall 2024
+5cca26c0-257a-4e34-b76d-25dd1996282c,HIST454,Practical Linear Algebra,History,3,30,30,Prof. Michael Davis,Tutorial,TTH,11:00-12:30,C557,Fall 2024
+79473bec-ad17-4445-81d5-8ea63208e260,PHI395,Classical Research Methods,Philosophy,4,30,30,Prof. James Wilson,Lab,TH,16:30-18:00,B117,Fall 2024
+4eec4b79-2d84-4c37-b984-515b5a519d50,CSE422,Applied Networks,Computer Science,3,30,30,Prof. Sarah Garcia,Lecture,MWF,13:30-15:00,D722,Fall 2024
+2e116f96-5aac-4935-9341-14a56c4e74b9,BIOL507,Fundamentals of Calculus,Biology,6,30,30,Prof. Amy Wilson,Seminar,MWF,13:30-15:00,D286,Fall 2024
+c0a11eff-b7db-4e7d-9e45-f32af59d31f2,PSY105,Applied Networks,Psychology,4,30,30,Prof. Ashley Lopez,Tutorial,TTH,15:00-16:30,C168,Fall 2024
+c59d1b76-e132-4922-9fff-599d25ee4c9d,BIO303,Modern Research Methods,Biology,3,30,30,Prof. Andrew Harris,Lab,MWF,11:00-12:30,A207,Fall 2024
+7a3d06e2-3064-4c07-95bb-8013d9fdfdcf,LIT203,Practical Algorithms,Literature,4,30,30,Prof. Anthony Jones,Lab,TTH,08:00-09:30,C787,Fall 2024
+1db8fc50-bf69-417a-b85a-3989363d7813,CSE549,Introduction to Database Systems III,Computer Science,3,30,30,Prof. Jane Gonzalez,Tutorial,MW,11:00-12:30,D871,Fall 2024
+890209b8-ec6c-457c-b72d-f71db9f74116,PHI268,Advanced Linear Algebra III,Philosophy,6,30,30,Prof. David Thompson,Lecture,MWF,09:30-11:00,B943,Fall 2024
+27f1f095-e734-42b6-b2cd-5f405233ab6b,LIT307,Advanced Linear Algebra,Literature,3,30,30,Prof. Ashley Hernandez,Tutorial,MW,11:00-12:30,C809,Fall 2024
+55432507-a1b9-4164-b6d8-53df72ba73fc,LIT380,Advanced Networks,Literature,6,30,30,Prof. James Brown,Seminar,WF,09:30-11:00,A799,Fall 2024
+e97b7139-339f-45a8-bff0-34fbe82fcb7b,BUS494,Introduction to Research Methods,Business Administration,6,30,30,Prof. Paul Taylor,Tutorial,MWF,13:30-15:00,C903,Fall 2024
+41b88df9-03ff-47e9-af7e-4626c1a690b2,PSY229,Practical Linear Algebra,Psychology,4,30,30,Prof. Jessica Davis,Lecture,TH,15:00-16:30,B778,Fall 2024
+9146d141-67d0-470b-9b88-48971cacc6de,HIST145,Practical Machine Learning,History,6,30,30,Prof. Jennifer Moore,Tutorial,TH,11:00-12:30,C279,Fall 2024
+68a559a5-33e8-4326-82dc-defe442de385,HIST208,Modern Data Structures,History,3,30,30,Prof. Steven Sanchez,Workshop,WF,15:00-16:30,B213,Fall 2024
+92a66cf7-4b8e-4e41-a397-738cf7f49cd1,MGMT211,Contemporary Data Structures,Business Administration,6,30,30,Prof. Anthony Sanchez,Seminar,MWF,11:00-12:30,A675,Fall 2024
+52c18242-935c-4417-9b66-d110e09bbbda,ENGR171,Theory of Systems I,Engineering,6,30,30,Prof. Lauren Harris,Lecture,TTH,15:00-16:30,A234,Fall 2024
+06eff49c-5a2c-4cfa-b962-cfc3c3e286d0,ECON191,Introduction to Machine Learning,Economics,3,30,30,Prof. Andrew Miller,Seminar,TTH,08:00-09:30,A463,Fall 2024
+199c2166-1592-44b9-836f-9a9c286b0487,PHI171,Introduction to Statistics I,Philosophy,4,30,30,Prof. David Lee,Seminar,WF,11:00-12:30,D189,Fall 2024
+347f3484-b6dc-44c9-ae28-9ccb15de01c6,CHM353,Contemporary Data Structures I,Chemistry,3,30,30,Prof. Nicole Jackson,Lecture,TTH,13:30-15:00,C893,Fall 2024
+afd7d4e8-c866-49df-a4c5-01c20ae83cc8,BIOL320,Modern Algorithms,Biology,6,30,30,Prof. Amanda Jones,Lab,TTH,11:00-12:30,D831,Fall 2024
+5867b7f7-1064-447b-8fb8-5b13c61ce6d7,HIS451,Advanced Design,History,6,30,30,Prof. Robert Robinson,Seminar,MW,11:00-12:30,A965,Fall 2024
+c52fa7cd-690d-447b-86f1-f3196c9b6437,PHY321,Introduction to Machine Learning I,Physics,6,30,30,Prof. Jennifer Lopez,Seminar,TTH,11:00-12:30,C365,Fall 2024
+67e1ab79-1b46-44d0-954b-1238c5c43e80,ECON255,Classical Analysis,Economics,3,30,30,Prof. David Rodriguez,Workshop,MWF,11:00-12:30,C890,Fall 2024
+98926eab-cded-42a9-8352-f6528bc0cb52,CHM249,Classical Data Structures,Chemistry,3,30,30,Prof. James Thompson,Seminar,TH,13:30-15:00,B171,Fall 2024
+95904048-dcfe-498a-941b-473728c4c3fe,ECO583,Modern Analysis,Economics,6,30,30,Prof. Megan Ramirez,Workshop,MWF,16:30-18:00,C352,Fall 2024
+2c080187-5d22-42ba-92a8-41c8c6aac5e0,ECO434,Modern Database Systems,Economics,4,30,30,Prof. Sarah Clark,Workshop,TTH,11:00-12:30,D984,Fall 2024
+ee064772-4068-4cce-954b-c86067c09f06,ENG334,Classical Programming,Engineering,3,30,30,Prof. Mark Moore,Lab,MW,08:00-09:30,C185,Fall 2024
+4b0a2fc2-a25d-427f-99d9-920511acd7ee,BIO435,Applied Analysis,Biology,4,30,30,Prof. Lauren Wilson,Lecture,MW,13:30-15:00,A937,Fall 2024
+f5487430-f4c9-4123-8e22-cbcbd1962d98,MGMT385,Practical Machine Learning,Business Administration,6,30,30,Prof. Rachel Davis,Lecture,MWF,16:30-18:00,C717,Fall 2024
+01bbef1b-35e5-4799-917d-fe6e3205bfcf,ECO254,Fundamentals of Programming I,Economics,4,30,30,Prof. Jessica Anderson,Lecture,TTH,09:30-11:00,D488,Fall 2024
+82409a97-2e9e-4c81-8403-0720e6510f3b,PHIL478,Practical Analysis,Philosophy,6,30,30,Prof. Rachel Jackson,Lab,TH,08:00-09:30,B121,Fall 2024
+2b9c9d5c-16bf-4aec-8a62-bec15735b509,ENGR230,Fundamentals of Database Systems,Engineering,6,30,30,Prof. Joshua Robinson,Lab,TTH,08:00-09:30,C429,Fall 2024
+4f2bf2d5-c687-4286-b64e-96a1a59846b7,PSY291,Classical Networks,Psychology,3,30,30,Prof. John Anderson,Workshop,TH,11:00-12:30,D553,Fall 2024
+132eed40-c72b-4c5c-b4a3-4b19390061e4,STA437,Advanced Analysis,Statistics,3,30,30,Prof. William Jones,Lab,MW,08:00-09:30,A252,Fall 2024
+1a0af523-449b-4c85-97fb-1e160c28f07f,HIST461,Classical Linear Algebra III,History,6,30,30,Prof. Emily Sanchez,Lecture,TTH,11:00-12:30,A522,Fall 2024
+bff6ef37-835a-4221-9b8e-fdeb2392ac20,MGMT245,Introduction to Statistics,Business Administration,3,30,30,Prof. Jessica Smith,Lecture,TTH,13:30-15:00,C425,Fall 2024
+b3188481-66be-453f-9aa3-79790c6c2309,BIO159,Introduction to Systems I,Biology,3,30,30,Prof. Jane Taylor,Workshop,MW,13:30-15:00,A198,Fall 2024
+a001b325-68f6-4065-8f9b-bedf6596a67f,STA482,Fundamentals of Networks,Statistics,3,30,30,Prof. Amanda Hernandez,Lecture,WF,09:30-11:00,A843,Fall 2024
+7998dff4-6e04-4cd5-8cf8-34dd4a5568e1,MGMT435,Classical Programming,Business Administration,4,30,30,Prof. Ashley Rodriguez,Tutorial,WF,15:00-16:30,A164,Fall 2024
+b28e1cd0-a8b5-4c07-a7bb-aa59c37d422b,BIO532,Applied Machine Learning II,Biology,6,30,30,Prof. Matthew Lopez,Lecture,WF,15:00-16:30,C702,Fall 2024
+f56a5797-7e45-4c86-a77e-70c5204345ff,PSYC446,Fundamentals of Database Systems,Psychology,4,30,30,Prof. Robert Rodriguez,Seminar,TTH,08:00-09:30,C959,Fall 2024
+9be9ae8a-c6a9-4178-8b07-ff7314495a09,BIO388,Modern Calculus,Biology,4,30,30,Prof. William Clark,Seminar,TH,13:30-15:00,B748,Fall 2024
+80d37764-452c-48bc-aec7-a991fc3591a7,CHEM514,Practical Algorithms,Chemistry,4,30,30,Prof. Daniel Johnson,Lecture,WF,16:30-18:00,D487,Fall 2024
+182d4390-a39c-473f-a906-82315bb80184,STAT269,Advanced Calculus,Mathematics,3,30,30,Prof. Robert Wilson,Tutorial,WF,11:00-12:30,D469,Fall 2024
+c0b2813b-226f-4dbb-aefd-c44e4be84dd8,CS213,Classical Design,Computer Science,3,30,30,Prof. Elizabeth Clark,Tutorial,MW,15:00-16:30,D245,Fall 2024
+937f8f2b-76ff-4736-a5e6-7d4820330924,ENG316,Classical Database Systems,Literature,6,30,30,Prof. Anthony Lee,Tutorial,MW,15:00-16:30,A425,Fall 2024
+f33898ec-daa2-472f-a649-d58a6aa9f852,BIO287,Contemporary Algorithms,Biology,4,30,30,Prof. Joshua Martinez,Lab,MW,15:00-16:30,A720,Fall 2024
+78001160-332d-4425-9a77-e2c12f2e5a22,STA261,Applied Design,Statistics,6,30,30,Prof. Jessica Clark,Tutorial,WF,08:00-09:30,A966,Fall 2024
+bb26a9e9-8c90-405c-85ed-302902c8c9c8,STAT400,Practical Machine Learning,Mathematics,6,30,30,Prof. Samantha Davis,Lab,WF,08:00-09:30,A125,Fall 2024
+288e86ff-a425-467f-a289-295b56b93ad4,PHYS597,Classical Algorithms,Physics,3,30,30,Prof. Samantha Clark,Workshop,MWF,15:00-16:30,D892,Fall 2024
+31481422-491a-447b-962c-79fce169788f,LIT495,Applied Linear Algebra,Literature,4,30,30,Prof. John Lewis,Lab,TH,16:30-18:00,C841,Fall 2024
+21f19aea-aa83-4919-b375-a177ee5f58c7,PHY441,Advanced Database Systems,Physics,3,30,30,Prof. Jennifer Clark,Lab,TTH,16:30-18:00,D598,Fall 2024
+a323d753-476b-439e-97ae-e0c5974ddde7,HIST206,Modern Calculus,History,3,30,30,Prof. Jessica Anderson,Workshop,TTH,09:30-11:00,A990,Fall 2024
+1050db9f-2731-4d70-ab19-a5e2009f05ab,STAT553,Fundamentals of Algorithms I,Statistics,4,30,30,Prof. Nicole Sanchez,Tutorial,MWF,09:30-11:00,D425,Fall 2024
+b4fd4734-e05a-422f-af08-1117cc8d137c,CHM551,Introduction to Machine Learning,Chemistry,4,30,30,Prof. Ashley Lopez,Lecture,WF,11:00-12:30,C398,Fall 2024
+f3d313c0-40cd-4ba8-8e1d-9eb7e02760b7,PHY528,Advanced Programming,Physics,3,30,30,Prof. Elizabeth Johnson,Lecture,MW,15:00-16:30,C197,Fall 2024
+4d566293-e685-4378-bcbb-7b5aa96ca74f,CHM278,Advanced Linear Algebra I,Chemistry,6,30,30,Prof. Elizabeth Martinez,Lecture,TTH,15:00-16:30,D837,Fall 2024
+2d7b600b-ffc3-4005-a12f-8863bf183339,BIOL424,Theory of Calculus I,Biology,4,30,30,Prof. Anthony Lee,Lecture,MWF,09:30-11:00,C504,Fall 2024
+0367188d-f012-4542-9eb8-974b9cf6b974,PHY291,Advanced Linear Algebra III,Physics,3,30,30,Prof. Rachel Davis,Lecture,MWF,13:30-15:00,D691,Fall 2024
+6c8ebb42-6fb7-4edd-badc-99227f558fb8,HIST121,Introduction to Research Methods,History,3,30,30,Prof. Jessica Robinson,Lecture,WF,13:30-15:00,C110,Fall 2024
+644447c4-8e1d-4424-9b67-5e9031a49c33,ECON341,Contemporary Algorithms III,Economics,4,30,30,Prof. Andrew Lee,Lecture,MW,15:00-16:30,A586,Fall 2024
+80567195-eaed-4c62-a520-119279c66502,LIT222,Applied Calculus,Literature,4,30,30,Prof. Daniel Lee,Tutorial,MWF,11:00-12:30,C520,Fall 2024
+9357541a-a879-46b7-8be8-d7fe412a9454,PHIL189,Fundamentals of Analysis II,Philosophy,6,30,30,Prof. Matthew Williams,Lecture,WF,08:00-09:30,D895,Fall 2024
+b8d9831e-d8b1-4e33-a214-f5e4cecf6e5f,ENG310,Fundamentals of Database Systems,Literature,4,30,30,Prof. Samantha Rodriguez,Tutorial,WF,15:00-16:30,D693,Fall 2024
+f33f40d7-b096-40a6-b28c-eee433533a71,PHY224,Modern Systems,Physics,3,30,30,Prof. Nicole Thompson,Tutorial,TTH,16:30-18:00,A335,Fall 2024
+27d5a06a-e796-42c1-97c2-b91881b5aaa8,PHYS477,Practical Algorithms,Physics,6,30,30,Prof. Mark Perez,Lab,TTH,08:00-09:30,D156,Fall 2024
+84f53e52-553c-4ff2-bd45-ad1adea841c2,STAT413,Fundamentals of Design,Mathematics,6,30,30,Prof. Jane Lewis,Tutorial,TH,13:30-15:00,B796,Fall 2024
+ea92c84a-5719-4cb7-afee-b6e10c53360a,PSY447,Advanced Machine Learning,Psychology,4,30,30,Prof. William Moore,Lab,MW,11:00-12:30,B408,Fall 2024
+d6ba047e-03e7-46f4-b56d-f4ca3aed811a,CALC326,Fundamentals of Networks,Mathematics,4,30,30,Prof. Ashley Miller,Workshop,TTH,13:30-15:00,A635,Fall 2024
+63e5f758-8143-4f25-8d06-f550052a2630,PSYC437,Fundamentals of Statistics,Psychology,4,30,30,Prof. Amanda Harris,Tutorial,MWF,13:30-15:00,A512,Fall 2024
+4e22e625-783d-4a56-930e-b0628b79882a,PHIL285,Fundamentals of Networks I,Philosophy,6,30,30,Prof. David Ramirez,Seminar,TH,13:30-15:00,B583,Fall 2024
+aa03789c-14e7-484b-bd67-cc7c8b813c84,ENG218,Advanced Networks,Engineering,4,30,30,Prof. Emily Brown,Workshop,TTH,16:30-18:00,A696,Fall 2024
+1c8882d6-b6a8-4ae4-8c26-53c25a0de92f,BUS336,Fundamentals of Networks,Business Administration,3,30,30,Prof. Ashley Perez,Seminar,MWF,13:30-15:00,A309,Fall 2024
+6d94593c-d641-4055-9b8b-4ef4359314c8,CHM427,Fundamentals of Linear Algebra,Chemistry,3,30,30,Prof. Daniel Garcia,Lab,TTH,09:30-11:00,B167,Fall 2024
+a8454eff-158c-47a5-a975-37db15a90024,BIO510,Theory of Database Systems II,Biology,3,30,30,Prof. Matthew Robinson,Tutorial,TTH,09:30-11:00,A225,Fall 2024
+97734607-5917-4cba-9ac9-4bbb4bdc90b7,PHY183,Classical Machine Learning,Physics,3,30,30,Prof. Joshua Brown,Tutorial,WF,08:00-09:30,C381,Fall 2024
+6029db3f-80ea-4cec-a40f-84c19769bd67,MATH225,Applied Statistics,Mathematics,6,30,30,Prof. Sarah Perez,Tutorial,TH,15:00-16:30,D956,Fall 2024
+befbda42-93ba-4882-9c15-b3f36def3d44,ECON139,Theory of Design II,Economics,3,30,30,Prof. James Gonzalez,Lab,TTH,08:00-09:30,A283,Fall 2024
+b7393359-f428-4cbb-a20e-e534d0524c82,ENGR263,Classical Statistics,Engineering,3,30,30,Prof. Samantha Moore,Lab,MW,09:30-11:00,B989,Fall 2024
+57f35508-52d8-46ea-8394-2bfb85fb22ae,ECO111,Practical Networks,Economics,3,30,30,Prof. Michael Lewis,Tutorial,WF,09:30-11:00,A247,Fall 2024
+87f8effd-63c5-446f-8bba-8a8a55c1a269,PSY481,Advanced Machine Learning,Psychology,6,30,30,Prof. Jane Gonzalez,Seminar,TTH,16:30-18:00,C123,Fall 2024
+40da93f3-b46e-47ac-bc05-1a5fa8437bd9,ECON546,Introduction to Linear Algebra,Economics,4,30,30,Prof. Emily Lee,Lecture,WF,13:30-15:00,B519,Fall 2024
+93b7c15f-25d8-478c-bffc-6737bc097635,MGMT478,Advanced Systems,Business Administration,4,30,30,Prof. David Brown,Workshop,TH,15:00-16:30,C122,Fall 2024
+4bb601e5-41ce-4589-86d4-e544e030d072,PSY136,Introduction to Machine Learning,Psychology,4,30,30,Prof. Michael Moore,Lab,MWF,13:30-15:00,B296,Fall 2024
+c3e0bb63-a9a1-4e90-8de3-868116758bf7,BIO469,Classical Design II,Biology,6,30,30,Prof. Amanda Gonzalez,Tutorial,TTH,13:30-15:00,A589,Fall 2024
+6ad6901c-2c0d-4247-8e07-48618b271d55,CS545,Introduction to Systems II,Computer Science,3,30,30,Prof. Amanda Ramirez,Seminar,TTH,08:00-09:30,D527,Fall 2024
+d568a371-ca54-4095-91aa-64d62f13e573,HIST222,Advanced Data Structures I,History,6,30,30,Prof. Samantha Thompson,Tutorial,MWF,16:30-18:00,D999,Fall 2024
+c3562716-4344-4125-955a-dc34759ad6dd,PHI389,Theory of Database Systems II,Philosophy,3,30,30,Prof. James Anderson,Seminar,WF,08:00-09:30,B619,Fall 2024
+ff99a80f-7f26-4bc3-9303-581c4eb033bb,STAT164,Theory of Research Methods,Mathematics,4,30,30,Prof. Jane Thompson,Workshop,MW,09:30-11:00,B655,Fall 2024
+f0b7d4b2-20da-4e89-a4c5-96ce772207e4,COMP279,Classical Data Structures,Computer Science,6,30,30,Prof. Robert Williams,Workshop,MW,09:30-11:00,B539,Fall 2024
+29c5e263-934d-45ca-aa9f-2680d478435a,PHIL347,Applied Networks,Philosophy,4,30,30,Prof. Jennifer Lopez,Lab,TH,16:30-18:00,A754,Fall 2024
+2140dd40-72cc-4c85-bb6c-cee53cec7f87,PHY331,Contemporary Statistics,Physics,6,30,30,Prof. Robert Garcia,Workshop,MW,15:00-16:30,C424,Fall 2024
+6bc8371f-929a-4e70-a6c9-3829fd10eee5,COMP221,Introduction to Calculus,Computer Science,3,30,30,Prof. Samantha Garcia,Workshop,MWF,13:30-15:00,A765,Fall 2024
+c61f32c2-ad1d-416a-be02-4ba9a3b87e0f,CHM436,Theory of Research Methods,Chemistry,6,30,30,Prof. Steven Wilson,Seminar,MWF,13:30-15:00,C918,Fall 2024
+fdeae45b-a2c8-4c89-8a24-4cc2cb3fa6a4,HIS207,Modern Design,History,4,30,30,Prof. Andrew Lewis,Lecture,MW,08:00-09:30,B708,Fall 2024
+8f4c21cb-9126-400b-9620-6bce1fe1a5de,ENGR458,Introduction to Systems,Engineering,4,30,30,Prof. Rachel Brown,Workshop,MWF,16:30-18:00,A877,Fall 2024
+c4b9dab0-84cb-4b13-af1e-4dacde75a6b0,BIO108,Practical Database Systems,Biology,6,30,30,Prof. Amy Brown,Tutorial,MW,16:30-18:00,A646,Fall 2024
+50dfd3fa-708a-4841-8ef6-b231f128b2e7,PHIL564,Practical Statistics,Philosophy,6,30,30,Prof. Ashley Robinson,Lecture,WF,15:00-16:30,B759,Fall 2024
+01704095-f7e1-4ae9-bef6-4916a45cca5d,ENG519,Introduction to Programming,Literature,3,30,30,Prof. Samantha Robinson,Lab,TTH,08:00-09:30,C105,Fall 2024
+a8390511-055e-4f1e-b05a-7ef6a7e513cc,STA317,Theory of Algorithms,Statistics,3,30,30,Prof. Amanda Clark,Tutorial,TH,09:30-11:00,B264,Fall 2024
+b2db96dc-06ad-45fd-9bf4-3b043cc8e1ac,ENG246,Modern Machine Learning,Engineering,6,30,30,Prof. Nicole Brown,Tutorial,WF,16:30-18:00,C747,Fall 2024
+3c728022-989b-485b-8b0b-c3343f5c9673,BIO266,Introduction to Programming,Biology,3,30,30,Prof. Robert Perez,Seminar,MW,16:30-18:00,C262,Fall 2024
+79708b39-9ebf-4a94-9b8b-bd6e25ae7520,CALC551,Applied Statistics,Mathematics,3,30,30,Prof. Jane White,Lab,TTH,15:00-16:30,A531,Fall 2024
+8f38bc59-d828-442d-9569-3b264af1e11a,PSYC392,Theory of Machine Learning,Psychology,6,30,30,Prof. Anthony Robinson,Lab,MWF,11:00-12:30,C375,Fall 2024
+911d80bc-2e2e-4e2e-901c-0ec8620a2cbf,COMP325,Fundamentals of Calculus,Computer Science,4,30,30,Prof. Jessica Taylor,Workshop,WF,16:30-18:00,C746,Fall 2024
+a82a84e9-fd47-4d53-991f-081980852ec1,STAT395,Advanced Data Structures,Mathematics,6,30,30,Prof. Mark Lewis,Tutorial,TTH,08:00-09:30,A399,Fall 2024
+b09ed0e0-128e-4895-80cf-7e8ff2c28a6d,PHY211,Theory of Linear Algebra,Physics,6,30,30,Prof. Robert Garcia,Lecture,MW,11:00-12:30,A611,Fall 2024
+5a73a788-8b63-482e-8e60-6e478454a792,BUS284,Theory of Networks,Business Administration,4,30,30,Prof. David Robinson,Lecture,MW,15:00-16:30,D296,Fall 2024
+a17d6736-d26a-43b9-a133-87e81dd3c120,BUS539,Contemporary Systems,Business Administration,6,30,30,Prof. Stephanie Perez,Seminar,WF,16:30-18:00,C895,Fall 2024
+c22add9a-8b31-4da4-af8d-b9d2fddcb7a3,STA300,Modern Linear Algebra,Statistics,3,30,30,Prof. Robert Williams,Lab,TH,09:30-11:00,C386,Fall 2024
+28deace6-ec4e-4308-8fcc-e1fd11ff5533,HIST485,Contemporary Programming III,History,4,30,30,Prof. Nicole Lopez,Tutorial,TTH,13:30-15:00,A802,Fall 2024
+2c71b1e3-9c22-4aa5-9910-219de2c95604,CS483,Modern Algorithms,Computer Science,4,30,30,Prof. Elizabeth Hernandez,Lecture,WF,09:30-11:00,A276,Fall 2024
+3a21458a-0fdc-4756-84f1-12dd7b554fc5,CS117,Modern Programming,Computer Science,3,30,30,Prof. Jennifer Sanchez,Lab,TTH,15:00-16:30,B968,Fall 2024
+2b34a73f-eebd-4176-a033-af8304c46ac3,PHYS503,Applied Systems,Physics,6,30,30,Prof. Ashley Clark,Lab,TTH,13:30-15:00,B497,Fall 2024
+5d5b7c31-105a-4102-ac80-a130b41b87bb,LIT423,Modern Statistics,Literature,4,30,30,Prof. Lauren White,Workshop,TTH,15:00-16:30,B283,Fall 2024
+7d0c79fe-e2fd-4c7f-82ef-0f5aaf134c52,CALC506,Theory of Machine Learning I,Mathematics,4,30,30,Prof. Sarah Robinson,Seminar,WF,16:30-18:00,C952,Fall 2024
+6e616ab9-7653-4e0a-b18f-02021cef5c7b,ENG494,Introduction to Data Structures,Literature,4,30,30,Prof. Sarah Ramirez,Workshop,WF,08:00-09:30,D377,Fall 2024
+0193291a-eb7d-4e0c-9b6b-807fa56cea9f,MATH307,Advanced Programming III,Mathematics,3,30,30,Prof. James Ramirez,Tutorial,MWF,09:30-11:00,A112,Fall 2024
+9a7366f8-a42c-482c-ad15-3bcad036734e,CS442,Classical Machine Learning,Computer Science,4,30,30,Prof. Lauren Thomas,Workshop,MW,15:00-16:30,B937,Fall 2024
+01f8e7d8-5959-43c8-8573-87537e50fe94,MGMT437,Modern Statistics I,Business Administration,3,30,30,Prof. Daniel Lopez,Lecture,WF,08:00-09:30,A938,Fall 2024
+9a43c3bf-3ef7-46eb-909c-74f81f1ae573,ECO355,Applied Analysis,Economics,6,30,30,Prof. Megan Martinez,Tutorial,MWF,08:00-09:30,B987,Fall 2024
+8996aa04-2c17-4102-9a8e-39131d23b29e,ENGR590,Applied Systems,Engineering,6,30,30,Prof. William Smith,Lab,TTH,16:30-18:00,C280,Fall 2024
+9814ac79-362b-4923-9846-f4f49dccbf31,PHY322,Modern Algorithms III,Physics,4,30,30,Prof. David Martin,Workshop,MWF,11:00-12:30,C283,Fall 2024
+de5f216d-815e-4cf3-b0e6-230ba07f68c4,ECO271,Contemporary Systems I,Economics,6,30,30,Prof. Jennifer Wilson,Seminar,TH,16:30-18:00,B482,Fall 2024
+b2c43f8b-1183-4ab5-b077-e3b90bee270d,MGMT306,Contemporary Database Systems,Business Administration,3,30,30,Prof. Michael Thompson,Lab,WF,16:30-18:00,A923,Fall 2024
+fc581337-d1a0-47dc-a4b0-f61b0b4b80f9,PHI591,Theory of Algorithms,Philosophy,3,30,30,Prof. Lauren Rodriguez,Lab,TH,08:00-09:30,B460,Fall 2024
+8fcaeef4-fe94-4f21-a60b-24500f349790,PHIL474,Introduction to Algorithms II,Philosophy,6,30,30,Prof. Christopher Thomas,Lecture,TH,13:30-15:00,C787,Fall 2024
+f67fe6f2-a4bc-44be-9149-0372b2586686,HIST319,Modern Linear Algebra III,History,6,30,30,Prof. Joshua Miller,Lecture,MW,16:30-18:00,B881,Fall 2024
+99e168e6-fd14-4b32-a9b3-8f1ad1771dbf,CHM453,Fundamentals of Calculus,Chemistry,3,30,30,Prof. Steven Jackson,Lab,MW,09:30-11:00,C292,Fall 2024
+bb4e7aee-714a-4816-9d54-8ada2d181b94,CS541,Contemporary Database Systems,Computer Science,4,30,30,Prof. Megan Brown,Lecture,TH,08:00-09:30,B577,Fall 2024
+ace42f12-03e4-46b8-be90-c8ec8cacd619,PHYS265,Contemporary Design,Physics,3,30,30,Prof. Steven Wilson,Seminar,WF,09:30-11:00,A952,Fall 2024
+36298d7d-02d0-4a1e-bab5-6153bd598475,STAT548,Practical Systems,Statistics,3,30,30,Prof. Stephanie Taylor,Tutorial,TH,16:30-18:00,A760,Fall 2024
+8dd719cf-67bd-40d0-9d1a-13028cc1fcaf,LIT234,Practical Machine Learning,Literature,3,30,30,Prof. Matthew Thomas,Lab,TTH,11:00-12:30,A229,Fall 2024
+5b689c39-e34c-4e3f-b191-4b26e7b2457f,CSE470,Classical Programming I,Computer Science,4,30,30,Prof. Daniel Lopez,Seminar,TTH,16:30-18:00,B926,Fall 2024
+92e8c652-b693-4326-8eb6-ffebef3eb26c,ECON360,Practical Linear Algebra,Economics,4,30,30,Prof. James Brown,Lecture,WF,08:00-09:30,B699,Fall 2024
+8976d7c7-fc0f-4b4a-b6fc-0edba92f8d9a,PSY208,Modern Research Methods,Psychology,4,30,30,Prof. James Taylor,Seminar,MW,08:00-09:30,D879,Fall 2024
+6d0e63d2-c52a-483d-833b-0c75801e7d76,STAT264,Introduction to Machine Learning II,Statistics,6,30,30,Prof. Emily White,Tutorial,MW,13:30-15:00,D615,Fall 2024
+591250dd-2d14-4963-8daf-339d517f7c3c,HIS531,Classical Algorithms,History,3,30,30,Prof. Jessica Miller,Workshop,TTH,09:30-11:00,B885,Fall 2024
+71ad18d1-b40a-4931-b754-08ed7daba58f,PHY100,Classical Programming,Physics,4,30,30,Prof. William Brown,Lab,MW,16:30-18:00,B462,Fall 2024
+32498175-ba7a-42a5-8ffa-984d4302b4ed,BUS356,Theory of Programming,Business Administration,6,30,30,Prof. Emily Williams,Lecture,MW,09:30-11:00,D314,Fall 2024
+be807221-8a29-4199-89ef-ffe7426bc036,PHIL101,Contemporary Calculus II,Philosophy,6,30,30,Prof. Jane Brown,Workshop,MWF,15:00-16:30,A349,Fall 2024
+ee62869f-af99-4b72-afdd-0783d9a5a723,BUS305,Applied Linear Algebra II,Business Administration,4,30,30,Prof. Emily Rodriguez,Seminar,MWF,11:00-12:30,B929,Fall 2024
+993db44c-9827-479d-9339-561b8ffee8ec,BUS460,Fundamentals of Data Structures III,Business Administration,3,30,30,Prof. William Wilson,Seminar,MW,13:30-15:00,A500,Fall 2024
+a091618e-c7ba-4b66-9f22-67ae0525da03,CSE207,Contemporary Data Structures,Computer Science,6,30,30,Prof. Michael Wilson,Lab,TH,08:00-09:30,B985,Fall 2024
+864c16e3-3a4a-4921-8f74-70f61f138053,LIT169,Theory of Data Structures I,Literature,4,30,30,Prof. Daniel Robinson,Tutorial,MW,08:00-09:30,A867,Fall 2024
+5e5a6f76-38ad-46bd-bccc-bd68612daa55,CHEM519,Fundamentals of Linear Algebra II,Chemistry,6,30,30,Prof. Joshua Jackson,Seminar,MWF,09:30-11:00,D369,Fall 2024
+d9f55b0a-a94e-4a93-93b4-fc5011aef2a9,COMP486,Modern Networks,Computer Science,3,30,30,Prof. Nicole Gonzalez,Tutorial,MW,16:30-18:00,A792,Fall 2024
+5c4c1e7f-6797-468a-8cb4-d35255337af2,ENG127,Classical Networks II,Engineering,3,30,30,Prof. Paul Brown,Lab,TTH,16:30-18:00,D678,Fall 2024
+80a76017-6716-4870-b081-374857eb8af2,ECON355,Classical Machine Learning,Economics,4,30,30,Prof. Robert Davis,Workshop,MW,09:30-11:00,D205,Fall 2024
+2fa9f6dc-7241-4730-ae2b-7f6197eed9c9,ECO112,Modern Programming,Economics,3,30,30,Prof. James Jones,Lecture,MWF,09:30-11:00,D272,Fall 2024
+9b6b431f-386e-410d-87f2-8d63ff5c1720,ENG180,Introduction to Calculus,Engineering,3,30,30,Prof. Amanda Rodriguez,Workshop,TH,13:30-15:00,C794,Fall 2024
+760f3064-41ad-4913-af5a-02fce68235c1,COMP387,Advanced Machine Learning,Computer Science,4,30,30,Prof. Lauren Smith,Tutorial,TH,09:30-11:00,D704,Fall 2024
+424dddaf-ddc0-49c8-aff4-b7446c5f4fab,CHM135,Classical Data Structures,Chemistry,4,30,30,Prof. Anthony Jackson,Tutorial,WF,08:00-09:30,B645,Fall 2024
+97e70cbc-3844-4d48-9431-883e6a01b1ae,CHM311,Theory of Research Methods,Chemistry,3,30,30,Prof. Matthew White,Seminar,WF,11:00-12:30,B927,Fall 2024
+7db0bd1d-ca9e-4b86-9330-9a9dbafe063d,HIST204,Theory of Design,History,6,30,30,Prof. Megan Moore,Lecture,TTH,09:30-11:00,C948,Fall 2024
+ff2208ff-9896-4f6c-ab2f-eed8493fdaec,ECO117,Contemporary Statistics,Economics,4,30,30,Prof. Jennifer White,Lab,WF,16:30-18:00,A488,Fall 2024
+675fa612-020d-4fd5-98d7-a5fe1c987ece,BIO217,Modern Analysis,Biology,4,30,30,Prof. Emily Brown,Seminar,TH,16:30-18:00,C102,Fall 2024
+17ecc308-1c42-40eb-bfdc-0d13414bf635,STAT367,Applied Machine Learning,Statistics,3,30,30,Prof. James Rodriguez,Lecture,WF,11:00-12:30,B472,Fall 2024
+4a248728-85f2-47b3-a19b-09fc3c045b02,HIS475,Modern Design,History,3,30,30,Prof. Samantha Jones,Lecture,WF,13:30-15:00,D647,Fall 2024
+7ff60113-22ac-4c7b-b601-ced1e004cb6f,MGMT385,Classical Machine Learning III,Business Administration,3,30,30,Prof. Mark Harris,Workshop,TTH,11:00-12:30,A554,Fall 2024
+83c548df-7557-4815-893f-1e727508e79f,PHI212,Introduction to Statistics III,Philosophy,4,30,30,Prof. Nicole Brown,Lab,MWF,15:00-16:30,C874,Fall 2024
+5c437353-ea0f-41a3-86b0-0d4d29e490bf,STAT524,Theory of Programming,Statistics,3,30,30,Prof. Amy Martin,Seminar,WF,15:00-16:30,D561,Fall 2024
+aab9733a-763b-4092-bb55-a16528971610,STAT450,Practical Algorithms,Mathematics,6,30,30,Prof. Sarah Lopez,Seminar,MWF,08:00-09:30,C236,Fall 2024
+76a23acf-cf88-4700-84a7-9d7497a0b33d,MGMT198,Modern Machine Learning,Business Administration,4,30,30,Prof. Emily Lopez,Workshop,TH,13:30-15:00,B162,Fall 2024
+48e9606d-a795-4e63-afc8-2bb0651f8033,CHEM176,Practical Calculus,Chemistry,3,30,30,Prof. Steven Thompson,Tutorial,WF,09:30-11:00,D736,Fall 2024
+8ba1633d-f392-49af-ae51-414123c19a31,LIT413,Modern Research Methods I,Literature,6,30,30,Prof. Sarah Jones,Lab,TH,08:00-09:30,A191,Fall 2024
+14dd9e05-4377-40c4-bd2c-691537d776d6,PSYC193,Theory of Algorithms,Psychology,3,30,30,Prof. David Anderson,Lecture,MW,16:30-18:00,B638,Fall 2024
+68c9dd73-5d6e-4d92-a42b-3d8eb9d43778,PHI207,Contemporary Linear Algebra II,Philosophy,6,30,30,Prof. Nicole Anderson,Lecture,TH,11:00-12:30,B830,Fall 2024
+59c85e5b-6b3c-4ea3-a9e9-310cfc175db1,COMP242,Applied Statistics,Computer Science,4,30,30,Prof. Megan Williams,Lab,TH,16:30-18:00,B879,Fall 2024
+ab70d8c1-9479-4ff5-9c98-551b39a79a80,HIST346,Introduction to Data Structures III,History,4,30,30,Prof. Jane Taylor,Seminar,TH,11:00-12:30,A688,Fall 2024
+5d0ae9b6-fefa-451a-9006-3e4f1937b761,PHI336,Practical Research Methods,Philosophy,3,30,30,Prof. Jessica Robinson,Workshop,TTH,15:00-16:30,D304,Fall 2024
+f705f86d-66c5-402a-953a-3acbf8688a74,BIO126,Introduction to Statistics II,Biology,4,30,30,Prof. Joshua Wilson,Workshop,MWF,16:30-18:00,A147,Fall 2024
+13c5dc64-6baf-4c8c-86b4-10e277835a91,STAT474,Classical Machine Learning II,Statistics,4,30,30,Prof. Ashley Jones,Workshop,WF,13:30-15:00,C625,Fall 2024
+bed88953-ee70-487a-a929-4ce3de8806c4,PHY439,Classical Design,Physics,4,30,30,Prof. Michael Jones,Lecture,MW,13:30-15:00,C981,Fall 2024
+00a28363-1feb-498b-9ed7-113156af7bbe,BIOL336,Modern Data Structures II,Biology,6,30,30,Prof. Anthony Perez,Workshop,WF,13:30-15:00,A648,Fall 2024
+e95aeab9-66f9-41ab-8da1-e9e0feacd769,ECON372,Advanced Analysis,Economics,6,30,30,Prof. John Taylor,Tutorial,TH,16:30-18:00,A276,Fall 2024
+e0d0c597-528a-4e2a-9b74-b878b24916e3,HIST525,Contemporary Design I,History,6,30,30,Prof. Sarah Brown,Lecture,MWF,09:30-11:00,A440,Fall 2024
+d94cfcbc-aa07-4145-8c01-19dcffc597c9,ENG302,Applied Programming,Literature,6,30,30,Prof. Anthony Garcia,Seminar,TH,13:30-15:00,B923,Fall 2024
+50d02c67-98c7-4757-9936-31933ba7e2a8,PHI550,Contemporary Design,Philosophy,3,30,30,Prof. Emily Moore,Workshop,TH,13:30-15:00,D544,Fall 2024
+a2b96297-be40-48fe-b0cd-64ee366a272e,PHIL369,Theory of Programming I,Philosophy,3,30,30,Prof. Rachel Jackson,Tutorial,MW,15:00-16:30,B794,Fall 2024
+2ecd0d0e-9857-4e14-907d-ae7ca586abb7,ENG257,Fundamentals of Database Systems,Engineering,3,30,30,Prof. Joshua Wilson,Seminar,TH,13:30-15:00,A275,Fall 2024
+d6e392fd-ab05-43e9-86cb-fa960dc81fc7,BUS436,Applied Programming,Business Administration,6,30,30,Prof. Emily Harris,Lecture,TTH,13:30-15:00,A403,Fall 2024
+363d7fbe-96c7-4db8-bd38-276c4f98592b,HIS393,Introduction to Systems I,History,6,30,30,Prof. Jane Clark,Lab,MW,08:00-09:30,A344,Fall 2024
+7eadaff2-f9f2-4862-ae8c-1948ce60b795,PSY479,Modern Data Structures,Psychology,6,30,30,Prof. Anthony Davis,Tutorial,TTH,16:30-18:00,A560,Fall 2024
+15f6ab8d-3bf8-431e-b834-10145cbd4b60,HIST186,Advanced Database Systems,History,4,30,30,Prof. Christopher Robinson,Lecture,WF,15:00-16:30,D994,Fall 2024
+581d6240-96ba-4aa4-9bad-a29f942753ee,CSE578,Applied Statistics,Computer Science,4,30,30,Prof. Nicole Jones,Workshop,TH,09:30-11:00,D277,Fall 2024
+29296a16-ad7b-43c6-93b0-20700096c106,LIT347,Contemporary Systems,Literature,4,30,30,Prof. Nicole White,Tutorial,TTH,11:00-12:30,A815,Fall 2024
+0601ca13-e1c7-4418-93d3-755fb7f86155,CHEM501,Practical Data Structures II,Chemistry,3,30,30,Prof. Jennifer Thomas,Tutorial,TH,13:30-15:00,A174,Fall 2024
+6924de70-1e3e-4074-965f-658e14cde7d2,HIST134,Advanced Programming,History,4,30,30,Prof. Samantha Lewis,Seminar,TTH,08:00-09:30,D730,Fall 2024
+fd50ce0f-ed00-4abd-9bc5-3dd6cbf365f2,PHY397,Theory of Systems,Physics,6,30,30,Prof. William Thompson,Workshop,WF,08:00-09:30,D508,Fall 2024
+597c0557-9926-495f-a70e-e46c72c67f7e,STAT348,Introduction to Design,Statistics,4,30,30,Prof. James Lopez,Workshop,TTH,09:30-11:00,C584,Fall 2024
+72f12b46-97f0-4a3a-be6b-8bfd869bf2b7,PSYC115,Practical Data Structures II,Psychology,6,30,30,Prof. Jessica Anderson,Seminar,WF,16:30-18:00,B223,Fall 2024
+edad80e3-6dad-446e-b08e-d3787f436b53,PSY359,Introduction to Data Structures II,Psychology,3,30,30,Prof. Nicole Ramirez,Tutorial,MW,15:00-16:30,C661,Fall 2024
+74e6cc45-9903-445b-9cf3-8962ec3fabf3,CSE447,Modern Database Systems,Computer Science,6,30,30,Prof. Sarah Miller,Lecture,MW,13:30-15:00,B724,Fall 2024
+be2ba651-5de0-4cb4-9de9-bb483aa5d596,CHM171,Contemporary Data Structures III,Chemistry,4,30,30,Prof. Robert Taylor,Seminar,MW,09:30-11:00,A362,Fall 2024
+c183a3cd-e492-4aa4-96ba-7e2a52257caa,BIO443,Classical Database Systems,Biology,4,30,30,Prof. Andrew Harris,Lab,TH,11:00-12:30,C958,Fall 2024
+a026b59d-f1db-43d9-ae06-ddc70fdf63c6,LIT480,Modern Linear Algebra,Literature,3,30,30,Prof. Nicole Sanchez,Lab,MW,08:00-09:30,A131,Fall 2024
+501b3dc5-7927-43fb-a2c5-4622678dc8b9,ECO451,Contemporary Design II,Economics,4,30,30,Prof. David Taylor,Lecture,MW,11:00-12:30,B826,Fall 2024
+cb7d8d0e-7fb6-4860-ba58-89304f59b279,HIS351,Introduction to Calculus I,History,6,30,30,Prof. Ashley Davis,Tutorial,WF,13:30-15:00,C727,Fall 2024
+7c429a86-54cb-4df9-aa47-c9abb9ba4841,PHI312,Modern Data Structures III,Philosophy,6,30,30,Prof. Lauren Williams,Tutorial,MWF,16:30-18:00,B947,Fall 2024
+e56a13f8-2b6c-4563-a643-50161cfd96ed,HIS310,Advanced Algorithms,History,6,30,30,Prof. Robert Garcia,Lecture,TH,08:00-09:30,A258,Fall 2024
+9ba0ca53-5112-46f3-8607-a9f500e78fcb,PHY305,Introduction to Algorithms I,Physics,4,30,30,Prof. Elizabeth White,Lab,TH,15:00-16:30,B605,Fall 2024
+f0be7229-d4a3-4bfc-8f08-8baa5685184d,CALC386,Theory of Statistics,Mathematics,3,30,30,Prof. Megan Brown,Seminar,WF,13:30-15:00,D737,Fall 2024
+4b0f1f23-5754-4b8a-b234-16408b836b83,BIOL483,Advanced Data Structures II,Biology,6,30,30,Prof. Matthew Lopez,Lecture,MW,09:30-11:00,A198,Fall 2024
+04751e7a-dd4a-4266-875c-3b117152c822,PSY113,Practical Algorithms,Psychology,3,30,30,Prof. Michael Anderson,Lab,WF,16:30-18:00,B912,Fall 2024
+fab4af38-fc62-4dba-b5e5-ef12e59b78f7,BUS375,Applied Statistics,Business Administration,3,30,30,Prof. Andrew Rodriguez,Seminar,TH,15:00-16:30,A970,Fall 2024
+1a4276c4-7d30-48b0-895c-d12aab10700d,CSE199,Classical Statistics I,Computer Science,4,30,30,Prof. Jane Martin,Tutorial,TTH,13:30-15:00,A197,Fall 2024
+43832b14-ab3b-42a5-9343-9d64a8bd63cb,LIT565,Applied Linear Algebra,Literature,3,30,30,Prof. Matthew Jackson,Tutorial,TH,11:00-12:30,A849,Fall 2024
+3737b5e5-7abf-41b0-95c9-8681f4ebde73,COMP252,Classical Programming,Computer Science,3,30,30,Prof. Elizabeth Miller,Tutorial,MWF,08:00-09:30,A883,Fall 2024
+5b1ae6e9-90d5-45cf-ab09-b1ef4843cdca,PHI374,Theory of Analysis,Philosophy,3,30,30,Prof. Amy Lewis,Lab,TTH,11:00-12:30,D941,Fall 2024
+40e54a9e-3340-408e-9b36-68c20fd74154,STAT402,Contemporary Systems,Mathematics,6,30,30,Prof. Elizabeth Lopez,Lecture,WF,08:00-09:30,A371,Fall 2024
+ee799f8b-6907-461d-802f-a2db0c0caa93,CHM259,Contemporary Design,Chemistry,3,30,30,Prof. Michael Thomas,Lecture,TTH,15:00-16:30,A355,Fall 2024
+cf9eaaa2-641c-44e3-acd5-6716847c2e49,COMP311,Introduction to Algorithms,Computer Science,4,30,30,Prof. Stephanie Martin,Lab,MW,09:30-11:00,B782,Fall 2024
+d3abd567-defd-4688-8b44-09f6302a1ad7,ECO562,Theory of Database Systems,Economics,6,30,30,Prof. Elizabeth Miller,Lab,WF,13:30-15:00,D565,Fall 2024
+ce8440bf-cc0d-4176-b850-a3292f2720e8,ENGR340,Classical Systems I,Engineering,6,30,30,Prof. Jane Ramirez,Tutorial,MWF,09:30-11:00,A277,Fall 2024

@@ -6,22 +6,22 @@ import (
 	"github.com/spf13/viper"
 )
 
-
 type Config struct {
-	App      AppConfig      `mapstructure:"app"`
-	Server   ServerConfig   `mapstructure:"server"`
-	Database DatabaseConfig `mapstructure:"database"`
-	Cache    CacheConfig    `mapstructure:"cache"`
-	Log      LogConfig      `mapstructure:"log"`
+	App          AppConfig          `mapstructure:"app"`
+	Server       ServerConfig       `mapstructure:"server"`
+	Database     DatabaseConfig     `mapstructure:"database"`
+	Cache        CacheConfig        `mapstructure:"cache"`
+	Queue        QueueConfig        `mapstructure:"queue"`
+	Registration RegistrationConfig `mapstructure:"registration"`
+	Log          LogConfig          `mapstructure:"log"`
 }
-
 
 type AppConfig struct {
 	Name        string `mapstructure:"name"`
 	Version     string `mapstructure:"version"`
 	Environment string `mapstructure:"environment"`
+	Description string `mapstructure:"description"`
 }
-
 
 type ServerConfig struct {
 	Host           string `mapstructure:"host"`
@@ -31,26 +31,45 @@ type ServerConfig struct {
 	MaxHeaderBytes int    `mapstructure:"max_header_bytes"`
 }
 
-
 type DatabaseConfig struct {
-	Driver   string `mapstructure:"driver"`
-	Host     string `mapstructure:"host"`
-	Port     int    `mapstructure:"port"`
-	Username string `mapstructure:"username"`
-	Password string `mapstructure:"password"`
-	Name     string `mapstructure:"name"`
-	SSLMode  string `mapstructure:"ssl_mode"`
+	Driver                 string `mapstructure:"driver"`
+	Host                   string `mapstructure:"host"`
+	Port                   int    `mapstructure:"port"`
+	Username               string `mapstructure:"username"`
+	Password               string `mapstructure:"password"`
+	Name                   string `mapstructure:"name"`
+	SSLMode                string `mapstructure:"ssl_mode"`
+	MaxOpenConns           int    `mapstructure:"max_open_conns"`
+	MaxIdleConns           int    `mapstructure:"max_idle_conns"`
+	ConnMaxLifetimeMinutes int    `mapstructure:"conn_max_lifetime_minutes"`
 }
-
 
 type CacheConfig struct {
-	Type     string `mapstructure:"type"`
-	Host     string `mapstructure:"host"`
-	Port     int    `mapstructure:"port"`
-	Password string `mapstructure:"password"`
-	DB       int    `mapstructure:"db"`
+	Type        string `mapstructure:"type"`
+	Host        string `mapstructure:"host"`
+	Port        int    `mapstructure:"port"`
+	Password    string `mapstructure:"password"`
+	DB          int    `mapstructure:"db"`
+	MaxRetries  int    `mapstructure:"max_retries"`
+	PoolSize    int    `mapstructure:"pool_size"`
+	PoolTimeout int    `mapstructure:"pool_timeout"`
+	IdleTimeout int    `mapstructure:"idle_timeout"`
+	TTLMinutes  int    `mapstructure:"ttl_minutes"`
 }
 
+type QueueConfig struct {
+	Type          string `mapstructure:"type"`
+	BufferSize    int    `mapstructure:"buffer_size"`
+	WorkerCount   int    `mapstructure:"worker_count"`
+	RetryAttempts int    `mapstructure:"retry_attempts"`
+}
+
+type RegistrationConfig struct {
+	MaxCoursesPerStudent         int `mapstructure:"max_courses_per_student"`
+	WaitlistMaxSize              int `mapstructure:"waitlist_max_size"`
+	RegistrationTimeoutMinutes   int `mapstructure:"registration_timeout_minutes"`
+	ConcurrentRegistrationsLimit int `mapstructure:"concurrent_registrations_limit"`
+}
 
 type LogConfig struct {
 	Level  string `mapstructure:"level"`
@@ -60,19 +79,14 @@ type LogConfig struct {
 
 var config *Config
 
-
 func Init() {
 	config = &Config{}
 
-	
 	setDefaults()
-
-	
 	if err := viper.Unmarshal(config); err != nil {
 		log.Fatalf("Unable to decode config: %v", err)
 	}
 }
-
 
 func Get() *Config {
 	if config == nil {
@@ -81,21 +95,18 @@ func Get() *Config {
 	return config
 }
 
-
 func setDefaults() {
-	
+
 	viper.SetDefault("app.name", "cobra-template")
 	viper.SetDefault("app.version", "1.0.0")
 	viper.SetDefault("app.environment", "development")
 
-	
 	viper.SetDefault("server.host", "localhost")
 	viper.SetDefault("server.port", "8080")
 	viper.SetDefault("server.read_timeout", 15)
 	viper.SetDefault("server.write_timeout", 15)
 	viper.SetDefault("server.max_header_bytes", 1048576)
 
-	
 	viper.SetDefault("database.driver", "postgres")
 	viper.SetDefault("database.host", "localhost")
 	viper.SetDefault("database.port", 5432)
@@ -103,15 +114,32 @@ func setDefaults() {
 	viper.SetDefault("database.password", "")
 	viper.SetDefault("database.name", "cobra_template")
 	viper.SetDefault("database.ssl_mode", "disable")
+	viper.SetDefault("database.max_open_conns", 25)
+	viper.SetDefault("database.max_idle_conns", 5)
+	viper.SetDefault("database.conn_max_lifetime_minutes", 30)
 
-	
+	// Cache configuration
 	viper.SetDefault("cache.type", "redis")
 	viper.SetDefault("cache.host", "localhost")
-	viper.SetDefault("cache.port", 6379)
+	viper.SetDefault("cache.port", 6380)
 	viper.SetDefault("cache.password", "")
 	viper.SetDefault("cache.db", 0)
+	viper.SetDefault("cache.max_retries", 3)
+	viper.SetDefault("cache.pool_size", 10)
+	viper.SetDefault("cache.pool_timeout", 30)
+	viper.SetDefault("cache.idle_timeout", 300)
+	viper.SetDefault("cache.ttl_minutes", 60)
 
-	
+	viper.SetDefault("queue.type", "memory")
+	viper.SetDefault("queue.buffer_size", 1000)
+	viper.SetDefault("queue.worker_count", 10)
+	viper.SetDefault("queue.retry_attempts", 3)
+	viper.SetDefault("registration.max_courses_per_student", 6)
+	viper.SetDefault("registration.waitlist_max_size", 50)
+	viper.SetDefault("registration.registration_timeout_minutes", 5)
+	viper.SetDefault("registration.concurrent_registrations_limit", 100)
+
+	// Log configuration
 	viper.SetDefault("log.level", "info")
 	viper.SetDefault("log.format", "json")
 	viper.SetDefault("log.output", "stdout")

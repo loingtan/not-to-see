@@ -13,7 +13,6 @@ import (
 	"gorm.io/gorm"
 )
 
-// NewRegistrationRouter creates a router with the full registration system
 func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 
@@ -22,10 +21,14 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 	r.Use(middleware.Logger())
 	r.Use(cors.Default())
 	r.Use(gin.Recovery())
+
+	// Initialize repositories
 	studentRepo := repository.NewStudentRepository(db)
 	sectionRepo := repository.NewSectionRepository(db)
 	registrationRepo := repository.NewRegistrationRepository(db)
 	waitlistRepo := repository.NewWaitlistRepository(db)
+
+	// Initialize services
 	cacheService := cache.NewRedisCache("localhost:6379", "", 0)
 	queueService := queue.NewInMemoryQueue(1000, 10)
 	registrationService := service.NewRegistrationService(
@@ -46,6 +49,7 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 	r.GET("/ready", healthHandler.ReadinessCheck)
 	r.GET("/live", healthHandler.LivenessCheck)
 
+	// API v1 routes
 	v1 := r.Group("/api/v1")
 	{
 		registration := v1.Group("/register")
@@ -53,9 +57,10 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 			registration.POST("", registrationHandler.Register)
 			registration.POST("/drop", registrationHandler.DropCourse)
 		}
+
 		students := v1.Group("/students")
 		{
-			students.GET("/:student_id/registrations", registrationHandler.GetRegistrations)
+			students.GET("/:student_id/registrations", registrationHandler.GetStudentRegistrations)
 			students.GET("/:student_id/waitlist", registrationHandler.GetWaitlistStatus)
 		}
 
@@ -64,23 +69,6 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 			sections.GET("/available", registrationHandler.GetAvailableSections)
 		}
 	}
-
-	return r
-}
-
-func NewRouter() *gin.Engine {
-	gin.SetMode(gin.ReleaseMode)
-
-	r := gin.New()
-
-	r.Use(middleware.Logger())
-	r.Use(cors.Default())
-	r.Use(gin.Recovery())
-	healthHandler := handlers.NewHealthHandler()
-
-	r.GET("/health", healthHandler.HealthCheck)
-	r.GET("/ready", healthHandler.ReadinessCheck)
-	r.GET("/live", healthHandler.LivenessCheck)
 
 	return r
 }

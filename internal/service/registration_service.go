@@ -3,6 +3,7 @@ package service
 import (
 	domain "cobra-template/internal/domain/registration"
 	interfaces "cobra-template/internal/interfaces/infrastructure"
+	serviceInterfaces "cobra-template/internal/interfaces/service"
 	"cobra-template/pkg/logger"
 	"context"
 	"errors"
@@ -11,6 +12,9 @@ import (
 
 	"github.com/google/uuid"
 )
+
+// Compile-time check to ensure RegistrationService implements the interface
+var _ serviceInterfaces.RegistrationService = (*RegistrationService)(nil)
 
 type RegistrationService struct {
 	studentRepo      interfaces.StudentRepository
@@ -39,21 +43,9 @@ func NewRegistrationService(
 	}
 }
 
-type RegisterRequest struct {
-	StudentID  uuid.UUID   `json:"student_id" validate:"required"`
-	SectionIDs []uuid.UUID `json:"section_ids" validate:"required,min=1"`
-}
-
-type RegisterResponse struct {
-	Results []RegistrationResult `json:"results"`
-}
-
-type RegistrationResult struct {
-	SectionID uuid.UUID `json:"section_id"`
-	Status    string    `json:"status"`
-	Message   string    `json:"message"`
-	Position  *int      `json:"waitlist_position,omitempty"`
-}
+type RegisterRequest = serviceInterfaces.RegisterRequest
+type RegisterResponse = serviceInterfaces.RegisterResponse
+type RegistrationResult = serviceInterfaces.RegistrationResult
 
 func (s *RegistrationService) Register(ctx context.Context, req *RegisterRequest) (*RegisterResponse, error) {
 	logger.Info("Processing registration for student %s with %d sections", req.StudentID, len(req.SectionIDs))
@@ -75,7 +67,6 @@ func (s *RegistrationService) Register(ctx context.Context, req *RegisterRequest
 		result := s.registerForSection(ctx, req.StudentID, sectionID)
 		response.Results = append(response.Results, result)
 	}
-
 	return response, nil
 }
 
@@ -299,4 +290,58 @@ func (s *RegistrationService) processWaitlist(ctx context.Context, sectionID uui
 	}
 
 	return s.queueService.EnqueueRegistration(ctx, registrationJob)
+}
+
+// GetStudentRegistrations retrieves all registrations for a student
+func (s *RegistrationService) GetStudentRegistrations(ctx context.Context, studentID uuid.UUID) ([]*domain.Registration, error) {
+	logger.Info("Getting registrations for student %s", studentID)
+
+	registrations, err := s.registrationRepo.GetByStudentID(ctx, studentID)
+	if err != nil {
+		return nil, fmt.Errorf("failed to get student registrations: %w", err)
+	}
+
+	return registrations, nil
+}
+
+// GetStudentWaitlistStatus retrieves all waitlist entries for a student
+func (s *RegistrationService) GetStudentWaitlistStatus(ctx context.Context, studentID uuid.UUID) ([]*domain.WaitlistEntry, error) {
+	logger.Info("Getting waitlist status for student %s", studentID)
+
+	waitlistEntries, err := s.waitlistRepo.GetByStudentID(ctx, studentID)
+	if err != nil {
+		return nil, fmt.Errorf("failed to get student waitlist status: %w", err)
+	}
+
+	return waitlistEntries, nil
+}
+
+// GetAvailableSections retrieves available sections for a semester, optionally filtered by course
+func (s *RegistrationService) GetAvailableSections(ctx context.Context, semesterID uuid.UUID, courseID *uuid.UUID) ([]*domain.Section, error) {
+	logger.Info("Getting available sections for semester %s", semesterID)
+
+	var sections []*domain.Section
+	var err error
+
+	if courseID != nil {
+		// Get sections for specific course and semester
+		sections, err = s.sectionRepo.GetByCourseAndSemester(ctx, *courseID, semesterID)
+	} else {
+		// Get all sections for semester
+		sections, err = s.sectionRepo.GetBySemester(ctx, semesterID)
+	}
+
+	if err != nil {
+		return nil, fmt.Errorf("failed to get available sections: %w", err)
+	}
+
+	// Filter to only return sections with available seats
+	availableSections := make([]*domain.Section, 0)
+	for _, section := range sections {
+		if section.AvailableSeats > 0 {
+			availableSections = append(availableSections, section)
+		}
+	}
+
+	return availableSections, nil
 }

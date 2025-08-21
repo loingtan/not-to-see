@@ -1,0 +1,6026 @@
+[
+  {
+    "course_id": "54c08202-8cc2-4d21-96be-2a33ab2ddd91",
+    "course_code": "MGMT561",
+    "course_name": "Contemporary Programming III",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Perez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "C208"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "67130a94-d493-419c-af20-1af898944b98",
+    "course_code": "PHY214",
+    "course_name": "Applied Networks",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Martin",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "C716"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d1fcb720-6411-4c1a-bf21-e634233c0cac",
+    "course_code": "CHEM304",
+    "course_name": "Practical Machine Learning I",
+    "department": "Chemistry",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Gonzalez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "C696"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "296f1cfd-58c5-4b55-94a1-52800bd7f85a",
+    "course_code": "CHM256",
+    "course_name": "Modern Data Structures I",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Gonzalez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "C729"
+    },
+    "prerequisites": [
+      "Engineering137"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "cfe005eb-2c80-4089-a8f3-470046cee9fd",
+    "course_code": "BIOL428",
+    "course_name": "Fundamentals of Linear Algebra",
+    "department": "Biology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Brown",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "C683"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "41a35d36-1ba6-4791-85b4-33fab46a8ab1",
+    "course_code": "ENG296",
+    "course_name": "Contemporary Database Systems",
+    "department": "Engineering",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Taylor",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "D690"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "aee4a27f-e9ae-469c-9b97-fd0705508266",
+    "course_code": "ENG381",
+    "course_name": "Classical Statistics",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Martinez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "B298"
+    },
+    "prerequisites": [
+      "Statistics137"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "82b720af-d107-45ed-b23c-a109b3342e60",
+    "course_code": "HIS306",
+    "course_name": "Introduction to Statistics",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Brown",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "D495"
+    },
+    "prerequisites": [
+      "Biology154"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8fdb81f5-cecf-411a-b877-22f185f579a5",
+    "course_code": "ENGR560",
+    "course_name": "Practical Calculus",
+    "department": "Engineering",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Sanchez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "C597"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e651145f-0a94-4190-a786-aefde0b3d94b",
+    "course_code": "PHI491",
+    "course_name": "Contemporary Database Systems",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Jackson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "C522"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "34b89614-1c39-454a-9eb6-9db868df6dc3",
+    "course_code": "PHIL448",
+    "course_name": "Theory of Programming II",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Gonzalez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "B752"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f3de43e6-3d43-4f60-9e3e-3500619c0894",
+    "course_code": "BIO503",
+    "course_name": "Practical Analysis II",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Lewis",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "A384"
+    },
+    "prerequisites": [
+      "Engineering181"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "435fc910-83ec-408c-8210-53d643e10d71",
+    "course_code": "PHI148",
+    "course_name": "Practical Calculus",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Taylor",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "C954"
+    },
+    "prerequisites": [
+      "Business Administration218"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4fd323ea-5ac6-4f34-9ab5-4184a73767f6",
+    "course_code": "ENG458",
+    "course_name": "Fundamentals of Database Systems",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Robinson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "A388"
+    },
+    "prerequisites": [
+      "Mathematics132"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "936b044d-b6e9-4fbb-a8f9-f276e3757354",
+    "course_code": "STAT191",
+    "course_name": "Fundamentals of Research Methods III",
+    "department": "Mathematics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Ramirez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "A371"
+    },
+    "prerequisites": [
+      "Psychology251"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "1485cc80-556d-46e6-8e14-cc99944ce45d",
+    "course_code": "CHM224",
+    "course_name": "Contemporary Machine Learning II",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Lewis",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "B303"
+    },
+    "prerequisites": [
+      "Biology140"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "0296b766-7924-49e1-a739-31a0fc548d39",
+    "course_code": "LIT239",
+    "course_name": "Fundamentals of Linear Algebra II",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew White",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "D434"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "29ca408a-8b08-4e00-9e4d-ea24912a8413",
+    "course_code": "BUS159",
+    "course_name": "Applied Networks",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Clark",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "A631"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "32143589-d666-4b92-b938-bd176c45b93e",
+    "course_code": "ENG462",
+    "course_name": "Fundamentals of Research Methods",
+    "department": "Engineering",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Jones",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "C164"
+    },
+    "prerequisites": [
+      "Mathematics144"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "706536de-c85f-4653-b78f-6c1e1f320ee0",
+    "course_code": "PHIL239",
+    "course_name": "Contemporary Linear Algebra",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Jones",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "B914"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9acb65b5-63ec-43fa-800d-394c446fef99",
+    "course_code": "PHI477",
+    "course_name": "Introduction to Algorithms",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Clark",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "15:00-16:30",
+      "room": "A384"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "aacf62ad-105d-4fc7-a880-38d21df67544",
+    "course_code": "PSY545",
+    "course_name": "Modern Networks",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Gonzalez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "A619"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8c7bd57a-7229-41e8-9ef5-91f6b5fed121",
+    "course_code": "BIO159",
+    "course_name": "Practical Programming III",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Brown",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "D333"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5f2d5400-5d56-4ed1-a9fb-3d72e037e907",
+    "course_code": "ENG585",
+    "course_name": "Fundamentals of Machine Learning I",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Davis",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "D692"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "18f710c6-9ad4-48d4-a33f-c36aa1dad5f2",
+    "course_code": "PSY372",
+    "course_name": "Classical Statistics",
+    "department": "Psychology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Lewis",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "A923"
+    },
+    "prerequisites": [
+      "Business Administration160"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a840a233-120f-4c5b-bce5-16294cefd0b7",
+    "course_code": "BUS562",
+    "course_name": "Classical Algorithms",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Perez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "C759"
+    },
+    "prerequisites": [
+      "Engineering193"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d076be25-bf5a-47b6-8038-74e012808a30",
+    "course_code": "PHIL425",
+    "course_name": "Fundamentals of Statistics",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Perez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "C116"
+    },
+    "prerequisites": [
+      "Physics142"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2eed2132-3c7a-4924-b92f-0ca1d71c1533",
+    "course_code": "PSY193",
+    "course_name": "Introduction to Database Systems",
+    "department": "Psychology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Johnson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "B945"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "aa3838b4-4500-4c19-b65c-75925d9711e3",
+    "course_code": "BIOL496",
+    "course_name": "Applied Database Systems I",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Davis",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "C820"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ffc1540d-489f-48d3-9369-3de3cf5264cf",
+    "course_code": "HIST333",
+    "course_name": "Advanced Database Systems",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. John Garcia",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "C255"
+    },
+    "prerequisites": [
+      "Biology268"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "21ec7ef8-41f2-4702-bc8e-5e22dc95580e",
+    "course_code": "STAT292",
+    "course_name": "Theory of Calculus",
+    "department": "Statistics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Gonzalez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "15:00-16:30",
+      "room": "B677"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8798bb4e-6c5d-45e8-bb56-ea2667c8e85e",
+    "course_code": "PSY297",
+    "course_name": "Practical Algorithms",
+    "department": "Psychology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Clark",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "B218"
+    },
+    "prerequisites": [
+      "Economics191"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "cff17f25-1c0a-4b3d-ae5e-a43b11f48f5f",
+    "course_code": "PHY129",
+    "course_name": "Advanced Calculus",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Ramirez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "A743"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9288419a-6115-47ac-9f4e-d6fcba465da1",
+    "course_code": "ENG416",
+    "course_name": "Classical Calculus II",
+    "department": "Engineering",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Davis",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "D299"
+    },
+    "prerequisites": [
+      "History115"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ddfaf99a-dedd-4fdf-9360-5fa283597b2d",
+    "course_code": "LIT377",
+    "course_name": "Modern Database Systems",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Lewis",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "B653"
+    },
+    "prerequisites": [
+      "Computer Science111"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d5fc9aec-2d69-475d-9e17-3330a2f1e2ad",
+    "course_code": "CS322",
+    "course_name": "Practical Database Systems II",
+    "department": "Computer Science",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Hernandez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "B180"
+    },
+    "prerequisites": [
+      "Biology165"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "3f95c27e-608c-41a7-b1b2-0aaaa1f6e104",
+    "course_code": "BIOL567",
+    "course_name": "Practical Design",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah White",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "C851"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "719edad5-761b-4387-b2f4-bbdb641ccf1c",
+    "course_code": "PHI584",
+    "course_name": "Contemporary Programming I",
+    "department": "Philosophy",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Gonzalez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "D886"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "302ee05d-3c4b-4e07-8d2f-76ac430b4c66",
+    "course_code": "ENG511",
+    "course_name": "Applied Networks",
+    "department": "Engineering",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Brown",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "C397"
+    },
+    "prerequisites": [
+      "Statistics150"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "671fb846-169a-4c75-a930-0bb93b2a1589",
+    "course_code": "COMP285",
+    "course_name": "Modern Calculus II",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Perez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "C894"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "0e0ca811-01ee-4c2b-ada7-402b70064fc4",
+    "course_code": "ECON359",
+    "course_name": "Introduction to Database Systems III",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Moore",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "B222"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "42ed31e7-a924-430a-ac35-6ffdc2f59a8f",
+    "course_code": "BIO352",
+    "course_name": "Theory of Linear Algebra",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Miller",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "B919"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b3d5b979-a242-476c-b6ce-de9a842948f4",
+    "course_code": "HIS551",
+    "course_name": "Modern Systems",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Lee",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "C861"
+    },
+    "prerequisites": [
+      "Statistics255"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ca030be4-7fb2-4aca-a68f-c0f39d8f9f70",
+    "course_code": "CALC206",
+    "course_name": "Applied Analysis III",
+    "department": "Mathematics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Miller",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "A973"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "efcf1878-2f87-4764-822b-e13d37967245",
+    "course_code": "CHM341",
+    "course_name": "Modern Database Systems",
+    "department": "Chemistry",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Ramirez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "B683"
+    },
+    "prerequisites": [
+      "History134"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4f7e4d1b-c01c-4533-8320-d0bc75c977a9",
+    "course_code": "CS551",
+    "course_name": "Applied Database Systems III",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Thompson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "A315"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "0d50ed4c-ca7b-4e8a-9a9f-f914cc1b1b00",
+    "course_code": "CHM264",
+    "course_name": "Introduction to Networks III",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Sanchez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "A383"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "290dca8c-50f8-4390-b133-b945f2cce1bc",
+    "course_code": "PSYC457",
+    "course_name": "Applied Database Systems",
+    "department": "Psychology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Johnson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "D563"
+    },
+    "prerequisites": [
+      "Business Administration126"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4a1e13af-d7be-4e96-8bc7-2ba73e98a6e4",
+    "course_code": "ECO523",
+    "course_name": "Modern Statistics",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Johnson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "B694"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b70c415b-7483-45f0-a028-d2f5ff2894a0",
+    "course_code": "BUS399",
+    "course_name": "Contemporary Data Structures",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Christopher Sanchez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "A507"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e63b3c31-b4d9-49a5-96c8-af4e854fd09f",
+    "course_code": "CHEM480",
+    "course_name": "Classical Systems",
+    "department": "Chemistry",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Jones",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "D868"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7fc158c1-adc1-40ec-84cc-2034df2eb98c",
+    "course_code": "MGMT483",
+    "course_name": "Advanced Systems",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Wilson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "A551"
+    },
+    "prerequisites": [
+      "Psychology109"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "43753e67-a9da-4b83-956c-e005036f7e54",
+    "course_code": "STA240",
+    "course_name": "Advanced Programming",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Martin",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "D232"
+    },
+    "prerequisites": [
+      "Psychology129"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6d7a439c-1856-4f9a-8dc2-59fb440e3b32",
+    "course_code": "CHEM361",
+    "course_name": "Practical Linear Algebra",
+    "department": "Chemistry",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Martin",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "D417"
+    },
+    "prerequisites": [
+      "Philosophy257"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "1ea11aa0-47a7-4a94-b5bb-324d70133af3",
+    "course_code": "PHYS336",
+    "course_name": "Practical Networks",
+    "department": "Physics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Thomas",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "D695"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "735d2a45-b5ee-4a68-b045-4b878f28353c",
+    "course_code": "CHM505",
+    "course_name": "Practical Networks",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Harris",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "C964"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c2a6de0d-592b-497a-ac53-3a03c27c1136",
+    "course_code": "ENG499",
+    "course_name": "Fundamentals of Research Methods II",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Robinson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "A772"
+    },
+    "prerequisites": [
+      "Economics117"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4ef561c7-d8bd-4383-8271-a6f78cc130ea",
+    "course_code": "PHIL458",
+    "course_name": "Fundamentals of Systems",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Lee",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "D317"
+    },
+    "prerequisites": [
+      "Biology172"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ee622b2e-8846-473a-abc9-6ebf4e72d834",
+    "course_code": "LIT504",
+    "course_name": "Classical Calculus II",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. John Lee",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "A291"
+    },
+    "prerequisites": [
+      "Engineering196"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "960bd476-72e3-4ee6-9dbb-123d62ed1f86",
+    "course_code": "CHEM577",
+    "course_name": "Modern Calculus",
+    "department": "Chemistry",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Ramirez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "B143"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2a0b1c67-881d-44e4-a9a4-47240d492c7a",
+    "course_code": "ENGR264",
+    "course_name": "Theory of Machine Learning I",
+    "department": "Engineering",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Moore",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "D832"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5fc07205-d05c-4287-98d0-cc61581e5f30",
+    "course_code": "HIST189",
+    "course_name": "Modern Design",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Lee",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "C903"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6fa8e210-29b3-4068-b8cd-78916756b3bb",
+    "course_code": "PHIL237",
+    "course_name": "Introduction to Systems",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica White",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "B477"
+    },
+    "prerequisites": [
+      "Computer Science217"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "10d1848e-dec6-4899-85b1-3d8b678f8c2e",
+    "course_code": "PHYS222",
+    "course_name": "Applied Database Systems",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Moore",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "15:00-16:30",
+      "room": "A936"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "bb2d2ba7-f50d-4245-8e6a-378610b825ed",
+    "course_code": "BUS258",
+    "course_name": "Applied Programming",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Wilson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "A345"
+    },
+    "prerequisites": [
+      "Computer Science113"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "3db7f756-ae94-4ee1-817c-0d6111dedf4f",
+    "course_code": "PHI361",
+    "course_name": "Theory of Database Systems II",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Hernandez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "B433"
+    },
+    "prerequisites": [
+      "Mathematics186"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8a523152-48ea-41ed-a48e-44adece7c2de",
+    "course_code": "HIS235",
+    "course_name": "Theory of Systems",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Hernandez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "C201"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7d87e020-7f1a-42d0-9110-773553749d0b",
+    "course_code": "LIT144",
+    "course_name": "Contemporary Algorithms",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Moore",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "B848"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2da9a5f1-4741-4428-84f4-fc743fe74dfc",
+    "course_code": "STA197",
+    "course_name": "Theory of Database Systems",
+    "department": "Statistics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Harris",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "A789"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "364c93a5-5bdb-49a9-959c-1a0a759aeaf0",
+    "course_code": "CHM439",
+    "course_name": "Contemporary Design II",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Mark White",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "B788"
+    },
+    "prerequisites": [
+      "Economics264"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "96cda7e2-2998-4a58-a8a3-85804147f302",
+    "course_code": "ECO251",
+    "course_name": "Theory of Machine Learning",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Perez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "D711"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "68478bfc-29ae-4d84-973f-f3f27ecd0bfd",
+    "course_code": "ECON529",
+    "course_name": "Contemporary Statistics",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Garcia",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "D305"
+    },
+    "prerequisites": [
+      "Psychology162"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "35d1d6ae-7262-45d7-b9e2-44b35d95c688",
+    "course_code": "PHYS180",
+    "course_name": "Classical Networks",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Mark Jackson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "B499"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "84b0e626-5601-46fd-a349-6a9e7ee912d8",
+    "course_code": "STAT186",
+    "course_name": "Introduction to Research Methods",
+    "department": "Mathematics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Rodriguez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "A167"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5d17c256-f148-4d6f-ba37-f22ef9c4f941",
+    "course_code": "PSY517",
+    "course_name": "Classical Machine Learning I",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Miller",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "B553"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "bebb2e57-5214-4d31-a5cc-e10ea24ebe43",
+    "course_code": "MGMT218",
+    "course_name": "Introduction to Database Systems",
+    "department": "Business Administration",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Jones",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "C286"
+    },
+    "prerequisites": [
+      "Literature287"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "fac679bc-1f04-4834-887f-da0033fae1a8",
+    "course_code": "ECON517",
+    "course_name": "Fundamentals of Programming",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Harris",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "D556"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b28b0bdc-1052-40e5-b0d3-8255168d09b6",
+    "course_code": "ENG113",
+    "course_name": "Theory of Linear Algebra",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Lee",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "D974"
+    },
+    "prerequisites": [
+      "Literature169"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b54eaa28-9edf-471f-bcbf-ec1ff51c6a6c",
+    "course_code": "CHEM598",
+    "course_name": "Practical Calculus",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer White",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "C824"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2ee550ab-623c-49d0-b5e5-d2f95304c278",
+    "course_code": "HIS498",
+    "course_name": "Modern Machine Learning I",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Robinson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "C912"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "031ec556-70a9-4d16-a10e-619bd05b2649",
+    "course_code": "PSY526",
+    "course_name": "Advanced Programming II",
+    "department": "Psychology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Brown",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "B182"
+    },
+    "prerequisites": [
+      "Computer Science128"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "128bed6a-16be-40d7-8a5b-85e339cd2081",
+    "course_code": "BIO240",
+    "course_name": "Modern Systems",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Jackson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "09:30-11:00",
+      "room": "C629"
+    },
+    "prerequisites": [
+      "Biology210"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c6b3bb1f-c0c1-4ef8-ab72-6adec65c1579",
+    "course_code": "HIST582",
+    "course_name": "Fundamentals of Linear Algebra III",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Miller",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "B410"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6814b039-939f-40d4-88e0-c7304aca52d4",
+    "course_code": "LIT238",
+    "course_name": "Practical Algorithms",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Thomas",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "B729"
+    },
+    "prerequisites": [
+      "Biology257"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e53d8bb7-00a7-4a2c-b121-013784db8c1e",
+    "course_code": "PSYC206",
+    "course_name": "Modern Data Structures I",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. John Thomas",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "B752"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5360df72-e6e0-42a4-989d-a058a9c0cd46",
+    "course_code": "BIOL361",
+    "course_name": "Applied Systems",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Gonzalez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "A877"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "bb6369ea-df85-4b48-8022-e1d892405d5b",
+    "course_code": "BUS401",
+    "course_name": "Theory of Machine Learning",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Thompson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "D713"
+    },
+    "prerequisites": [
+      "Business Administration144"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "37963f4f-f254-477f-85a1-317f5cd2bd9e",
+    "course_code": "STA279",
+    "course_name": "Modern Calculus",
+    "department": "Statistics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Paul Taylor",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "C384"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7ea1c7f4-1c5f-494c-a0f3-53390d1dcda6",
+    "course_code": "ECON388",
+    "course_name": "Practical Design I",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Brown",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "A277"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d6a3e6e9-a816-40b5-b29c-dfab62b71c6a",
+    "course_code": "LIT239",
+    "course_name": "Practical Algorithms I",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Martinez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "C295"
+    },
+    "prerequisites": [
+      "Literature209"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "0be310a7-c69e-41a4-a140-db2377581a66",
+    "course_code": "CSE295",
+    "course_name": "Practical Systems",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Sanchez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "C913"
+    },
+    "prerequisites": [
+      "Economics184"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "41b64ed4-d958-4164-85ca-349a82822f7e",
+    "course_code": "PHYS286",
+    "course_name": "Classical Networks",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Sanchez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "A268"
+    },
+    "prerequisites": [
+      "Philosophy268"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b6d1bf34-9323-438f-a013-31d3af48de2d",
+    "course_code": "ECON189",
+    "course_name": "Contemporary Research Methods",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Anderson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "B137"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "426d5f57-d2f9-4c12-a3ae-1987730370bb",
+    "course_code": "PHY143",
+    "course_name": "Contemporary Analysis I",
+    "department": "Physics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Thomas",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "A232"
+    },
+    "prerequisites": [
+      "Engineering236"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "3234550d-dfd8-4ce5-a1ad-3e79c2196eb6",
+    "course_code": "MGMT506",
+    "course_name": "Theory of Database Systems",
+    "department": "Business Administration",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Sanchez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "C830"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9a895e46-5c65-4a60-a8e4-1ee290f202f2",
+    "course_code": "CS395",
+    "course_name": "Contemporary Machine Learning II",
+    "department": "Computer Science",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Martinez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "C901"
+    },
+    "prerequisites": [
+      "Mathematics168"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "32334fcf-9e78-41ae-a255-dc06fcda33a4",
+    "course_code": "MATH259",
+    "course_name": "Advanced Data Structures",
+    "department": "Mathematics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Paul Martin",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "D956"
+    },
+    "prerequisites": [
+      "Philosophy121"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e132a90b-3656-49d6-b7f5-a38b58811d91",
+    "course_code": "STAT482",
+    "course_name": "Modern Database Systems",
+    "department": "Statistics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Thomas",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "B635"
+    },
+    "prerequisites": [
+      "Chemistry172"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "65d2c83a-2e2d-4dfe-b2eb-def84ff2f3c4",
+    "course_code": "PHYS350",
+    "course_name": "Theory of Linear Algebra",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Sanchez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "15:00-16:30",
+      "room": "D987"
+    },
+    "prerequisites": [
+      "Business Administration170"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e410b1fa-1d89-4e0f-a78b-7e6746262f3b",
+    "course_code": "CS567",
+    "course_name": "Introduction to Database Systems",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Ramirez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "A774"
+    },
+    "prerequisites": [
+      "Literature170"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a42300b5-6e99-4d00-8872-029c0f0734c8",
+    "course_code": "CALC384",
+    "course_name": "Theory of Database Systems",
+    "department": "Mathematics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Rodriguez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "A334"
+    },
+    "prerequisites": [
+      "Engineering120"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ba21e0d8-c69e-4af8-97f2-b7af61efa481",
+    "course_code": "ENG273",
+    "course_name": "Theory of Calculus",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven White",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "C247"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "cc46b8fc-8e48-4ae2-a21d-6e6f978d6c8d",
+    "course_code": "HIST182",
+    "course_name": "Applied Calculus",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Miller",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "C866"
+    },
+    "prerequisites": [
+      "Engineering254"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "3506101e-f069-4ff2-9ca1-cb4c989513b8",
+    "course_code": "CSE395",
+    "course_name": "Modern Research Methods",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. John Johnson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "B850"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5cca26c0-257a-4e34-b76d-25dd1996282c",
+    "course_code": "HIST454",
+    "course_name": "Practical Linear Algebra",
+    "department": "History",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Davis",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "C557"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "79473bec-ad17-4445-81d5-8ea63208e260",
+    "course_code": "PHI395",
+    "course_name": "Classical Research Methods",
+    "department": "Philosophy",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Wilson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "B117"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4eec4b79-2d84-4c37-b984-515b5a519d50",
+    "course_code": "CSE422",
+    "course_name": "Applied Networks",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Garcia",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "D722"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2e116f96-5aac-4935-9341-14a56c4e74b9",
+    "course_code": "BIOL507",
+    "course_name": "Fundamentals of Calculus",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Wilson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "D286"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c0a11eff-b7db-4e7d-9e45-f32af59d31f2",
+    "course_code": "PSY105",
+    "course_name": "Applied Networks",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Lopez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "C168"
+    },
+    "prerequisites": [
+      "Computer Science142"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c59d1b76-e132-4922-9fff-599d25ee4c9d",
+    "course_code": "BIO303",
+    "course_name": "Modern Research Methods",
+    "department": "Biology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Harris",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "A207"
+    },
+    "prerequisites": [
+      "Psychology155"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7a3d06e2-3064-4c07-95bb-8013d9fdfdcf",
+    "course_code": "LIT203",
+    "course_name": "Practical Algorithms",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Jones",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "C787"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "1db8fc50-bf69-417a-b85a-3989363d7813",
+    "course_code": "CSE549",
+    "course_name": "Introduction to Database Systems III",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Gonzalez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "D871"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "890209b8-ec6c-457c-b72d-f71db9f74116",
+    "course_code": "PHI268",
+    "course_name": "Advanced Linear Algebra III",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Thompson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "B943"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "27f1f095-e734-42b6-b2cd-5f405233ab6b",
+    "course_code": "LIT307",
+    "course_name": "Advanced Linear Algebra",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Hernandez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "C809"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "55432507-a1b9-4164-b6d8-53df72ba73fc",
+    "course_code": "LIT380",
+    "course_name": "Advanced Networks",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Brown",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "A799"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e97b7139-339f-45a8-bff0-34fbe82fcb7b",
+    "course_code": "BUS494",
+    "course_name": "Introduction to Research Methods",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Paul Taylor",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "C903"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "41b88df9-03ff-47e9-af7e-4626c1a690b2",
+    "course_code": "PSY229",
+    "course_name": "Practical Linear Algebra",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Davis",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "B778"
+    },
+    "prerequisites": [
+      "Economics283"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9146d141-67d0-470b-9b88-48971cacc6de",
+    "course_code": "HIST145",
+    "course_name": "Practical Machine Learning",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Moore",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "C279"
+    },
+    "prerequisites": [
+      "Economics131"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "68a559a5-33e8-4326-82dc-defe442de385",
+    "course_code": "HIST208",
+    "course_name": "Modern Data Structures",
+    "department": "History",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Sanchez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "B213"
+    },
+    "prerequisites": [
+      "History130"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "92a66cf7-4b8e-4e41-a397-738cf7f49cd1",
+    "course_code": "MGMT211",
+    "course_name": "Contemporary Data Structures",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Sanchez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "A675"
+    },
+    "prerequisites": [
+      "Engineering283"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "52c18242-935c-4417-9b66-d110e09bbbda",
+    "course_code": "ENGR171",
+    "course_name": "Theory of Systems I",
+    "department": "Engineering",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Lauren Harris",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "A234"
+    },
+    "prerequisites": [
+      "Business Administration154"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "06eff49c-5a2c-4cfa-b962-cfc3c3e286d0",
+    "course_code": "ECON191",
+    "course_name": "Introduction to Machine Learning",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Miller",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "A463"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "199c2166-1592-44b9-836f-9a9c286b0487",
+    "course_code": "PHI171",
+    "course_name": "Introduction to Statistics I",
+    "department": "Philosophy",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Lee",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "D189"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "347f3484-b6dc-44c9-ae28-9ccb15de01c6",
+    "course_code": "CHM353",
+    "course_name": "Contemporary Data Structures I",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Jackson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "C893"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "afd7d4e8-c866-49df-a4c5-01c20ae83cc8",
+    "course_code": "BIOL320",
+    "course_name": "Modern Algorithms",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amanda Jones",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "D831"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5867b7f7-1064-447b-8fb8-5b13c61ce6d7",
+    "course_code": "HIS451",
+    "course_name": "Advanced Design",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Robinson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "A965"
+    },
+    "prerequisites": [
+      "Computer Science150"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c52fa7cd-690d-447b-86f1-f3196c9b6437",
+    "course_code": "PHY321",
+    "course_name": "Introduction to Machine Learning I",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Lopez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "C365"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "67e1ab79-1b46-44d0-954b-1238c5c43e80",
+    "course_code": "ECON255",
+    "course_name": "Classical Analysis",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Rodriguez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "C890"
+    },
+    "prerequisites": [
+      "Mathematics115"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "98926eab-cded-42a9-8352-f6528bc0cb52",
+    "course_code": "CHM249",
+    "course_name": "Classical Data Structures",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Thompson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "B171"
+    },
+    "prerequisites": [
+      "Physics118"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "95904048-dcfe-498a-941b-473728c4c3fe",
+    "course_code": "ECO583",
+    "course_name": "Modern Analysis",
+    "department": "Economics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Ramirez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "C352"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2c080187-5d22-42ba-92a8-41c8c6aac5e0",
+    "course_code": "ECO434",
+    "course_name": "Modern Database Systems",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Clark",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "D984"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ee064772-4068-4cce-954b-c86067c09f06",
+    "course_code": "ENG334",
+    "course_name": "Classical Programming",
+    "department": "Engineering",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Mark Moore",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "C185"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4b0a2fc2-a25d-427f-99d9-920511acd7ee",
+    "course_code": "BIO435",
+    "course_name": "Applied Analysis",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Lauren Wilson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "A937"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f5487430-f4c9-4123-8e22-cbcbd1962d98",
+    "course_code": "MGMT385",
+    "course_name": "Practical Machine Learning",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Davis",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "C717"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "01bbef1b-35e5-4799-917d-fe6e3205bfcf",
+    "course_code": "ECO254",
+    "course_name": "Fundamentals of Programming I",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Anderson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "D488"
+    },
+    "prerequisites": [
+      "Economics177"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "82409a97-2e9e-4c81-8403-0720e6510f3b",
+    "course_code": "PHIL478",
+    "course_name": "Practical Analysis",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Jackson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "B121"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2b9c9d5c-16bf-4aec-8a62-bec15735b509",
+    "course_code": "ENGR230",
+    "course_name": "Fundamentals of Database Systems",
+    "department": "Engineering",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Robinson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "C429"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4f2bf2d5-c687-4286-b64e-96a1a59846b7",
+    "course_code": "PSY291",
+    "course_name": "Classical Networks",
+    "department": "Psychology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. John Anderson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "D553"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "132eed40-c72b-4c5c-b4a3-4b19390061e4",
+    "course_code": "STA437",
+    "course_name": "Advanced Analysis",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Jones",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "A252"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "1a0af523-449b-4c85-97fb-1e160c28f07f",
+    "course_code": "HIST461",
+    "course_name": "Classical Linear Algebra III",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Sanchez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "A522"
+    },
+    "prerequisites": [
+      "Psychology258"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "bff6ef37-835a-4221-9b8e-fdeb2392ac20",
+    "course_code": "MGMT245",
+    "course_name": "Introduction to Statistics",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Smith",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "C425"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b3188481-66be-453f-9aa3-79790c6c2309",
+    "course_code": "BIO159",
+    "course_name": "Introduction to Systems I",
+    "department": "Biology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Taylor",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "A198"
+    },
+    "prerequisites": [
+      "Chemistry196"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a001b325-68f6-4065-8f9b-bedf6596a67f",
+    "course_code": "STA482",
+    "course_name": "Fundamentals of Networks",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amanda Hernandez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "A843"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7998dff4-6e04-4cd5-8cf8-34dd4a5568e1",
+    "course_code": "MGMT435",
+    "course_name": "Classical Programming",
+    "department": "Business Administration",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Rodriguez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "A164"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b28e1cd0-a8b5-4c07-a7bb-aa59c37d422b",
+    "course_code": "BIO532",
+    "course_name": "Applied Machine Learning II",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Lopez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "C702"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f56a5797-7e45-4c86-a77e-70c5204345ff",
+    "course_code": "PSYC446",
+    "course_name": "Fundamentals of Database Systems",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Rodriguez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "C959"
+    },
+    "prerequisites": [
+      "Physics247"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9be9ae8a-c6a9-4178-8b07-ff7314495a09",
+    "course_code": "BIO388",
+    "course_name": "Modern Calculus",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Clark",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "B748"
+    },
+    "prerequisites": [
+      "Economics221"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "80d37764-452c-48bc-aec7-a991fc3591a7",
+    "course_code": "CHEM514",
+    "course_name": "Practical Algorithms",
+    "department": "Chemistry",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Johnson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "D487"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "182d4390-a39c-473f-a906-82315bb80184",
+    "course_code": "STAT269",
+    "course_name": "Advanced Calculus",
+    "department": "Mathematics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Wilson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "D469"
+    },
+    "prerequisites": [
+      "Physics290"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c0b2813b-226f-4dbb-aefd-c44e4be84dd8",
+    "course_code": "CS213",
+    "course_name": "Classical Design",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Clark",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "D245"
+    },
+    "prerequisites": [
+      "History250"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "937f8f2b-76ff-4736-a5e6-7d4820330924",
+    "course_code": "ENG316",
+    "course_name": "Classical Database Systems",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Lee",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "A425"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f33898ec-daa2-472f-a649-d58a6aa9f852",
+    "course_code": "BIO287",
+    "course_name": "Contemporary Algorithms",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Martinez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "A720"
+    },
+    "prerequisites": [
+      "Mathematics139"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "78001160-332d-4425-9a77-e2c12f2e5a22",
+    "course_code": "STA261",
+    "course_name": "Applied Design",
+    "department": "Statistics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Clark",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "A966"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "bb26a9e9-8c90-405c-85ed-302902c8c9c8",
+    "course_code": "STAT400",
+    "course_name": "Practical Machine Learning",
+    "department": "Mathematics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Davis",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "A125"
+    },
+    "prerequisites": [
+      "Philosophy296"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "288e86ff-a425-467f-a289-295b56b93ad4",
+    "course_code": "PHYS597",
+    "course_name": "Classical Algorithms",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Clark",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "15:00-16:30",
+      "room": "D892"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "31481422-491a-447b-962c-79fce169788f",
+    "course_code": "LIT495",
+    "course_name": "Applied Linear Algebra",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. John Lewis",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "C841"
+    },
+    "prerequisites": [
+      "Chemistry153"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "21f19aea-aa83-4919-b375-a177ee5f58c7",
+    "course_code": "PHY441",
+    "course_name": "Advanced Database Systems",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Clark",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "D598"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a323d753-476b-439e-97ae-e0c5974ddde7",
+    "course_code": "HIST206",
+    "course_name": "Modern Calculus",
+    "department": "History",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Anderson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "A990"
+    },
+    "prerequisites": [
+      "Computer Science280"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "1050db9f-2731-4d70-ab19-a5e2009f05ab",
+    "course_code": "STAT553",
+    "course_name": "Fundamentals of Algorithms I",
+    "department": "Statistics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Sanchez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "D425"
+    },
+    "prerequisites": [
+      "Engineering279"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b4fd4734-e05a-422f-af08-1117cc8d137c",
+    "course_code": "CHM551",
+    "course_name": "Introduction to Machine Learning",
+    "department": "Chemistry",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Lopez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "C398"
+    },
+    "prerequisites": [
+      "History139"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f3d313c0-40cd-4ba8-8e1d-9eb7e02760b7",
+    "course_code": "PHY528",
+    "course_name": "Advanced Programming",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Johnson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "C197"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4d566293-e685-4378-bcbb-7b5aa96ca74f",
+    "course_code": "CHM278",
+    "course_name": "Advanced Linear Algebra I",
+    "department": "Chemistry",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Martinez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "D837"
+    },
+    "prerequisites": [
+      "Psychology109"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2d7b600b-ffc3-4005-a12f-8863bf183339",
+    "course_code": "BIOL424",
+    "course_name": "Theory of Calculus I",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Lee",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "C504"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "0367188d-f012-4542-9eb8-974b9cf6b974",
+    "course_code": "PHY291",
+    "course_name": "Advanced Linear Algebra III",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Davis",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "D691"
+    },
+    "prerequisites": [
+      "Computer Science145"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6c8ebb42-6fb7-4edd-badc-99227f558fb8",
+    "course_code": "HIST121",
+    "course_name": "Introduction to Research Methods",
+    "department": "History",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Robinson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "C110"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "644447c4-8e1d-4424-9b67-5e9031a49c33",
+    "course_code": "ECON341",
+    "course_name": "Contemporary Algorithms III",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Lee",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "A586"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "80567195-eaed-4c62-a520-119279c66502",
+    "course_code": "LIT222",
+    "course_name": "Applied Calculus",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Lee",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "C520"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9357541a-a879-46b7-8be8-d7fe412a9454",
+    "course_code": "PHIL189",
+    "course_name": "Fundamentals of Analysis II",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Williams",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "D895"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b8d9831e-d8b1-4e33-a214-f5e4cecf6e5f",
+    "course_code": "ENG310",
+    "course_name": "Fundamentals of Database Systems",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Rodriguez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "D693"
+    },
+    "prerequisites": [
+      "Biology287"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f33f40d7-b096-40a6-b28c-eee433533a71",
+    "course_code": "PHY224",
+    "course_name": "Modern Systems",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Thompson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "A335"
+    },
+    "prerequisites": [
+      "Biology192"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "27d5a06a-e796-42c1-97c2-b91881b5aaa8",
+    "course_code": "PHYS477",
+    "course_name": "Practical Algorithms",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Mark Perez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "D156"
+    },
+    "prerequisites": [
+      "Psychology160"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "84f53e52-553c-4ff2-bd45-ad1adea841c2",
+    "course_code": "STAT413",
+    "course_name": "Fundamentals of Design",
+    "department": "Mathematics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Lewis",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "B796"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ea92c84a-5719-4cb7-afee-b6e10c53360a",
+    "course_code": "PSY447",
+    "course_name": "Advanced Machine Learning",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Moore",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "B408"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d6ba047e-03e7-46f4-b56d-f4ca3aed811a",
+    "course_code": "CALC326",
+    "course_name": "Fundamentals of Networks",
+    "department": "Mathematics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Miller",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "A635"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "63e5f758-8143-4f25-8d06-f550052a2630",
+    "course_code": "PSYC437",
+    "course_name": "Fundamentals of Statistics",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amanda Harris",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "A512"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4e22e625-783d-4a56-930e-b0628b79882a",
+    "course_code": "PHIL285",
+    "course_name": "Fundamentals of Networks I",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Ramirez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "B583"
+    },
+    "prerequisites": [
+      "Chemistry198"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "aa03789c-14e7-484b-bd67-cc7c8b813c84",
+    "course_code": "ENG218",
+    "course_name": "Advanced Networks",
+    "department": "Engineering",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Brown",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "A696"
+    },
+    "prerequisites": [
+      "Business Administration145"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "1c8882d6-b6a8-4ae4-8c26-53c25a0de92f",
+    "course_code": "BUS336",
+    "course_name": "Fundamentals of Networks",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Perez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "A309"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6d94593c-d641-4055-9b8b-4ef4359314c8",
+    "course_code": "CHM427",
+    "course_name": "Fundamentals of Linear Algebra",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Garcia",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "B167"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a8454eff-158c-47a5-a975-37db15a90024",
+    "course_code": "BIO510",
+    "course_name": "Theory of Database Systems II",
+    "department": "Biology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Robinson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "A225"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "97734607-5917-4cba-9ac9-4bbb4bdc90b7",
+    "course_code": "PHY183",
+    "course_name": "Classical Machine Learning",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Brown",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "C381"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6029db3f-80ea-4cec-a40f-84c19769bd67",
+    "course_code": "MATH225",
+    "course_name": "Applied Statistics",
+    "department": "Mathematics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Perez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "D956"
+    },
+    "prerequisites": [
+      "Biology127"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "befbda42-93ba-4882-9c15-b3f36def3d44",
+    "course_code": "ECON139",
+    "course_name": "Theory of Design II",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Gonzalez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "A283"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b7393359-f428-4cbb-a20e-e534d0524c82",
+    "course_code": "ENGR263",
+    "course_name": "Classical Statistics",
+    "department": "Engineering",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Moore",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "B989"
+    },
+    "prerequisites": [
+      "Statistics136"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "57f35508-52d8-46ea-8394-2bfb85fb22ae",
+    "course_code": "ECO111",
+    "course_name": "Practical Networks",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Lewis",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "A247"
+    },
+    "prerequisites": [
+      "Chemistry120"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "87f8effd-63c5-446f-8bba-8a8a55c1a269",
+    "course_code": "PSY481",
+    "course_name": "Advanced Machine Learning",
+    "department": "Psychology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Gonzalez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "C123"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "40da93f3-b46e-47ac-bc05-1a5fa8437bd9",
+    "course_code": "ECON546",
+    "course_name": "Introduction to Linear Algebra",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Lee",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "B519"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "93b7c15f-25d8-478c-bffc-6737bc097635",
+    "course_code": "MGMT478",
+    "course_name": "Advanced Systems",
+    "department": "Business Administration",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Brown",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "C122"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4bb601e5-41ce-4589-86d4-e544e030d072",
+    "course_code": "PSY136",
+    "course_name": "Introduction to Machine Learning",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Moore",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "B296"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c3e0bb63-a9a1-4e90-8de3-868116758bf7",
+    "course_code": "BIO469",
+    "course_name": "Classical Design II",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amanda Gonzalez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "A589"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6ad6901c-2c0d-4247-8e07-48618b271d55",
+    "course_code": "CS545",
+    "course_name": "Introduction to Systems II",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amanda Ramirez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "D527"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d568a371-ca54-4095-91aa-64d62f13e573",
+    "course_code": "HIST222",
+    "course_name": "Advanced Data Structures I",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Thompson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "D999"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c3562716-4344-4125-955a-dc34759ad6dd",
+    "course_code": "PHI389",
+    "course_name": "Theory of Database Systems II",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Anderson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "B619"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ff99a80f-7f26-4bc3-9303-581c4eb033bb",
+    "course_code": "STAT164",
+    "course_name": "Theory of Research Methods",
+    "department": "Mathematics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Thompson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "B655"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f0b7d4b2-20da-4e89-a4c5-96ce772207e4",
+    "course_code": "COMP279",
+    "course_name": "Classical Data Structures",
+    "department": "Computer Science",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Williams",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "B539"
+    },
+    "prerequisites": [
+      "Psychology299"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "29c5e263-934d-45ca-aa9f-2680d478435a",
+    "course_code": "PHIL347",
+    "course_name": "Applied Networks",
+    "department": "Philosophy",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Lopez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "A754"
+    },
+    "prerequisites": [
+      "Mathematics209"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2140dd40-72cc-4c85-bb6c-cee53cec7f87",
+    "course_code": "PHY331",
+    "course_name": "Contemporary Statistics",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Garcia",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "C424"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6bc8371f-929a-4e70-a6c9-3829fd10eee5",
+    "course_code": "COMP221",
+    "course_name": "Introduction to Calculus",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Garcia",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "A765"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c61f32c2-ad1d-416a-be02-4ba9a3b87e0f",
+    "course_code": "CHM436",
+    "course_name": "Theory of Research Methods",
+    "department": "Chemistry",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Wilson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "13:30-15:00",
+      "room": "C918"
+    },
+    "prerequisites": [
+      "Economics201"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "fdeae45b-a2c8-4c89-8a24-4cc2cb3fa6a4",
+    "course_code": "HIS207",
+    "course_name": "Modern Design",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Lewis",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "B708"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8f4c21cb-9126-400b-9620-6bce1fe1a5de",
+    "course_code": "ENGR458",
+    "course_name": "Introduction to Systems",
+    "department": "Engineering",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Brown",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "A877"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c4b9dab0-84cb-4b13-af1e-4dacde75a6b0",
+    "course_code": "BIO108",
+    "course_name": "Practical Database Systems",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Brown",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "A646"
+    },
+    "prerequisites": [
+      "Mathematics291"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "50dfd3fa-708a-4841-8ef6-b231f128b2e7",
+    "course_code": "PHIL564",
+    "course_name": "Practical Statistics",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Robinson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "B759"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "01704095-f7e1-4ae9-bef6-4916a45cca5d",
+    "course_code": "ENG519",
+    "course_name": "Introduction to Programming",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Robinson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "C105"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a8390511-055e-4f1e-b05a-7ef6a7e513cc",
+    "course_code": "STA317",
+    "course_name": "Theory of Algorithms",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amanda Clark",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "09:30-11:00",
+      "room": "B264"
+    },
+    "prerequisites": [
+      "Computer Science164"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b2db96dc-06ad-45fd-9bf4-3b043cc8e1ac",
+    "course_code": "ENG246",
+    "course_name": "Modern Machine Learning",
+    "department": "Engineering",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Brown",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "C747"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "3c728022-989b-485b-8b0b-c3343f5c9673",
+    "course_code": "BIO266",
+    "course_name": "Introduction to Programming",
+    "department": "Biology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Perez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "C262"
+    },
+    "prerequisites": [
+      "Psychology138"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "79708b39-9ebf-4a94-9b8b-bd6e25ae7520",
+    "course_code": "CALC551",
+    "course_name": "Applied Statistics",
+    "department": "Mathematics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane White",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "A531"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8f38bc59-d828-442d-9569-3b264af1e11a",
+    "course_code": "PSYC392",
+    "course_name": "Theory of Machine Learning",
+    "department": "Psychology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Robinson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "C375"
+    },
+    "prerequisites": [
+      "Biology193"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "911d80bc-2e2e-4e2e-901c-0ec8620a2cbf",
+    "course_code": "COMP325",
+    "course_name": "Fundamentals of Calculus",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Taylor",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "C746"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a82a84e9-fd47-4d53-991f-081980852ec1",
+    "course_code": "STAT395",
+    "course_name": "Advanced Data Structures",
+    "department": "Mathematics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Mark Lewis",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "A399"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b09ed0e0-128e-4895-80cf-7e8ff2c28a6d",
+    "course_code": "PHY211",
+    "course_name": "Theory of Linear Algebra",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Garcia",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "A611"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5a73a788-8b63-482e-8e60-6e478454a792",
+    "course_code": "BUS284",
+    "course_name": "Theory of Networks",
+    "department": "Business Administration",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Robinson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "D296"
+    },
+    "prerequisites": [
+      "Business Administration179"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a17d6736-d26a-43b9-a133-87e81dd3c120",
+    "course_code": "BUS539",
+    "course_name": "Contemporary Systems",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Perez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "C895"
+    },
+    "prerequisites": [
+      "History120"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c22add9a-8b31-4da4-af8d-b9d2fddcb7a3",
+    "course_code": "STA300",
+    "course_name": "Modern Linear Algebra",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Williams",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "09:30-11:00",
+      "room": "C386"
+    },
+    "prerequisites": [
+      "History129"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "28deace6-ec4e-4308-8fcc-e1fd11ff5533",
+    "course_code": "HIST485",
+    "course_name": "Contemporary Programming III",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Lopez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "A802"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2c71b1e3-9c22-4aa5-9910-219de2c95604",
+    "course_code": "CS483",
+    "course_name": "Modern Algorithms",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Hernandez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "A276"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "3a21458a-0fdc-4756-84f1-12dd7b554fc5",
+    "course_code": "CS117",
+    "course_name": "Modern Programming",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Sanchez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "B968"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2b34a73f-eebd-4176-a033-af8304c46ac3",
+    "course_code": "PHYS503",
+    "course_name": "Applied Systems",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Clark",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "B497"
+    },
+    "prerequisites": [
+      "Economics172"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5d5b7c31-105a-4102-ac80-a130b41b87bb",
+    "course_code": "LIT423",
+    "course_name": "Modern Statistics",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Lauren White",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "B283"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7d0c79fe-e2fd-4c7f-82ef-0f5aaf134c52",
+    "course_code": "CALC506",
+    "course_name": "Theory of Machine Learning I",
+    "department": "Mathematics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Robinson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "C952"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6e616ab9-7653-4e0a-b18f-02021cef5c7b",
+    "course_code": "ENG494",
+    "course_name": "Introduction to Data Structures",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Ramirez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "D377"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "0193291a-eb7d-4e0c-9b6b-807fa56cea9f",
+    "course_code": "MATH307",
+    "course_name": "Advanced Programming III",
+    "department": "Mathematics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Ramirez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "A112"
+    },
+    "prerequisites": [
+      "Philosophy180"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9a7366f8-a42c-482c-ad15-3bcad036734e",
+    "course_code": "CS442",
+    "course_name": "Classical Machine Learning",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Lauren Thomas",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "B937"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "01f8e7d8-5959-43c8-8573-87537e50fe94",
+    "course_code": "MGMT437",
+    "course_name": "Modern Statistics I",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Lopez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "A938"
+    },
+    "prerequisites": [
+      "Engineering262"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9a43c3bf-3ef7-46eb-909c-74f81f1ae573",
+    "course_code": "ECO355",
+    "course_name": "Applied Analysis",
+    "department": "Economics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Martinez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "B987"
+    },
+    "prerequisites": [
+      "Business Administration148"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8996aa04-2c17-4102-9a8e-39131d23b29e",
+    "course_code": "ENGR590",
+    "course_name": "Applied Systems",
+    "department": "Engineering",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Smith",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "C280"
+    },
+    "prerequisites": [
+      "Biology181"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9814ac79-362b-4923-9846-f4f49dccbf31",
+    "course_code": "PHY322",
+    "course_name": "Modern Algorithms III",
+    "department": "Physics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Martin",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "C283"
+    },
+    "prerequisites": [
+      "History230"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "de5f216d-815e-4cf3-b0e6-230ba07f68c4",
+    "course_code": "ECO271",
+    "course_name": "Contemporary Systems I",
+    "department": "Economics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Wilson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "B482"
+    },
+    "prerequisites": [
+      "History137"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "b2c43f8b-1183-4ab5-b077-e3b90bee270d",
+    "course_code": "MGMT306",
+    "course_name": "Contemporary Database Systems",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Thompson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "A923"
+    },
+    "prerequisites": [
+      "Chemistry185"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "fc581337-d1a0-47dc-a4b0-f61b0b4b80f9",
+    "course_code": "PHI591",
+    "course_name": "Theory of Algorithms",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Lauren Rodriguez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "B460"
+    },
+    "prerequisites": [
+      "Mathematics263"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8fcaeef4-fe94-4f21-a60b-24500f349790",
+    "course_code": "PHIL474",
+    "course_name": "Introduction to Algorithms II",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Christopher Thomas",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "C787"
+    },
+    "prerequisites": [
+      "Physics105"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f67fe6f2-a4bc-44be-9149-0372b2586686",
+    "course_code": "HIST319",
+    "course_name": "Modern Linear Algebra III",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Miller",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "B881"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "99e168e6-fd14-4b32-a9b3-8f1ad1771dbf",
+    "course_code": "CHM453",
+    "course_name": "Fundamentals of Calculus",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Jackson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "C292"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "bb4e7aee-714a-4816-9d54-8ada2d181b94",
+    "course_code": "CS541",
+    "course_name": "Contemporary Database Systems",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Brown",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "B577"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ace42f12-03e4-46b8-be90-c8ec8cacd619",
+    "course_code": "PHYS265",
+    "course_name": "Contemporary Design",
+    "department": "Physics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Wilson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "A952"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "36298d7d-02d0-4a1e-bab5-6153bd598475",
+    "course_code": "STAT548",
+    "course_name": "Practical Systems",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Taylor",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "A760"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8dd719cf-67bd-40d0-9d1a-13028cc1fcaf",
+    "course_code": "LIT234",
+    "course_name": "Practical Machine Learning",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Thomas",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "A229"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5b689c39-e34c-4e3f-b191-4b26e7b2457f",
+    "course_code": "CSE470",
+    "course_name": "Classical Programming I",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Lopez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "B926"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "92e8c652-b693-4326-8eb6-ffebef3eb26c",
+    "course_code": "ECON360",
+    "course_name": "Practical Linear Algebra",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Brown",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "B699"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8976d7c7-fc0f-4b4a-b6fc-0edba92f8d9a",
+    "course_code": "PSY208",
+    "course_name": "Modern Research Methods",
+    "department": "Psychology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Taylor",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "D879"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6d0e63d2-c52a-483d-833b-0c75801e7d76",
+    "course_code": "STAT264",
+    "course_name": "Introduction to Machine Learning II",
+    "department": "Statistics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily White",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "D615"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "591250dd-2d14-4963-8daf-339d517f7c3c",
+    "course_code": "HIS531",
+    "course_name": "Classical Algorithms",
+    "department": "History",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Miller",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "B885"
+    },
+    "prerequisites": [
+      "Physics207"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "71ad18d1-b40a-4931-b754-08ed7daba58f",
+    "course_code": "PHY100",
+    "course_name": "Classical Programming",
+    "department": "Physics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Brown",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "B462"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "32498175-ba7a-42a5-8ffa-984d4302b4ed",
+    "course_code": "BUS356",
+    "course_name": "Theory of Programming",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Williams",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "D314"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "be807221-8a29-4199-89ef-ffe7426bc036",
+    "course_code": "PHIL101",
+    "course_name": "Contemporary Calculus II",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Brown",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "15:00-16:30",
+      "room": "A349"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ee62869f-af99-4b72-afdd-0783d9a5a723",
+    "course_code": "BUS305",
+    "course_name": "Applied Linear Algebra II",
+    "department": "Business Administration",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Rodriguez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "11:00-12:30",
+      "room": "B929"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "993db44c-9827-479d-9339-561b8ffee8ec",
+    "course_code": "BUS460",
+    "course_name": "Fundamentals of Data Structures III",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Wilson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "A500"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a091618e-c7ba-4b66-9f22-67ae0525da03",
+    "course_code": "CSE207",
+    "course_name": "Contemporary Data Structures",
+    "department": "Computer Science",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Wilson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "B985"
+    },
+    "prerequisites": [
+      "Biology202"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "864c16e3-3a4a-4921-8f74-70f61f138053",
+    "course_code": "LIT169",
+    "course_name": "Theory of Data Structures I",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Daniel Robinson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "A867"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5e5a6f76-38ad-46bd-bccc-bd68612daa55",
+    "course_code": "CHEM519",
+    "course_name": "Fundamentals of Linear Algebra II",
+    "department": "Chemistry",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Jackson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "D369"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d9f55b0a-a94e-4a93-93b4-fc5011aef2a9",
+    "course_code": "COMP486",
+    "course_name": "Modern Networks",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Gonzalez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "A792"
+    },
+    "prerequisites": [
+      "Physics295"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5c4c1e7f-6797-468a-8cb4-d35255337af2",
+    "course_code": "ENG127",
+    "course_name": "Classical Networks II",
+    "department": "Engineering",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Paul Brown",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "D678"
+    },
+    "prerequisites": [
+      "Engineering156"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "80a76017-6716-4870-b081-374857eb8af2",
+    "course_code": "ECON355",
+    "course_name": "Classical Machine Learning",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Davis",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "D205"
+    },
+    "prerequisites": [
+      "Mathematics262"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2fa9f6dc-7241-4730-ae2b-7f6197eed9c9",
+    "course_code": "ECO112",
+    "course_name": "Modern Programming",
+    "department": "Economics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Jones",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "D272"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9b6b431f-386e-410d-87f2-8d63ff5c1720",
+    "course_code": "ENG180",
+    "course_name": "Introduction to Calculus",
+    "department": "Engineering",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amanda Rodriguez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "C794"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "760f3064-41ad-4913-af5a-02fce68235c1",
+    "course_code": "COMP387",
+    "course_name": "Advanced Machine Learning",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Lauren Smith",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "09:30-11:00",
+      "room": "D704"
+    },
+    "prerequisites": [
+      "Mathematics251"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "424dddaf-ddc0-49c8-aff4-b7446c5f4fab",
+    "course_code": "CHM135",
+    "course_name": "Classical Data Structures",
+    "department": "Chemistry",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Jackson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "B645"
+    },
+    "prerequisites": [
+      "Statistics131"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "97e70cbc-3844-4d48-9431-883e6a01b1ae",
+    "course_code": "CHM311",
+    "course_name": "Theory of Research Methods",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew White",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "B927"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7db0bd1d-ca9e-4b86-9330-9a9dbafe063d",
+    "course_code": "HIST204",
+    "course_name": "Theory of Design",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Moore",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "C948"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ff2208ff-9896-4f6c-ab2f-eed8493fdaec",
+    "course_code": "ECO117",
+    "course_name": "Contemporary Statistics",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer White",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "A488"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "675fa612-020d-4fd5-98d7-a5fe1c987ece",
+    "course_code": "BIO217",
+    "course_name": "Modern Analysis",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Brown",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "C102"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "17ecc308-1c42-40eb-bfdc-0d13414bf635",
+    "course_code": "STAT367",
+    "course_name": "Applied Machine Learning",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Rodriguez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "11:00-12:30",
+      "room": "B472"
+    },
+    "prerequisites": [
+      "Mathematics213"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4a248728-85f2-47b3-a19b-09fc3c045b02",
+    "course_code": "HIS475",
+    "course_name": "Modern Design",
+    "department": "History",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Jones",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "D647"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7ff60113-22ac-4c7b-b601-ced1e004cb6f",
+    "course_code": "MGMT385",
+    "course_name": "Classical Machine Learning III",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Mark Harris",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "A554"
+    },
+    "prerequisites": [
+      "Philosophy260"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "83c548df-7557-4815-893f-1e727508e79f",
+    "course_code": "PHI212",
+    "course_name": "Introduction to Statistics III",
+    "department": "Philosophy",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Brown",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MWF",
+      "time": "15:00-16:30",
+      "room": "C874"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5c437353-ea0f-41a3-86b0-0d4d29e490bf",
+    "course_code": "STAT524",
+    "course_name": "Theory of Programming",
+    "department": "Statistics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Martin",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "D561"
+    },
+    "prerequisites": [
+      "History110"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "aab9733a-763b-4092-bb55-a16528971610",
+    "course_code": "STAT450",
+    "course_name": "Practical Algorithms",
+    "department": "Mathematics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Lopez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "C236"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "76a23acf-cf88-4700-84a7-9d7497a0b33d",
+    "course_code": "MGMT198",
+    "course_name": "Modern Machine Learning",
+    "department": "Business Administration",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Lopez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "B162"
+    },
+    "prerequisites": [
+      "Physics299"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "48e9606d-a795-4e63-afc8-2bb0651f8033",
+    "course_code": "CHEM176",
+    "course_name": "Practical Calculus",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Steven Thompson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "09:30-11:00",
+      "room": "D736"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "8ba1633d-f392-49af-ae51-414123c19a31",
+    "course_code": "LIT413",
+    "course_name": "Modern Research Methods I",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Jones",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "A191"
+    },
+    "prerequisites": [
+      "Biology157"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "14dd9e05-4377-40c4-bd2c-691537d776d6",
+    "course_code": "PSYC193",
+    "course_name": "Theory of Algorithms",
+    "department": "Psychology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Anderson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "16:30-18:00",
+      "room": "B638"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "68c9dd73-5d6e-4d92-a42b-3d8eb9d43778",
+    "course_code": "PHI207",
+    "course_name": "Contemporary Linear Algebra II",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Anderson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "B830"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "59c85e5b-6b3c-4ea3-a9e9-310cfc175db1",
+    "course_code": "COMP242",
+    "course_name": "Applied Statistics",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Williams",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "B879"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ab70d8c1-9479-4ff5-9c98-551b39a79a80",
+    "course_code": "HIST346",
+    "course_name": "Introduction to Data Structures III",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Taylor",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "A688"
+    },
+    "prerequisites": [
+      "Computer Science268"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5d0ae9b6-fefa-451a-9006-3e4f1937b761",
+    "course_code": "PHI336",
+    "course_name": "Practical Research Methods",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Robinson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "D304"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f705f86d-66c5-402a-953a-3acbf8688a74",
+    "course_code": "BIO126",
+    "course_name": "Introduction to Statistics II",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Wilson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "A147"
+    },
+    "prerequisites": [
+      "Computer Science175"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "13c5dc64-6baf-4c8c-86b4-10e277835a91",
+    "course_code": "STAT474",
+    "course_name": "Classical Machine Learning II",
+    "department": "Statistics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Jones",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "C625"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "bed88953-ee70-487a-a929-4ce3de8806c4",
+    "course_code": "PHY439",
+    "course_name": "Classical Design",
+    "department": "Physics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Jones",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "C981"
+    },
+    "prerequisites": [
+      "Engineering100"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "00a28363-1feb-498b-9ed7-113156af7bbe",
+    "course_code": "BIOL336",
+    "course_name": "Modern Data Structures II",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Perez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "A648"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e95aeab9-66f9-41ab-8da1-e9e0feacd769",
+    "course_code": "ECON372",
+    "course_name": "Advanced Analysis",
+    "department": "Economics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. John Taylor",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "16:30-18:00",
+      "room": "A276"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e0d0c597-528a-4e2a-9b74-b878b24916e3",
+    "course_code": "HIST525",
+    "course_name": "Contemporary Design I",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Brown",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "A440"
+    },
+    "prerequisites": [
+      "Economics229"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d94cfcbc-aa07-4145-8c01-19dcffc597c9",
+    "course_code": "ENG302",
+    "course_name": "Applied Programming",
+    "department": "Literature",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Garcia",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "B923"
+    },
+    "prerequisites": [
+      "Business Administration100"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "50d02c67-98c7-4757-9936-31933ba7e2a8",
+    "course_code": "PHI550",
+    "course_name": "Contemporary Design",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Moore",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "D544"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a2b96297-be40-48fe-b0cd-64ee366a272e",
+    "course_code": "PHIL369",
+    "course_name": "Theory of Programming I",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Rachel Jackson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "B794"
+    },
+    "prerequisites": [
+      "Business Administration204"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "2ecd0d0e-9857-4e14-907d-ae7ca586abb7",
+    "course_code": "ENG257",
+    "course_name": "Fundamentals of Database Systems",
+    "department": "Engineering",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Joshua Wilson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "A275"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d6e392fd-ab05-43e9-86cb-fa960dc81fc7",
+    "course_code": "BUS436",
+    "course_name": "Applied Programming",
+    "department": "Business Administration",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Emily Harris",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "A403"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "363d7fbe-96c7-4db8-bd38-276c4f98592b",
+    "course_code": "HIS393",
+    "course_name": "Introduction to Systems I",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Clark",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "A344"
+    },
+    "prerequisites": [
+      "Economics137"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7eadaff2-f9f2-4862-ae8c-1948ce60b795",
+    "course_code": "PSY479",
+    "course_name": "Modern Data Structures",
+    "department": "Psychology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Anthony Davis",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "16:30-18:00",
+      "room": "A560"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "15f6ab8d-3bf8-431e-b834-10145cbd4b60",
+    "course_code": "HIST186",
+    "course_name": "Advanced Database Systems",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Christopher Robinson",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "15:00-16:30",
+      "room": "D994"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "581d6240-96ba-4aa4-9bad-a29f942753ee",
+    "course_code": "CSE578",
+    "course_name": "Applied Statistics",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Jones",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TH",
+      "time": "09:30-11:00",
+      "room": "D277"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "29296a16-ad7b-43c6-93b0-20700096c106",
+    "course_code": "LIT347",
+    "course_name": "Contemporary Systems",
+    "department": "Literature",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole White",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "A815"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "0601ca13-e1c7-4418-93d3-755fb7f86155",
+    "course_code": "CHEM501",
+    "course_name": "Practical Data Structures II",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jennifer Thomas",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "13:30-15:00",
+      "room": "A174"
+    },
+    "prerequisites": [
+      "Literature156"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "6924de70-1e3e-4074-965f-658e14cde7d2",
+    "course_code": "HIST134",
+    "course_name": "Advanced Programming",
+    "department": "History",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Samantha Lewis",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TTH",
+      "time": "08:00-09:30",
+      "room": "D730"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "fd50ce0f-ed00-4abd-9bc5-3dd6cbf365f2",
+    "course_code": "PHY397",
+    "course_name": "Theory of Systems",
+    "department": "Physics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. William Thompson",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "D508"
+    },
+    "prerequisites": [
+      "Psychology152"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "597c0557-9926-495f-a70e-e46c72c67f7e",
+    "course_code": "STAT348",
+    "course_name": "Introduction to Design",
+    "department": "Statistics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. James Lopez",
+    "course_type": "Workshop",
+    "schedule": {
+      "days": "TTH",
+      "time": "09:30-11:00",
+      "room": "C584"
+    },
+    "prerequisites": [
+      "Psychology229"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "72f12b46-97f0-4a3a-be6b-8bfd869bf2b7",
+    "course_code": "PSYC115",
+    "course_name": "Practical Data Structures II",
+    "department": "Psychology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jessica Anderson",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "B223"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "edad80e3-6dad-446e-b08e-d3787f436b53",
+    "course_code": "PSY359",
+    "course_name": "Introduction to Data Structures II",
+    "department": "Psychology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Ramirez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MW",
+      "time": "15:00-16:30",
+      "room": "C661"
+    },
+    "prerequisites": [
+      "Philosophy298"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "74e6cc45-9903-445b-9cf3-8962ec3fabf3",
+    "course_code": "CSE447",
+    "course_name": "Modern Database Systems",
+    "department": "Computer Science",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Sarah Miller",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "13:30-15:00",
+      "room": "B724"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "be2ba651-5de0-4cb4-9de9-bb483aa5d596",
+    "course_code": "CHM171",
+    "course_name": "Contemporary Data Structures III",
+    "department": "Chemistry",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Taylor",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "A362"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "c183a3cd-e492-4aa4-96ba-7e2a52257caa",
+    "course_code": "BIO443",
+    "course_name": "Classical Database Systems",
+    "department": "Biology",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Harris",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "C958"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "a026b59d-f1db-43d9-ae06-ddc70fdf63c6",
+    "course_code": "LIT480",
+    "course_name": "Modern Linear Algebra",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Nicole Sanchez",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "08:00-09:30",
+      "room": "A131"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "501b3dc5-7927-43fb-a2c5-4622678dc8b9",
+    "course_code": "ECO451",
+    "course_name": "Contemporary Design II",
+    "department": "Economics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. David Taylor",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "11:00-12:30",
+      "room": "B826"
+    },
+    "prerequisites": [
+      "Economics149"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "cb7d8d0e-7fb6-4860-ba58-89304f59b279",
+    "course_code": "HIS351",
+    "course_name": "Introduction to Calculus I",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Ashley Davis",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "C727"
+    },
+    "prerequisites": [
+      "Business Administration218"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "7c429a86-54cb-4df9-aa47-c9abb9ba4841",
+    "course_code": "PHI312",
+    "course_name": "Modern Data Structures III",
+    "department": "Philosophy",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Lauren Williams",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "16:30-18:00",
+      "room": "B947"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "e56a13f8-2b6c-4563-a643-50161cfd96ed",
+    "course_code": "HIS310",
+    "course_name": "Advanced Algorithms",
+    "department": "History",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Robert Garcia",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TH",
+      "time": "08:00-09:30",
+      "room": "A258"
+    },
+    "prerequisites": [
+      "Chemistry136"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "9ba0ca53-5112-46f3-8607-a9f500e78fcb",
+    "course_code": "PHY305",
+    "course_name": "Introduction to Algorithms I",
+    "department": "Physics",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth White",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "B605"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "f0be7229-d4a3-4bfc-8f08-8baa5685184d",
+    "course_code": "CALC386",
+    "course_name": "Theory of Statistics",
+    "department": "Mathematics",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Megan Brown",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "D737"
+    },
+    "prerequisites": [
+      "Biology227"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "4b0f1f23-5754-4b8a-b234-16408b836b83",
+    "course_code": "BIOL483",
+    "course_name": "Advanced Data Structures II",
+    "department": "Biology",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Lopez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "A198"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "04751e7a-dd4a-4266-875c-3b117152c822",
+    "course_code": "PSY113",
+    "course_name": "Practical Algorithms",
+    "department": "Psychology",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Anderson",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "WF",
+      "time": "16:30-18:00",
+      "room": "B912"
+    },
+    "prerequisites": [
+      "Engineering236"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "fab4af38-fc62-4dba-b5e5-ef12e59b78f7",
+    "course_code": "BUS375",
+    "course_name": "Applied Statistics",
+    "department": "Business Administration",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Andrew Rodriguez",
+    "course_type": "Seminar",
+    "schedule": {
+      "days": "TH",
+      "time": "15:00-16:30",
+      "room": "A970"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "1a4276c4-7d30-48b0-895c-d12aab10700d",
+    "course_code": "CSE199",
+    "course_name": "Classical Statistics I",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Martin",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TTH",
+      "time": "13:30-15:00",
+      "room": "A197"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "43832b14-ab3b-42a5-9343-9d64a8bd63cb",
+    "course_code": "LIT565",
+    "course_name": "Applied Linear Algebra",
+    "department": "Literature",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Matthew Jackson",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "TH",
+      "time": "11:00-12:30",
+      "room": "A849"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "3737b5e5-7abf-41b0-95c9-8681f4ebde73",
+    "course_code": "COMP252",
+    "course_name": "Classical Programming",
+    "department": "Computer Science",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Miller",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "08:00-09:30",
+      "room": "A883"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "5b1ae6e9-90d5-45cf-ab09-b1ef4843cdca",
+    "course_code": "PHI374",
+    "course_name": "Theory of Analysis",
+    "department": "Philosophy",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Amy Lewis",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "TTH",
+      "time": "11:00-12:30",
+      "room": "D941"
+    },
+    "prerequisites": [
+      "Physics243"
+    ],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "40e54a9e-3340-408e-9b36-68c20fd74154",
+    "course_code": "STAT402",
+    "course_name": "Contemporary Systems",
+    "department": "Mathematics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Lopez",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "WF",
+      "time": "08:00-09:30",
+      "room": "A371"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ee799f8b-6907-461d-802f-a2db0c0caa93",
+    "course_code": "CHM259",
+    "course_name": "Contemporary Design",
+    "department": "Chemistry",
+    "credits": 3,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Michael Thomas",
+    "course_type": "Lecture",
+    "schedule": {
+      "days": "TTH",
+      "time": "15:00-16:30",
+      "room": "A355"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "cf9eaaa2-641c-44e3-acd5-6716847c2e49",
+    "course_code": "COMP311",
+    "course_name": "Introduction to Algorithms",
+    "department": "Computer Science",
+    "credits": 4,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Stephanie Martin",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "MW",
+      "time": "09:30-11:00",
+      "room": "B782"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "d3abd567-defd-4688-8b44-09f6302a1ad7",
+    "course_code": "ECO562",
+    "course_name": "Theory of Database Systems",
+    "department": "Economics",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Elizabeth Miller",
+    "course_type": "Lab",
+    "schedule": {
+      "days": "WF",
+      "time": "13:30-15:00",
+      "room": "D565"
+    },
+    "prerequisites": [],
+    "semester": "Fall 2024"
+  },
+  {
+    "course_id": "ce8440bf-cc0d-4176-b850-a3292f2720e8",
+    "course_code": "ENGR340",
+    "course_name": "Classical Systems I",
+    "department": "Engineering",
+    "credits": 6,
+    "total_slots": 30,
+    "available_slots": 30,
+    "instructor": "Prof. Jane Ramirez",
+    "course_type": "Tutorial",
+    "schedule": {
+      "days": "MWF",
+      "time": "09:30-11:00",
+      "room": "A277"
+    },
+    "prerequisites": [
+      "Engineering297"
+    ],
+    "semester": "Fall 2024"
+  }
+]

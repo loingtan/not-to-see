@@ -1,0 +1,113 @@
+
+COURSE REGISTRATION SYSTEM - ENHANCED LOAD TEST RESULTS
+========================================================
+Test Execution Time: 2025-08-22T01:01:31.802696 to 2025-08-22T01:04:11.907513
+Total Duration: 160.10 seconds
+
+PERFORMANCE SLO TARGETS ANALYSIS
+================================
+
+🎯 THROUGHPUT & CONCURRENCY TARGETS:
+Target: ≥40 successful registrations/sec sustained for 10 min (≥24k total)
+Actual: 59.96 reg/s 
+Status: ✅ PASS
+
+Target: 80-120 total req/s (incl. retries)
+Actual: 411.31 req/s
+Status: ❌ FAIL
+
+Target: 8,000 concurrent users, 1,000-2,000 simultaneous submissions in first minute
+Actual: 8200 peak concurrent users
+Status: ✅ PASS
+
+Target: 200-300 atomic ops/s on hottest sections
+Actual: 42.07 ops/s on hot sections
+Status: ⚠️  CHECK
+
+🚀 LATENCY SLO TARGETS (End-to-End API):
+Target p50: ≤120ms | Actual: 45.86ms | ✅ PASS
+Target p95: ≤300ms | Actual: 98.08ms | ✅ PASS
+Target p99: ≤600ms | Actual: 174.38ms | ✅ PASS
+Target Tail: <1% requests >1s | Actual: 0.0% | ✅ PASS
+
+⚡ ATOMIC SEAT RESERVATION TARGETS:
+Target p95: ≤10ms (cache) or ≤50ms (DB) | Actual: 13.68ms | ✅ PASS
+Target retry rate: <3% | Actual: 2.4% | ✅ PASS
+Target compensation success: 99.9% within 1s | Actual: 99.37% | ❌ FAIL
+
+💾 DATABASE TARGETS:
+Target writes: 80-240 txn/s | Actual: 59.96 txn/s | ❌ FAIL
+Target reads: ≤100 qps | Actual: 411.31 qps | ❌ FAIL
+Target p95 txn time: ≤40ms | Actual: 49.42ms | ❌ FAIL
+Target deadlocks: <0.1% | Actual: 0.05% | ✅ PASS
+Target pool utilization p95: <70% | Actual: 56.5% | ✅ PASS
+
+🗄️  CACHE (Redis) TARGETS:
+Target hit rate: ≥95% | Actual: 94.94% | ❌ FAIL
+Target p95 latency: ≤5ms | Actual: 3.8ms | ✅ PASS
+Target hot-key timeouts: 0 | Actual: 0 | ✅ PASS
+Target evictions: 0 | Actual: 0 | ✅ PASS
+
+🛡️  API RELIABILITY & QUALITY TARGETS:
+Target 5xx errors: <0.5% | Actual: 0.28% | ✅ PASS
+Target 4xx errors: <5% | Actual: 5.04% | ❌ FAIL
+Target idempotency: ~100% | Actual: 99.8% | ✅ PASS
+Target retry success: ≥99% within 3 tries | Actual: 99.37% | ✅ PASS
+
+LEGACY SYSTEM VERIFICATION
+===========================
+✓ Over 300 courses: 320 courses available
+✓ 30 slots per course: All courses configured with 30 slots  
+✓ Over 8000 concurrent students: 8,200 students participated
+✓ At least 3 subjects per student: 2,098 students (25.6%) achieved minimum requirement
+
+REGISTRATION SUMMARY
+====================
+- Total registration attempts: 65,852
+- Successful registrations: 9,600 (14.6%)
+- Waitlisted registrations: 36,985 (56.2%)
+- Failed registrations: 15,767 (23.9%)
+
+STUDENT SUCCESS METRICS
+========================
+- Students processed: 8,200
+- Students with minimum courses (≥3): 2,098
+- Minimum course success rate: 25.6%
+- Average registrations per student: 8.0
+
+COURSE UTILIZATION
+==================
+- Average course utilization: 100.0%
+- Courses at capacity: 317
+- Courses over 80% capacity: 317
+
+TOP 10 MOST POPULAR COURSES:
+ 1. MGMT561: 30/30 slots (100.0%)
+ 2. PHY214: 30/30 slots (100.0%)
+ 3. CHEM304: 30/30 slots (100.0%)
+ 4. CHM256: 30/30 slots (100.0%)
+ 5. BIOL428: 30/30 slots (100.0%)
+ 6. ENG296: 30/30 slots (100.0%)
+ 7. ENG381: 30/30 slots (100.0%)
+ 8. HIS306: 30/30 slots (100.0%)
+ 9. ENGR560: 30/30 slots (100.0%)
+10. PHI491: 30/30 slots (100.0%)
+
+
+OVERALL SLO ASSESSMENT
+======================
+✅ SLO Targets Met: 13/20 (65.0%)
+🎯 Overall Grade: CRITICAL ISSUES
+
+Peak Registration Rush Readiness: ❌ NOT READY
+
+RECOMMENDATIONS
+===============
+- Cache optimization: Review cache strategy and TTL settings
+- High 4xx errors: Review conflict handling and user experience
+
+FILES GENERATED:
+- load_test_results.json (detailed results data with SLO metrics)
+- load_test_registrations.json (all registration attempts)  
+- load_test_report.txt (this comprehensive report)
+- slo_metrics.json (detailed SLO analysis)

@@ -1,0 +1,38 @@
+{
+  "throughput": {
+    "successful_registrations_per_sec": 59.96,
+    "total_attempts_per_sec": 411.31,
+    "peak_concurrent_users": 8200,
+    "hot_section_ops_per_sec": 42.07
+  },
+  "latency": {
+    "p50_ms": 45.86,
+    "p95_ms": 98.08,
+    "p99_ms": 174.38,
+    "tail_gt_1s_percent": 0.0
+  },
+  "atomic_ops": {
+    "p95_ms": 13.68,
+    "retry_rate_percent": 2.4,
+    "compensation_success_percent": 99.37
+  },
+  "database": {
+    "writes_per_sec": 59.96,
+    "reads_per_sec": 411.31,
+    "p95_txn_time_ms": 49.42,
+    "deadlock_rate_percent": 0.05,
+    "pool_utilization_p95": 56.4837606056486
+  },
+  "cache": {
+    "hit_rate_percent": 94.94,
+    "p95_latency_ms": 3.8314790946883646,
+    "hot_key_timeouts": 0,
+    "evictions": 0
+  },
+  "reliability": {
+    "error_5xx_percent": 0.28,
+    "error_4xx_percent": 5.04,
+    "idempotency_success_percent": 99.8,
+    "retry_success_percent": 99.37
+  }
+}

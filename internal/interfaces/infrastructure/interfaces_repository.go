@@ -1,8 +1,9 @@
 package interfaces
 
 import (
-	"context"
 	domain "cobra-template/internal/domain/registration"
+	"context"
+
 	"github.com/google/uuid"
 )
 
@@ -29,6 +30,7 @@ type SectionRepository interface {
 	GetByID(ctx context.Context, id uuid.UUID) (*domain.Section, error)
 	UpdateWithOptimisticLock(ctx context.Context, section *domain.Section) error
 	GetByCourseAndSemester(ctx context.Context, courseID, semesterID uuid.UUID) ([]*domain.Section, error)
+	GetBySemester(ctx context.Context, semesterID uuid.UUID) ([]*domain.Section, error)
 }
 
 type RegistrationRepository interface {

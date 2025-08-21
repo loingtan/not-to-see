@@ -75,3 +75,17 @@ func (r *SectionRepository) GetByCourseAndSemester(ctx context.Context, courseID
 	}
 	return sections, nil
 }
+
+// GetBySemester retrieves all sections for a semester
+func (r *SectionRepository) GetBySemester(ctx context.Context, semesterID uuid.UUID) ([]*domain.Section, error) {
+	var sections []*domain.Section
+	err := r.db.WithContext(ctx).
+		Preload("Course").
+		Preload("Semester").
+		Where("semester_id = ?", semesterID).
+		Find(&sections).Error
+	if err != nil {
+		return nil, err
+	}
+	return sections, nil
+}
