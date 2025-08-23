@@ -20,7 +20,7 @@ vendor/
 
 # Go workspace file
 go.work
-
+venv
 # IDE and editor files
 .vscode/
 .idea/

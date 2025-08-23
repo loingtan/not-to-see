@@ -1,11 +1,17 @@
 package router
 
 import (
+	"context"
+	"fmt"
+	"time"
+
 	"cobra-template/internal/api/handlers"
 	"cobra-template/internal/api/middleware"
+	"cobra-template/internal/config"
 	"cobra-template/internal/infrastructure/cache"
 	"cobra-template/internal/infrastructure/queue"
 	"cobra-template/internal/infrastructure/repository"
+	interfaces "cobra-template/internal/interfaces/infrastructure"
 	"cobra-template/internal/service"
 
 	"github.com/gin-contrib/cors"
@@ -13,7 +19,17 @@ import (
 	"gorm.io/gorm"
 )
 
+type RouterComponents struct {
+	Router       *gin.Engine
+	QueueService interfaces.QueueService
+}
+
 func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
+	components := NewRegistrationRouterWithQueue(db)
+	return components.Router
+}
+
+func NewRegistrationRouterWithQueue(db *gorm.DB) *RouterComponents {
 	gin.SetMode(gin.ReleaseMode)
 
 	r := gin.New()
@@ -21,15 +37,15 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 	r.Use(middleware.Logger())
 	r.Use(cors.Default())
 	r.Use(gin.Recovery())
-
-	// Initialize repositories
 	studentRepo := repository.NewStudentRepository(db)
 	sectionRepo := repository.NewSectionRepository(db)
 	registrationRepo := repository.NewRegistrationRepository(db)
 	waitlistRepo := repository.NewWaitlistRepository(db)
 
-	// Initialize services
-	cacheService := cache.NewRedisCache("localhost:6379", "", 0)
+	cfg := config.Get()
+	redisAddr := fmt.Sprintf("%s:%d", cfg.Cache.Host, cfg.Cache.Port)
+	cacheService := cache.NewRedisCache(redisAddr, cfg.Cache.Password, cfg.Cache.DB)
+
 	queueService := queue.NewInMemoryQueue(1000, 10)
 	registrationService := service.NewRegistrationService(
 		studentRepo,
@@ -40,16 +56,19 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 		queueService,
 	)
 
-	// Initialize handlers
+	if err := initializeSectionCache(cacheService, sectionRepo); err != nil {
+
+		fmt.Printf("Warning: Failed to initialize section cache: %v\n", err)
+	}
+
+	queueService.SetRegistrationService(registrationService)
+	queueService.StartWorkers()
+
 	registrationHandler := handlers.NewRegistrationHandler(registrationService)
 	healthHandler := handlers.NewHealthHandler()
-
-	// Health endpoints
 	r.GET("/health", healthHandler.HealthCheck)
 	r.GET("/ready", healthHandler.ReadinessCheck)
 	r.GET("/live", healthHandler.LivenessCheck)
-
-	// API v1 routes
 	v1 := r.Group("/api/v1")
 	{
 		registration := v1.Group("/register")
@@ -70,5 +89,28 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 		}
 	}
 
-	return r
+	return &RouterComponents{
+		Router:       r,
+		QueueService: queueService,
+	}
+}
+
+func initializeSectionCache(cacheService interfaces.CacheService, sectionRepo interfaces.SectionRepository) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	sections, err := sectionRepo.GetAllActive(ctx)
+	if err != nil {
+		return fmt.Errorf("failed to get active sections: %w", err)
+	}
+
+	for _, section := range sections {
+		if err := cacheService.SetAvailableSeats(ctx, section.SectionID, section.AvailableSeats, 24*time.Hour); err != nil {
+
+			fmt.Printf("Warning: Failed to cache seats for section %s: %v\n", section.SectionID, err)
+		}
+	}
+
+	fmt.Printf("Successfully initialized cache with %d sections\n", len(sections))
+	return nil
 }

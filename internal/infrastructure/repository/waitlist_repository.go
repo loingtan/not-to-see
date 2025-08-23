@@ -10,11 +10,9 @@ import (
 	"gorm.io/gorm"
 )
 
-
 type WaitlistRepository struct {
 	db *gorm.DB
 }
-
 
 func NewWaitlistRepository(db *gorm.DB) interfaces.WaitlistRepository {
 	return &WaitlistRepository{
@@ -22,11 +20,9 @@ func NewWaitlistRepository(db *gorm.DB) interfaces.WaitlistRepository {
 	}
 }
 
-
 func (r *WaitlistRepository) Create(ctx context.Context, entry *domain.WaitlistEntry) error {
 	return r.db.WithContext(ctx).Create(entry).Error
 }
-
 
 func (r *WaitlistRepository) GetByStudentAndSection(ctx context.Context, studentID, sectionID uuid.UUID) (*domain.WaitlistEntry, error) {
 	var entry domain.WaitlistEntry
@@ -43,7 +39,6 @@ func (r *WaitlistRepository) GetByStudentAndSection(ctx context.Context, student
 	}
 	return &entry, nil
 }
-
 
 func (r *WaitlistRepository) GetNextInLine(ctx context.Context, sectionID uuid.UUID) (*domain.WaitlistEntry, error) {
 	var entry domain.WaitlistEntry
@@ -62,7 +57,6 @@ func (r *WaitlistRepository) GetNextInLine(ctx context.Context, sectionID uuid.U
 	return &entry, nil
 }
 
-
 func (r *WaitlistRepository) GetNextPosition(ctx context.Context, sectionID uuid.UUID) (int, error) {
 	var count int64
 	err := r.db.WithContext(ctx).Model(&domain.WaitlistEntry{}).
@@ -74,11 +68,9 @@ func (r *WaitlistRepository) GetNextPosition(ctx context.Context, sectionID uuid
 	return int(count) + 1, nil
 }
 
-
 func (r *WaitlistRepository) Delete(ctx context.Context, id uuid.UUID) error {
 	return r.db.WithContext(ctx).Delete(&domain.WaitlistEntry{}, "waitlist_id = ?", id).Error
 }
-
 
 func (r *WaitlistRepository) GetBySectionID(ctx context.Context, sectionID uuid.UUID) ([]*domain.WaitlistEntry, error) {
 	var entries []*domain.WaitlistEntry
@@ -93,7 +85,6 @@ func (r *WaitlistRepository) GetBySectionID(ctx context.Context, sectionID uuid.
 	}
 	return entries, nil
 }
-
 
 func (r *WaitlistRepository) GetByStudentID(ctx context.Context, studentID uuid.UUID) ([]*domain.WaitlistEntry, error) {
 	var entries []*domain.WaitlistEntry

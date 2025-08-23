@@ -10,31 +10,26 @@ import (
 	"github.com/google/uuid"
 )
 
-// APIResponse represents a standard API response
 type APIResponse struct {
-	Success bool        `json:"success"`
-	Message string      `json:"message,omitempty"`
-	Data    interface{} `json:"data,omitempty"`
-	Errors  interface{} `json:"errors,omitempty"`
+	Success bool   `json:"success"`
+	Message string `json:"message,omitempty"`
+	Data    any    `json:"data,omitempty"`
+	Errors  any    `json:"errors,omitempty"`
 }
 
-// RegistrationHandler handles registration-related HTTP requests
 type RegistrationHandler struct {
 	registrationService *service.RegistrationService
 }
 
-// NewRegistrationHandler creates a new registration handler
 func NewRegistrationHandler(registrationService *service.RegistrationService) *RegistrationHandler {
 	return &RegistrationHandler{
 		registrationService: registrationService,
 	}
 }
 
-// Register handles POST /api/register
 func (h *RegistrationHandler) Register(c *gin.Context) {
 	var req service.RegisterRequest
 
-	// Bind JSON request
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, APIResponse{
 			Success: false,
@@ -44,7 +39,6 @@ func (h *RegistrationHandler) Register(c *gin.Context) {
 		return
 	}
 
-	// Validate request
 	if err := validator.ValidateStruct(&req); err != nil {
 		validationErrors := validator.FormatValidationError(err)
 		c.JSON(http.StatusBadRequest, APIResponse{
@@ -55,7 +49,6 @@ func (h *RegistrationHandler) Register(c *gin.Context) {
 		return
 	}
 
-	// Process registration
 	response, err := h.registrationService.Register(c.Request.Context(), &req)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, APIResponse{
@@ -73,7 +66,6 @@ func (h *RegistrationHandler) Register(c *gin.Context) {
 	})
 }
 
-// DropCourse handles POST /api/drop
 func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 	type DropRequest struct {
 		StudentID uuid.UUID `json:"student_id" validate:"required"`
@@ -82,7 +74,6 @@ func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 
 	var req DropRequest
 
-	// Bind JSON request
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, APIResponse{
 			Success: false,
@@ -91,7 +82,6 @@ func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 		})
 		return
 	}
-
 	if err := validator.ValidateStruct(&req); err != nil {
 		validationErrors := validator.FormatValidationError(err)
 		c.JSON(http.StatusBadRequest, APIResponse{
@@ -117,12 +107,10 @@ func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 	})
 }
 
-// GetAvailableSections handles GET /api/sections/available
 func (h *RegistrationHandler) GetAvailableSections(c *gin.Context) {
 	semesterIDStr := c.Query("semester_id")
 	courseIDStr := c.Query("course_id")
 
-	// Validate query parameters
 	if semesterIDStr == "" {
 		c.JSON(http.StatusBadRequest, APIResponse{
 			Success: false,
@@ -166,11 +154,10 @@ func (h *RegistrationHandler) GetAvailableSections(c *gin.Context) {
 	c.JSON(http.StatusOK, APIResponse{
 		Success: true,
 		Message: "Available sections retrieved successfully",
-		Data:    map[string]interface{}{"sections": sections},
+		Data:    map[string]any{"sections": sections},
 	})
 }
 
-// GetWaitlistStatus handles GET /api/students/:student_id/waitlist
 func (h *RegistrationHandler) GetWaitlistStatus(c *gin.Context) {
 	studentIDStr := c.Param("student_id")
 	studentID, err := uuid.Parse(studentIDStr)
@@ -195,11 +182,10 @@ func (h *RegistrationHandler) GetWaitlistStatus(c *gin.Context) {
 	c.JSON(http.StatusOK, APIResponse{
 		Success: true,
 		Message: "Waitlist status retrieved successfully",
-		Data:    map[string]interface{}{"waitlist_entries": waitlistEntries},
+		Data:    map[string]any{"waitlist_entries": waitlistEntries},
 	})
 }
 
-// GetStudentRegistrations handles GET /api/students/:student_id/registrations
 func (h *RegistrationHandler) GetStudentRegistrations(c *gin.Context) {
 	studentIDStr := c.Param("student_id")
 	studentID, err := uuid.Parse(studentIDStr)

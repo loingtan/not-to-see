@@ -100,13 +100,11 @@ func setDefaults() {
 	viper.SetDefault("app.name", "cobra-template")
 	viper.SetDefault("app.version", "1.0.0")
 	viper.SetDefault("app.environment", "development")
-
 	viper.SetDefault("server.host", "localhost")
 	viper.SetDefault("server.port", "8080")
 	viper.SetDefault("server.read_timeout", 15)
 	viper.SetDefault("server.write_timeout", 15)
 	viper.SetDefault("server.max_header_bytes", 1048576)
-
 	viper.SetDefault("database.driver", "postgres")
 	viper.SetDefault("database.host", "localhost")
 	viper.SetDefault("database.port", 5432)
@@ -117,8 +115,6 @@ func setDefaults() {
 	viper.SetDefault("database.max_open_conns", 25)
 	viper.SetDefault("database.max_idle_conns", 5)
 	viper.SetDefault("database.conn_max_lifetime_minutes", 30)
-
-	// Cache configuration
 	viper.SetDefault("cache.type", "redis")
 	viper.SetDefault("cache.host", "localhost")
 	viper.SetDefault("cache.port", 6380)
@@ -129,7 +125,6 @@ func setDefaults() {
 	viper.SetDefault("cache.pool_timeout", 30)
 	viper.SetDefault("cache.idle_timeout", 300)
 	viper.SetDefault("cache.ttl_minutes", 60)
-
 	viper.SetDefault("queue.type", "memory")
 	viper.SetDefault("queue.buffer_size", 1000)
 	viper.SetDefault("queue.worker_count", 10)
@@ -138,8 +133,6 @@ func setDefaults() {
 	viper.SetDefault("registration.waitlist_max_size", 50)
 	viper.SetDefault("registration.registration_timeout_minutes", 5)
 	viper.SetDefault("registration.concurrent_registrations_limit", 100)
-
-	// Log configuration
 	viper.SetDefault("log.level", "info")
 	viper.SetDefault("log.format", "json")
 	viper.SetDefault("log.output", "stdout")

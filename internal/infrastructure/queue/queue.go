@@ -2,50 +2,135 @@ package queue
 
 import (
 	interfaces "cobra-template/internal/interfaces/infrastructure"
+	serviceInterfaces "cobra-template/internal/interfaces/service"
+	"cobra-template/pkg/logger"
 	"context"
 	"fmt"
 	"sync"
+	"time"
 
 	"github.com/google/uuid"
 )
 
 type Queue struct {
-	registrationQueue chan interfaces.RegistrationJob
-	waitlistQueue     chan uuid.UUID
-	mu                sync.RWMutex
+	databaseSyncQueue  chan interfaces.DatabaseSyncJob
+	waitlistQueue      chan uuid.UUID
+	waitlistEntryQueue chan interfaces.WaitlistJob
+
+	// Worker management
+	workers int
+	ctx     context.Context
+	cancel  context.CancelFunc
+	wg      sync.WaitGroup
+	started bool
+	mu      sync.RWMutex
+
+	// Service dependency for processing jobs
+	registrationService serviceInterfaces.RegistrationService
 }
 
-// NewInMemoryQueue creates a new  in-memory queue
 func NewInMemoryQueue(bufferSize, workers int) interfaces.QueueService {
-	return &Queue{
-		registrationQueue: make(chan interfaces.RegistrationJob, bufferSize),
-		waitlistQueue:     make(chan uuid.UUID, bufferSize),
+	ctx, cancel := context.WithCancel(context.Background())
+
+	queue := &Queue{
+		databaseSyncQueue:  make(chan interfaces.DatabaseSyncJob, bufferSize),
+		waitlistQueue:      make(chan uuid.UUID, bufferSize),
+		waitlistEntryQueue: make(chan interfaces.WaitlistJob, bufferSize),
+		workers:            workers,
+		ctx:                ctx,
+		cancel:             cancel,
+		started:            false,
+	}
+
+	return queue
+}
+
+// SetRegistrationService sets the registration service dependency for processing jobs
+func (q *Queue) SetRegistrationService(service interface{}) {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+
+	if regService, ok := service.(serviceInterfaces.RegistrationService); ok {
+		q.registrationService = regService
+	} else {
+		logger.Error("Invalid service type provided to SetRegistrationService")
 	}
 }
 
-// EnqueueRegistration adds a registration job to the queue
-func (q *Queue) EnqueueRegistration(ctx context.Context, job interfaces.RegistrationJob) error {
+// StartWorkers starts the background worker goroutines
+func (q *Queue) StartWorkers() {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+
+	if q.started {
+		return
+	}
+
+	if q.registrationService == nil {
+		logger.Warn("Registration service not set, workers cannot process jobs")
+		return
+	}
+
+	logger.Info("Starting %d queue workers", q.workers)
+
+	// Start database sync workers
+	for i := 0; i < q.workers; i++ {
+		q.wg.Add(1)
+		go q.databaseSyncWorker(i)
+	}
+
+	// Start waitlist processing workers
+	for i := 0; i < q.workers; i++ {
+		q.wg.Add(1)
+		go q.waitlistProcessingWorker(i)
+	}
+
+	// Start waitlist entry workers
+	for i := 0; i < q.workers; i++ {
+		q.wg.Add(1)
+		go q.waitlistEntryWorker(i)
+	}
+
+	q.started = true
+	logger.Info("Queue workers started successfully")
+}
+
+// StopWorkers stops all background workers gracefully
+func (q *Queue) StopWorkers() {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+
+	if !q.started {
+		return
+	}
+
+	logger.Info("Stopping queue workers...")
+	q.cancel()
+	q.wg.Wait()
+	q.started = false
+	logger.Info("Queue workers stopped")
+}
+
+func (q *Queue) EnqueueDatabaseSync(ctx context.Context, job interfaces.DatabaseSyncJob) error {
 	select {
-	case q.registrationQueue <- job:
+	case q.databaseSyncQueue <- job:
 		return nil
 	case <-ctx.Done():
 		return ctx.Err()
 	default:
-		return fmt.Errorf("registration queue is full")
+		return fmt.Errorf("database sync queue is full")
 	}
 }
 
-// DequeueRegistration gets a registration job from the queue
-func (q *Queue) DequeueRegistration(ctx context.Context) (*interfaces.RegistrationJob, error) {
+func (q *Queue) DequeueDatabaseSync(ctx context.Context) (*interfaces.DatabaseSyncJob, error) {
 	select {
-	case job := <-q.registrationQueue:
+	case job := <-q.databaseSyncQueue:
 		return &job, nil
 	case <-ctx.Done():
 		return nil, ctx.Err()
 	}
 }
 
-// EnqueueWaitlistProcessing adds a section to waitlist processing queue
 func (q *Queue) EnqueueWaitlistProcessing(ctx context.Context, sectionID uuid.UUID) error {
 	select {
 	case q.waitlistQueue <- sectionID:
@@ -56,22 +141,174 @@ func (q *Queue) EnqueueWaitlistProcessing(ctx context.Context, sectionID uuid.UU
 		return fmt.Errorf("waitlist queue is full")
 	}
 }
-
-// EnqueueFailedJob adds a failed job to the dead letter queue (simplified)
-func (q *Queue) EnqueueFailedJob(ctx context.Context, job interfaces.RegistrationJob, reason string) error {
-	// For simplicity, just log the failed job
-	fmt.Printf("Failed job: StudentID=%s, SectionID=%s, Reason=%s\n",
-		job.StudentID, job.SectionID, reason)
-	return nil
+func (q *Queue) DequeueWaitlistProcessing(ctx context.Context) (uuid.UUID, error) {
+	select {
+	case id := <-q.waitlistQueue:
+		return id, nil
+	case <-ctx.Done():
+		return uuid.UUID{}, ctx.Err()
+	}
 }
-func (q *Queue) GetQueueLength(ctx context.Context, queueName string) (int, error) {
-	switch queueName {
-	case "registration":
-		return len(q.registrationQueue), nil
-	case "waitlist":
-		return len(q.waitlistQueue), nil
+
+func (q *Queue) EnqueueWaitlistEntry(ctx context.Context, job interfaces.WaitlistJob) error {
+	select {
+	case q.waitlistEntryQueue <- job:
+		return nil
+	case <-ctx.Done():
+		return ctx.Err()
 	default:
-		return 0, fmt.Errorf("unknown queue: %s", queueName)
+		return fmt.Errorf("waitlist entry queue is full")
+	}
+}
+
+func (q *Queue) DequeueWaitlistEntry(ctx context.Context) (*interfaces.WaitlistJob, error) {
+	select {
+	case job := <-q.waitlistEntryQueue:
+		return &job, nil
+	case <-ctx.Done():
+		return nil, ctx.Err()
+	}
+}
+
+// Background worker methods
+
+// databaseSyncWorker processes database sync jobs
+func (q *Queue) databaseSyncWorker(workerID int) {
+	defer q.wg.Done()
+
+	logger.Info("Database sync worker %d started", workerID)
+
+	for {
+		select {
+		case <-q.ctx.Done():
+			logger.Info("Database sync worker %d stopped", workerID)
+			return
+		default:
+			// Try to get a job with timeout
+			ctx, cancel := context.WithTimeout(q.ctx, 5*time.Second)
+			job, err := q.DequeueDatabaseSync(ctx)
+			cancel()
+
+			if err != nil {
+				if err == context.DeadlineExceeded {
+					continue // Timeout, try again
+				}
+				logger.Error("Database sync worker %d error: %v", workerID, err)
+				continue
+			}
+
+			if job != nil {
+				q.processDatabaseSyncJob(workerID, job)
+			}
+		}
+	}
+}
+
+// waitlistProcessingWorker processes waitlist processing jobs
+func (q *Queue) waitlistProcessingWorker(workerID int) {
+	defer q.wg.Done()
+
+	logger.Info("Waitlist processing worker %d started", workerID)
+
+	for {
+		select {
+		case <-q.ctx.Done():
+			logger.Info("Waitlist processing worker %d stopped", workerID)
+			return
+		default:
+			// Try to get a section ID with timeout
+			ctx, cancel := context.WithTimeout(q.ctx, 5*time.Second)
+			sectionID, err := q.DequeueWaitlistProcessing(ctx)
+			cancel()
+
+			if err != nil {
+				if err == context.DeadlineExceeded {
+					continue // Timeout, try again
+				}
+				logger.Error("Waitlist processing worker %d error: %v", workerID, err)
+				continue
+			}
+
+			q.processWaitlistProcessing(workerID, sectionID)
+		}
+	}
+}
+
+// waitlistEntryWorker processes waitlist entry jobs
+func (q *Queue) waitlistEntryWorker(workerID int) {
+	defer q.wg.Done()
+
+	logger.Info("Waitlist entry worker %d started", workerID)
+
+	for {
+		select {
+		case <-q.ctx.Done():
+			logger.Info("Waitlist entry worker %d stopped", workerID)
+			return
+		default:
+			// Try to get a job with timeout
+			ctx, cancel := context.WithTimeout(q.ctx, 5*time.Second)
+			job, err := q.DequeueWaitlistEntry(ctx)
+			cancel()
+
+			if err != nil {
+				if err == context.DeadlineExceeded {
+					continue // Timeout, try again
+				}
+				logger.Error("Waitlist entry worker %d error: %v", workerID, err)
+				continue
+			}
+
+			if job != nil {
+				q.processWaitlistEntryJob(workerID, job)
+			}
+		}
+	}
+}
+
+// Job processing methods
+
+func (q *Queue) processDatabaseSyncJob(workerID int, job *interfaces.DatabaseSyncJob) {
+	logger.Info("Worker %d processing database sync job: %s for student %s, section %s",
+		workerID, job.JobType, job.StudentID, job.SectionID)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	if err := q.registrationService.ProcessDatabaseSyncJob(ctx, *job); err != nil {
+		logger.Error("Worker %d failed to process database sync job: %v", workerID, err)
+		// TODO: Implement retry logic or dead letter queue
+	} else {
+		logger.Info("Worker %d successfully processed database sync job", workerID)
+	}
+}
+
+func (q *Queue) processWaitlistProcessing(workerID int, sectionID uuid.UUID) {
+	logger.Info("Worker %d processing waitlist for section %s", workerID, sectionID)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	if err := q.registrationService.ProcessWaitlist(ctx, sectionID); err != nil {
+		logger.Error("Worker %d failed to process waitlist for section %s: %v", workerID, sectionID, err)
+		// TODO: Implement retry logic
+	} else {
+		logger.Info("Worker %d successfully processed waitlist for section %s", workerID, sectionID)
+	}
+}
+
+func (q *Queue) processWaitlistEntryJob(workerID int, job *interfaces.WaitlistJob) {
+	logger.Info("Worker %d processing waitlist entry for student %s, section %s, position %d",
+		workerID, job.StudentID, job.SectionID, job.Position)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	if err := q.registrationService.ProcessWaitlistJob(ctx, *job); err != nil {
+		logger.Error("Worker %d failed to process waitlist entry: %v", workerID, err)
+
+	} else {
+		logger.Info("Worker %d successfully processed waitlist entry", workerID)
 	}
 }
 

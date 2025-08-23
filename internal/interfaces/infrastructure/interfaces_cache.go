@@ -13,6 +13,10 @@ type CacheService interface {
 	DecrementAvailableSeats(ctx context.Context, sectionID uuid.UUID) error
 	IncrementAvailableSeats(ctx context.Context, sectionID uuid.UUID) error
 
+	// Atomic operations that return the new value
+	DecrementAndGetAvailableSeats(ctx context.Context, sectionID uuid.UUID) (int, error)
+	IncrementAndGetAvailableSeats(ctx context.Context, sectionID uuid.UUID) (int, error)
+
 	GetSectionDetails(ctx context.Context, sectionID uuid.UUID) (interface{}, error)
 	SetSectionDetails(ctx context.Context, sectionID uuid.UUID, data interface{}, ttl time.Duration) error
 

@@ -82,6 +82,46 @@ func (r *RedisCache) DecrementAvailableSeats(ctx context.Context, sectionID uuid
 	return nil
 }
 
+func (r *RedisCache) DecrementAndGetAvailableSeats(ctx context.Context, sectionID uuid.UUID) (int, error) {
+	key := fmt.Sprintf("section:seats:%s", sectionID.String())
+
+	luaScript := `
+		local key = KEYS[1]
+		local current = redis.call("GET", key)
+		if current == false then
+			return redis.error_reply("Key does not exist")
+		end
+		local value = tonumber(current)
+		if value <= 0 then
+			return redis.error_reply("No seats available")
+		end
+		return redis.call("DECR", key)
+	`
+
+	result, err := r.client.Eval(ctx, luaScript, []string{key}).Result()
+	if err != nil {
+		return -1, fmt.Errorf("failed to decrement seats: %w", err)
+	}
+
+	newValue, ok := result.(int64)
+	if !ok {
+		return -1, fmt.Errorf("unexpected result type from Redis")
+	}
+
+	return int(newValue), nil
+}
+
+func (r *RedisCache) IncrementAndGetAvailableSeats(ctx context.Context, sectionID uuid.UUID) (int, error) {
+	key := fmt.Sprintf("section:seats:%s", sectionID.String())
+
+	result, err := r.client.Incr(ctx, key).Result()
+	if err != nil {
+		return -1, fmt.Errorf("failed to increment seats: %w", err)
+	}
+
+	return int(result), nil
+}
+
 func (r *RedisCache) IncrementAvailableSeats(ctx context.Context, sectionID uuid.UUID) error {
 	key := fmt.Sprintf("section:seats:%s", sectionID.String())
 

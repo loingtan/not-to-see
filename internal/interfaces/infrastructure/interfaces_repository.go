@@ -31,6 +31,7 @@ type SectionRepository interface {
 	UpdateWithOptimisticLock(ctx context.Context, section *domain.Section) error
 	GetByCourseAndSemester(ctx context.Context, courseID, semesterID uuid.UUID) ([]*domain.Section, error)
 	GetBySemester(ctx context.Context, semesterID uuid.UUID) ([]*domain.Section, error)
+	GetAllActive(ctx context.Context) ([]*domain.Section, error)
 }
 
 type RegistrationRepository interface {

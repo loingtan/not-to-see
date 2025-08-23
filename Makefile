@@ -2,19 +2,8 @@ GO ?= go
 BINARY ?= bin/cobra-template
 PKG := ./...
 
-.PHONY: help fmt tidy build run up down logs test clean
+.PHONY: help fmt tidy build run up down logs test clean migrate-up migrate-status migrate-create
 
-help:
-	@echo "Common targets:"
-	@echo "  fmt     - Format code with gofmt"
-	@echo "  tidy    - Sync go.mod/go.sum"
-	@echo "  build   - Build CLI binary to $(BINARY)"
-	@echo "  run     - Build then run registration server"
-	@echo "  up      - Start Postgres and Redis with docker compose"
-	@echo "  down    - Stop docker compose services"
-	@echo "  logs    - Tail compose service logs"
-	@echo "  test    - Run unit tests"
-	@echo "  clean   - Remove build artifacts"
 
 fmt:
 	gofmt -s -w .
@@ -27,12 +16,11 @@ build: fmt tidy
 
 run: build
 	$(BINARY) registration -v
-
 up:
 	docker-compose up -d postgres redis
 
 down:
-	docker-compose down
+	docker-compose down -v
 
 logs:
 	docker-compose logs -f
@@ -42,3 +30,23 @@ test:
 
 clean:
 	rm -rf bin
+
+migrate-up: build
+	$(BINARY) migrate up
+
+migrate-status: build
+	$(BINARY) migrate status
+
+migrate-create:
+	@if [ -z "$(NAME)" ]; then \
+		echo "Usage: make migrate-create NAME=migration_name"; \
+		exit 1; \
+	fi; \
+	TIMESTAMP=$$(date +%Y%m%d%H%M%S); \
+	FILE="migrations/$${TIMESTAMP}_$(NAME).sql"; \
+	echo "-- Migration: $${TIMESTAMP}_$(NAME)" > $$FILE; \
+	echo "-- Description: $(NAME)" >> $$FILE; \
+	echo "-- Created: $$(date +%Y-%m-%d)" >> $$FILE; \
+	echo "" >> $$FILE; \
+	echo "-- Add your migration SQL here" >> $$FILE; \
+	echo "Created migration file: $$FILE"

@@ -43,7 +43,7 @@ func (h *HealthHandler) HealthCheck(c *gin.Context) {
 
 func (h *HealthHandler) ReadinessCheck(c *gin.Context) {
 
-	response := map[string]interface{}{
+	response := map[string]any{
 		"ready":     true,
 		"timestamp": time.Now(),
 	}
@@ -53,7 +53,7 @@ func (h *HealthHandler) ReadinessCheck(c *gin.Context) {
 
 func (h *HealthHandler) LivenessCheck(c *gin.Context) {
 
-	response := map[string]interface{}{
+	response := map[string]any{
 		"alive":     true,
 		"timestamp": time.Now(),
 	}
