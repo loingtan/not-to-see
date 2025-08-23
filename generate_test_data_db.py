@@ -42,14 +42,13 @@ class CourseRegistrationDataInserter:
         self.registrations = []
         self.waitlist = []
 
-        # Configuration
+        #
         self.num_courses = 320
         self.slots_per_course = 30
         self.num_students = 8200
         self.min_courses_per_student = 3
         self.max_courses_per_student = 6
 
-        # Department and course configuration
         self.departments = [
             "Computer Science", "Mathematics", "Physics", "Chemistry",
             "Biology", "Economics", "Psychology", "History", "Literature",
@@ -80,7 +79,6 @@ class CourseRegistrationDataInserter:
                 cursor_factory=psycopg2.extras.RealDictCursor)
             print("✅ Connected to PostgreSQL database")
 
-            # Test connection with a simple query
             self.cursor.execute("SELECT version();")
             version = self.cursor.fetchone()
             print(f"PostgreSQL version: {version['version']}")
@@ -316,7 +314,7 @@ class CourseRegistrationDataInserter:
 
         for semester in self.semesters:
             for course in self.courses:
-                # Each course has 1-3 sections per semester
+
                 num_sections = random.randint(1, 3)
 
                 for section_num in range(1, num_sections + 1):
@@ -326,7 +324,7 @@ class CourseRegistrationDataInserter:
                         'semester_id': semester['semester_id'],
                         'section_number': f"{section_num:03d}",
                         'total_seats': self.slots_per_course,
-                        'available_seats': self.slots_per_course,  # Start with all seats available
+                        'available_seats': self.slots_per_course,
                         'is_active': True,
                         'created_at': datetime.now(),
                         'updated_at': datetime.now(),
@@ -359,13 +357,12 @@ class CourseRegistrationDataInserter:
         """Skip generating initial registrations - let the system handle this during testing"""
         print("⏭️  Skipping initial registrations generation")
         print("   Registrations will be created through the registration system during testing")
-        self.registrations = []  # Keep empty for clean testing
+        self.registrations = []
 
     def generate_waitlist_entries(self):
         """Generate some waitlist entries"""
         print("⏳ Generating waitlist entries...")
 
-        # Generate waitlist entries for popular sections
         popular_sections = random.sample(
             self.sections, min(50, len(self.sections)))
         active_students = [
