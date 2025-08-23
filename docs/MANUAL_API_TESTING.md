@@ -66,13 +66,6 @@ curl -X GET "http://localhost:8080/api/v1/sections/available?semester_id=SEMESTE
 
 **Expected**: Status 200, Array of available sections
 
-**Example with actual ID**:
-```bash
-curl -X GET "http://localhost:8080/api/v1/sections/available?semester_id=123e4567-e89b-12d3-a456-426614174000" \
-  -H "Content-Type: application/json"
-```{"success":true,"message":"Student registrations retrieved successfully","data":{"registrations":[{"registration_id":"16c03a1e-7858-4dd4-b6c7-7a564567e99e","student_id":"afbb77da-008e-4dc3-ad88-28b58ff22eed","section_id":"87cdd665-0b12-412b-93ca-668b865f4b7e","status":"enrolled","registration_date":"2025-08-23T12:59:01.571793+07:00","created_at":"2025-08-23T12:59:01.571793+07:00","updated_at":"2025-08-23T12:59:01.571793+07:00","version":1,"student":{"student_id":"afbb77da-008e-4dc3-ad88-28b58ff22eed","student_number":"S2024000001","first_name":"Michelle","last_name":"Gonzalez","enrollment_status":"active","created_at":"2025-08-23T19:31:42.47748+07:00","updated_at":"2025-08-23T19:31:42.477484+07:00","version":1},"section":{"section_id":"87cdd665-0b12-412b-93ca-668b865f4b7e","course_id":"5183538a-851e-4c8b-9780-9b0e19bb26f8","semester_id":"2c40494b-e001-4a8d-8298-6482f1f4169c","section_number":"001","total_seats":30,"available_seats":30,"is_active":true,"created_at":"2025-08-23T19:31:47.212967+07:00","updated_at":"2025-08-23T19:31:47.212975+07:00","version":1,"course":{"course_id":"00000000-0000-0000-0000-000000000000","course_code":"","course_name":"","created_at":"0001-01-01T00:00:00Z","updated_at":"0001-01-01T00:00:00Z","version":0},"semester":{"semester_id":"00000000-0000-0000-0000-000000000000","semester_code":"","semester_name":"","start_date":"0001-01-01T00:00:00Z","end_date":"0001-01-01T00:00:00Z","registration_start":"0001-01-01T00:00:00Z","registration_end":"0001-01-01T00:00:00Z","is_active":false,"created_at":"0001-01-01T00:00:00Z","updated_at":"0001-01-01T00:00:00Z"}}}]}}
-
----
 
 ### 3. Register for Courses
 ```bash
@@ -88,17 +81,6 @@ curl -X POST http://localhost:8080/api/v1/register \
 
 **Expected**: Status 200, Registration results for each section
 
-**Example with actual IDs**:
-```bash
-curl -X POST http://localhost:8080/api/v1/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "student_id": "123e4567-e89b-12d3-a456-426614174001",
-    "section_ids": ["123e4567-e89b-12d3-a456-426614174002"]
-  }'
-```
-
----
 
 ### 4. Get Student Registrations
 ```bash
@@ -139,28 +121,6 @@ curl -X POST http://localhost:8080/api/v1/register/drop \
 **Expected**: Status 200, Success message
 
 ---
-
-## Test Scenarios
-
-### Scenario 1: Successful Registration Flow
-1. Get available sections for a semester
-2. Register a student for 2-3 courses
-3. Check student's registrations
-4. Drop one course
-5. Verify the course was dropped
-
-### Scenario 2: Waitlist Testing
-1. Register multiple students for the same popular section until it's full
-2. Register additional students to test waitlist functionality
-3. Check waitlist status for students
-4. Drop a course from an enrolled student
-5. Verify waitlist processing
-
-### Scenario 3: Error Handling
-1. Try to register with invalid student ID
-2. Try to register for non-existent section
-3. Try to register the same student for the same course twice
-4. Try to drop a course the student isn't enrolled in
 
 ## Detailed Test Commands
 
@@ -248,19 +208,6 @@ docker exec course_registration_postgres psql -U postgres -d course_registration
 docker exec course_registration_postgres psql -U postgres -d course_registration -c "SELECT w.*, s.first_name, s.last_name FROM waitlist w JOIN students s ON w.student_id = s.student_id ORDER BY w.section_id, w.position;"
 ```
 
-## Load Testing
-
-For basic load testing, you can run multiple curl commands in parallel:
-
-```bash
-# Run 10 concurrent registrations
-for i in {1..10}; do
-  curl -X POST http://localhost:8080/api/v1/register \
-    -H "Content-Type: application/json" \
-    -d "{\"student_id\": \"$STUDENT_ID\", \"section_ids\": [\"$SECTION_ID\"]}" &
-done
-wait
-```
 
 ## Troubleshooting
 
@@ -283,12 +230,3 @@ lsof -i :8080
 docker exec course_registration_postgres psql -U postgres -d course_registration -c "SELECT 1;"
 ```
 
-## Expected Behavior
-
-- **Registration**: Should succeed for available seats, add to waitlist when full
-- **Waitlist**: Should automatically process when seats become available
-- **Drop**: Should free up seats and process waitlist
-- **Concurrency**: Multiple simultaneous requests should be handled correctly
-- **Error Handling**: Invalid requests should return appropriate error messages
-
-This manual testing approach will help you verify all functionality of your course registration system.
