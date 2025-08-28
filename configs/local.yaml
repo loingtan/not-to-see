@@ -1,11 +1,11 @@
 app:
   name: "course-registration-system"
   version: "1.0.0"
-  environment: "development"
+  environment: "local"
   description: "University Course Registration System"
 
 server:
-  host: "localhost"
+  host: "127.0.0.1"
   port: "8080"
   read_timeout: 30
   write_timeout: 30
@@ -13,8 +13,8 @@ server:
 
 database:
   driver: "postgres"
-  host: "localhost"
-  port: 5432
+  host: "pgbouncer"
+  port: 6432
   username: "postgres"
   password: "password123"
   name: "course_registration"
@@ -25,7 +25,7 @@ database:
 
 cache:
   type: "redis"
-  host: "localhost"
+  host: "redis-master"
   port: 6379
   password: ""
   db: 0
@@ -35,15 +35,15 @@ cache:
   idle_timeout: 300
   ttl_minutes: 60
   sentinel:
-    enabled: false
+    enabled: true
     master_name: "mymaster"
-    sentinel_addrs: ["localhost:26379", "localhost:26380", "localhost:26381"]
+    sentinel_addrs: ["redis-sentinel-1:26379", "redis-sentinel-2:26379", "redis-sentinel-3:26379"]
     sentinel_password: ""
 
 queue:
   type: "redis"
   buffer_size: 1000
-  worker_count: 10
+  worker_count: 3  
   retry_attempts: 3
 
 registration:
@@ -51,7 +51,8 @@ registration:
   waitlist_max_size: 50
   registration_timeout_minutes: 5
   concurrent_registrations_limit: 100
-
+  waitlist_repository: "redis"     
+  waitlist_fallback_enabled: true  
 log:
   level: "info"
   format: "json"

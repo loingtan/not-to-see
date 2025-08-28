@@ -127,7 +127,22 @@ CREATE TABLE IF NOT EXISTS waitlist (
     expires_at TIMESTAMP WITH TIME ZONE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    UNIQUE(student_id, section_id)
+    CONSTRAINT fk_waitlist_student FOREIGN KEY (student_id) REFERENCES students(student_id) ON DELETE CASCADE,
+    CONSTRAINT fk_waitlist_section FOREIGN KEY (section_id) REFERENCES sections(section_id) ON DELETE CASCADE,
+    CONSTRAINT unique_waitlist_student_section UNIQUE (student_id, section_id)
+);
+
+-- Create idempotency_keys table for duplicate request prevention
+CREATE TABLE IF NOT EXISTS idempotency_keys (
+    key VARCHAR(255) PRIMARY KEY,
+    student_id UUID NOT NULL,
+    request_hash VARCHAR(64) NOT NULL,
+    response_data TEXT,
+    status_code INTEGER NOT NULL,
+    processed_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    CONSTRAINT fk_idempotency_student FOREIGN KEY (student_id) REFERENCES students(student_id) ON DELETE CASCADE
 );
 
 -- Add foreign key constraints for waitlist
@@ -229,6 +244,19 @@ BEGIN
     
     IF NOT EXISTS (SELECT 1 FROM pg_indexes WHERE indexname = 'idx_waitlist_timestamp') THEN
         CREATE INDEX idx_waitlist_timestamp ON waitlist(timestamp);
+    END IF;
+    
+    IF NOT EXISTS (SELECT 1 FROM pg_indexes WHERE indexname = 'idx_waitlist_section_position') THEN
+        CREATE INDEX idx_waitlist_section_position ON waitlist(section_id, position);
+    END IF;
+    
+    -- Idempotency indexes
+    IF NOT EXISTS (SELECT 1 FROM pg_indexes WHERE indexname = 'idx_idempotency_student_id') THEN
+        CREATE INDEX idx_idempotency_student_id ON idempotency_keys(student_id);
+    END IF;
+    
+    IF NOT EXISTS (SELECT 1 FROM pg_indexes WHERE indexname = 'idx_idempotency_expires_at') THEN
+        CREATE INDEX idx_idempotency_expires_at ON idempotency_keys(expires_at);
     END IF;
     
     -- Composite indexes

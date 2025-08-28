@@ -17,7 +17,6 @@ type Queue struct {
 	waitlistQueue      chan uuid.UUID
 	waitlistEntryQueue chan interfaces.WaitlistJob
 
-	// Worker management
 	workers int
 	ctx     context.Context
 	cancel  context.CancelFunc
@@ -25,7 +24,6 @@ type Queue struct {
 	started bool
 	mu      sync.RWMutex
 
-	// Service dependency for processing jobs
 	registrationService serviceInterfaces.RegistrationService
 }
 
@@ -45,7 +43,6 @@ func NewInMemoryQueue(bufferSize, workers int) interfaces.QueueService {
 	return queue
 }
 
-// SetRegistrationService sets the registration service dependency for processing jobs
 func (q *Queue) SetRegistrationService(service interface{}) {
 	q.mu.Lock()
 	defer q.mu.Unlock()
@@ -57,7 +54,6 @@ func (q *Queue) SetRegistrationService(service interface{}) {
 	}
 }
 
-// StartWorkers starts the background worker goroutines
 func (q *Queue) StartWorkers() {
 	q.mu.Lock()
 	defer q.mu.Unlock()
@@ -73,19 +69,16 @@ func (q *Queue) StartWorkers() {
 
 	logger.Info("Starting %d queue workers", q.workers)
 
-	// Start database sync workers
 	for i := 0; i < q.workers; i++ {
 		q.wg.Add(1)
 		go q.databaseSyncWorker(i)
 	}
 
-	// Start waitlist processing workers
 	for i := 0; i < q.workers; i++ {
 		q.wg.Add(1)
 		go q.waitlistProcessingWorker(i)
 	}
 
-	// Start waitlist entry workers
 	for i := 0; i < q.workers; i++ {
 		q.wg.Add(1)
 		go q.waitlistEntryWorker(i)
@@ -95,7 +88,6 @@ func (q *Queue) StartWorkers() {
 	logger.Info("Queue workers started successfully")
 }
 
-// StopWorkers stops all background workers gracefully
 func (q *Queue) StopWorkers() {
 	q.mu.Lock()
 	defer q.mu.Unlock()
@@ -170,9 +162,6 @@ func (q *Queue) DequeueWaitlistEntry(ctx context.Context) (*interfaces.WaitlistJ
 	}
 }
 
-// Background worker methods
-
-// databaseSyncWorker processes database sync jobs
 func (q *Queue) databaseSyncWorker(workerID int) {
 	defer q.wg.Done()
 
@@ -184,14 +173,14 @@ func (q *Queue) databaseSyncWorker(workerID int) {
 			logger.Info("Database sync worker %d stopped", workerID)
 			return
 		default:
-			// Try to get a job with timeout
+
 			ctx, cancel := context.WithTimeout(q.ctx, 5*time.Second)
 			job, err := q.DequeueDatabaseSync(ctx)
 			cancel()
 
 			if err != nil {
 				if err == context.DeadlineExceeded {
-					continue // Timeout, try again
+					continue
 				}
 				logger.Error("Database sync worker %d error: %v", workerID, err)
 				continue
@@ -204,7 +193,6 @@ func (q *Queue) databaseSyncWorker(workerID int) {
 	}
 }
 
-// waitlistProcessingWorker processes waitlist processing jobs
 func (q *Queue) waitlistProcessingWorker(workerID int) {
 	defer q.wg.Done()
 
@@ -216,14 +204,14 @@ func (q *Queue) waitlistProcessingWorker(workerID int) {
 			logger.Info("Waitlist processing worker %d stopped", workerID)
 			return
 		default:
-			// Try to get a section ID with timeout
+
 			ctx, cancel := context.WithTimeout(q.ctx, 5*time.Second)
 			sectionID, err := q.DequeueWaitlistProcessing(ctx)
 			cancel()
 
 			if err != nil {
 				if err == context.DeadlineExceeded {
-					continue // Timeout, try again
+					continue
 				}
 				logger.Error("Waitlist processing worker %d error: %v", workerID, err)
 				continue
@@ -234,7 +222,6 @@ func (q *Queue) waitlistProcessingWorker(workerID int) {
 	}
 }
 
-// waitlistEntryWorker processes waitlist entry jobs
 func (q *Queue) waitlistEntryWorker(workerID int) {
 	defer q.wg.Done()
 
@@ -246,14 +233,14 @@ func (q *Queue) waitlistEntryWorker(workerID int) {
 			logger.Info("Waitlist entry worker %d stopped", workerID)
 			return
 		default:
-			// Try to get a job with timeout
+
 			ctx, cancel := context.WithTimeout(q.ctx, 5*time.Second)
 			job, err := q.DequeueWaitlistEntry(ctx)
 			cancel()
 
 			if err != nil {
 				if err == context.DeadlineExceeded {
-					continue // Timeout, try again
+					continue
 				}
 				logger.Error("Waitlist entry worker %d error: %v", workerID, err)
 				continue
@@ -266,8 +253,6 @@ func (q *Queue) waitlistEntryWorker(workerID int) {
 	}
 }
 
-// Job processing methods
-
 func (q *Queue) processDatabaseSyncJob(workerID int, job *interfaces.DatabaseSyncJob) {
 	logger.Info("Worker %d processing database sync job: %s for student %s, section %s",
 		workerID, job.JobType, job.StudentID, job.SectionID)
@@ -277,7 +262,6 @@ func (q *Queue) processDatabaseSyncJob(workerID int, job *interfaces.DatabaseSyn
 
 	if err := q.registrationService.ProcessDatabaseSyncJob(ctx, *job); err != nil {
 		logger.Error("Worker %d failed to process database sync job: %v", workerID, err)
-		// TODO: Implement retry logic or dead letter queue
 	} else {
 		logger.Info("Worker %d successfully processed database sync job", workerID)
 	}
@@ -291,7 +275,7 @@ func (q *Queue) processWaitlistProcessing(workerID int, sectionID uuid.UUID) {
 
 	if err := q.registrationService.ProcessWaitlist(ctx, sectionID); err != nil {
 		logger.Error("Worker %d failed to process waitlist for section %s: %v", workerID, sectionID, err)
-		// TODO: Implement retry logic
+
 	} else {
 		logger.Info("Worker %d successfully processed waitlist for section %s", workerID, sectionID)
 	}

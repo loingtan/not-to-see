@@ -17,7 +17,8 @@ import (
 )
 
 var (
-	registrationPort string
+	registrationPort    string
+	enableLoadTestCache bool
 )
 
 var registrationCmd = &cobra.Command{
@@ -38,6 +39,7 @@ This includes:
 func init() {
 	rootCmd.AddCommand(registrationCmd)
 	registrationCmd.Flags().StringVarP(&registrationPort, "port", "p", "8080", "Port for the registration server to listen on")
+	registrationCmd.Flags().BoolVar(&enableLoadTestCache, "load-test-cache", false, "Enable enhanced pre-caching for load testing")
 }
 
 func startRegistrationServer() {
@@ -71,15 +73,12 @@ func startRegistrationServer() {
 		os.Exit(1)
 	}
 
-	// Initialize router and queue service
 	routerComponents := router.NewRegistrationRouterWithQueue(db)
-
-	// Create HTTP server
 	srv := &http.Server{
 		Addr:           ":" + cfg.Server.Port,
 		Handler:        routerComponents.Router,
-		ReadTimeout:    time.Duration(cfg.Server.ReadTimeout) * time.Second,
-		WriteTimeout:   time.Duration(cfg.Server.WriteTimeout) * time.Second,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   60 * time.Second,
 		MaxHeaderBytes: cfg.Server.MaxHeaderBytes,
 	}
 
@@ -91,7 +90,16 @@ func startRegistrationServer() {
 		logger.Info("  GET  /api/v1/students/{id}/registrations - Get student registrations")
 		logger.Info("  GET  /api/v1/students/{id}/waitlist - Get waitlist status")
 		logger.Info("  GET  /api/v1/sections/available - Get available sections")
+		logger.Info("  POST /api/v1/cache/warmup - Manual cache warmup")
+		logger.Info("  POST /api/v1/cache/warmup/loadtest - Enhanced load test cache warmup")
+		logger.Info("  GET  /api/v1/cache/stats - Cache statistics")
+		logger.Info("  GET  /api/v1/cache/loadtest/status - Load test readiness status")
 		logger.Info("  GET  /health - Health check")
+
+		if enableLoadTestCache {
+			logger.Info("🚀 Load test cache optimization enabled")
+		}
+
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			logger.Fatal("Failed to start registration server: %v", err)
 		}
@@ -100,16 +108,12 @@ func startRegistrationServer() {
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
 	<-quit
-	logger.Info("🛑 Shutting down Course Registration Server...")
-
-	// Stop queue workers first
+	logger.Info("Shutting down Course Registration Server...")
 	logger.Info("Stopping queue workers...")
 	routerComponents.QueueService.StopWorkers()
 
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
-
-	// Shutdown HTTP server
 	if err := srv.Shutdown(ctx); err != nil {
 		logger.Fatal("Server forced to shutdown: %v", err)
 	}

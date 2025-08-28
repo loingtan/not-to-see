@@ -1,0 +1,9 @@
+
+make start
+
+# Manual control
+make docker-build  # Build API image
+make db-up        # Start database services
+make up           # Start application services
+make status       # Check system status
+make full-down    # Stop everything

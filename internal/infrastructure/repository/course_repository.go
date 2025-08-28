@@ -47,3 +47,19 @@ func (r *CourseRepository) GetByCode(ctx context.Context, courseCode string) (*d
 	}
 	return &course, nil
 }
+
+func (r *CourseRepository) GetAllActive(ctx context.Context) ([]*domain.Course, error) {
+	var courses []*domain.Course
+
+	// Get all active courses - you might want to add additional criteria
+	// like checking if the course has active sections in current semester
+	err := r.db.WithContext(ctx).
+		Where("active = ?", true). // Assuming there's an active field
+		Find(&courses).Error
+
+	if err != nil {
+		return nil, err
+	}
+
+	return courses, nil
+}

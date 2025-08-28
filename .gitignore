@@ -64,12 +64,14 @@ target/
 # Documentation build outputs
 docs/_build/
 site/
-
+node_modules
+performance_tests/
 # Local development database files
 *.db
 *.sqlite
 *.sqlite3
-
+results/
+reports/
 # Docker
 .dockerignore
 
@@ -105,3 +107,4 @@ desktop.ini
 .vscode/tasks.json
 .vscode/launch.json
 .vscode/extensions.json
+node_modules/

@@ -11,18 +11,21 @@ type StudentRepository interface {
 	Create(ctx context.Context, student *domain.Student) error
 	GetByID(ctx context.Context, id uuid.UUID) (*domain.Student, error)
 	GetByStudentNumber(ctx context.Context, studentNumber string) (*domain.Student, error)
+	GetRecentlyActive(ctx context.Context, limit int) ([]*domain.Student, error)
 }
 
 type CourseRepository interface {
 	Create(ctx context.Context, course *domain.Course) error
 	GetByID(ctx context.Context, id uuid.UUID) (*domain.Course, error)
 	GetByCode(ctx context.Context, courseCode string) (*domain.Course, error)
+	GetAllActive(ctx context.Context) ([]*domain.Course, error)
 }
 
 type SemesterRepository interface {
 	Create(ctx context.Context, semester *domain.Semester) error
 	GetByID(ctx context.Context, id uuid.UUID) (*domain.Semester, error)
 	GetCurrent(ctx context.Context) (*domain.Semester, error)
+	GetAllActive(ctx context.Context) ([]*domain.Semester, error)
 }
 
 type SectionRepository interface {
@@ -50,4 +53,11 @@ type WaitlistRepository interface {
 	Delete(ctx context.Context, id uuid.UUID) error
 	GetBySectionID(ctx context.Context, sectionID uuid.UUID) ([]*domain.WaitlistEntry, error)
 	GetByStudentID(ctx context.Context, studentID uuid.UUID) ([]*domain.WaitlistEntry, error)
+}
+
+type IdempotencyRepository interface {
+	Create(ctx context.Context, key *domain.IdempotencyKey) error
+	GetByKey(ctx context.Context, key string) (*domain.IdempotencyKey, error)
+	DeleteExpired(ctx context.Context) error
+	Delete(ctx context.Context, key string) error
 }

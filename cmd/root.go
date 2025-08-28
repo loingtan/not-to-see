@@ -31,7 +31,12 @@ Example usage:
   course-registration registration --port 8080    # Start registration server
   course-registration loadtest --concurrent 100   # Run load tests`,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		logger.Init(verbose)
+		cfg := config.Get()
+		if err := logger.InitWithConfig(cfg.Log.Level, cfg.Log.Format, cfg.Log.Output, cfg.Log.FilePath); err != nil {
+			// Fallback to simple init if config-based init fails
+			logger.Init(verbose)
+			logger.Warn("Failed to initialize logger with config, using fallback: %v", err)
+		}
 	},
 }
 

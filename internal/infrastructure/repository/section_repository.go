@@ -11,19 +11,15 @@ import (
 	"gorm.io/gorm"
 )
 
-// SectionRepository implements SectionRepository using GORM
 type SectionRepository struct {
 	db *gorm.DB
 }
 
-// NewSectionRepository creates a new GORM section repository
 func NewSectionRepository(db *gorm.DB) interfaces.SectionRepository {
 	return &SectionRepository{
 		db: db,
 	}
 }
-
-// Create creates a new section
 func (r *SectionRepository) Create(ctx context.Context, section *domain.Section) error {
 	return r.db.WithContext(ctx).Create(section).Error
 }
@@ -83,8 +79,6 @@ func (r *SectionRepository) GetBySemester(ctx context.Context, semesterID uuid.U
 	}
 	return sections, nil
 }
-
-// GetAllActive returns all active sections (sections with available seats > 0)
 func (r *SectionRepository) GetAllActive(ctx context.Context) ([]*domain.Section, error) {
 	var sections []*domain.Section
 	err := r.db.WithContext(ctx).

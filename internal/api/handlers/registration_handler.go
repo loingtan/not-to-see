@@ -39,6 +39,12 @@ func (h *RegistrationHandler) Register(c *gin.Context) {
 		return
 	}
 
+	if req.IdempotencyKey == "" {
+		if headerKey := c.GetHeader("Idempotency-Key"); headerKey != "" {
+			req.IdempotencyKey = headerKey
+		}
+	}
+
 	if err := validator.ValidateStruct(&req); err != nil {
 		validationErrors := validator.FormatValidationError(err)
 		c.JSON(http.StatusBadRequest, APIResponse{
@@ -109,8 +115,6 @@ func (h *RegistrationHandler) DropCourse(c *gin.Context) {
 
 func (h *RegistrationHandler) GetAvailableSections(c *gin.Context) {
 	semesterIDStr := c.Query("semester_id")
-	courseIDStr := c.Query("course_id")
-
 	if semesterIDStr == "" {
 		c.JSON(http.StatusBadRequest, APIResponse{
 			Success: false,
@@ -128,20 +132,7 @@ func (h *RegistrationHandler) GetAvailableSections(c *gin.Context) {
 		return
 	}
 
-	var courseID *uuid.UUID
-	if courseIDStr != "" {
-		parsedCourseID, err := uuid.Parse(courseIDStr)
-		if err != nil {
-			c.JSON(http.StatusBadRequest, APIResponse{
-				Success: false,
-				Message: "Invalid course_id format",
-			})
-			return
-		}
-		courseID = &parsedCourseID
-	}
-
-	sections, err := h.registrationService.GetAvailableSections(c.Request.Context(), semesterID, courseID)
+	sections, err := h.registrationService.GetAvailableSections(c.Request.Context(), semesterID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, APIResponse{
 			Success: false,

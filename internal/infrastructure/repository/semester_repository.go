@@ -51,3 +51,14 @@ func (r *SemesterRepository) GetCurrent(ctx context.Context) (*domain.Semester, 
 	}
 	return &semester, nil
 }
+
+func (r *SemesterRepository) GetAllActive(ctx context.Context) ([]*domain.Semester, error) {
+	var semesters []*domain.Semester
+	err := r.db.WithContext(ctx).
+		Where("is_active = ?", true).
+		Find(&semesters).Error
+	if err != nil {
+		return nil, err
+	}
+	return semesters, nil
+}

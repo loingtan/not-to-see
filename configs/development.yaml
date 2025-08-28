@@ -1,11 +1,12 @@
+# Development Configuration
 app:
   name: "course-registration-system"
-  version: "1.0.0"
+  version: "1.0.0-dev"
   environment: "development"
-  description: "University Course Registration System"
+  description: "University Course Registration System - Development"
 
 server:
-  host: "localhost"
+  host: "127.0.0.1"
   port: "8080"
   read_timeout: 30
   write_timeout: 30
@@ -13,47 +14,49 @@ server:
 
 database:
   driver: "postgres"
-  host: "localhost"
-  port: 5432
+  host: "pgbouncer"
+  port: 6432
   username: "postgres"
   password: "password123"
   name: "course_registration"
   ssl_mode: "disable"
-  max_open_conns: 25
-  max_idle_conns: 5
+  max_open_conns: 10
+  max_idle_conns: 2
   conn_max_lifetime_minutes: 30
 
 cache:
   type: "redis"
-  host: "localhost"
+  host: "redis-master"
   port: 6379
   password: ""
-  db: 0
+  db: 1
   max_retries: 3
-  pool_size: 10
+  pool_size: 5
   pool_timeout: 30
   idle_timeout: 300
   ttl_minutes: 60
   sentinel:
-    enabled: false
+    enabled: true
     master_name: "mymaster"
-    sentinel_addrs: ["localhost:26379", "localhost:26380", "localhost:26381"]
+    sentinel_addrs: ["redis-sentinel-1:26379", "redis-sentinel-2:26379", "redis-sentinel-3:26379"]
     sentinel_password: ""
 
 queue:
   type: "redis"
-  buffer_size: 1000
-  worker_count: 10
+  buffer_size: 100
+  worker_count: 2
   retry_attempts: 3
 
 registration:
   max_courses_per_student: 6
-  waitlist_max_size: 50
+  waitlist_max_size: 20
   registration_timeout_minutes: 5
-  concurrent_registrations_limit: 100
+  concurrent_registrations_limit: 50
+  waitlist_repository: "redis"
+  waitlist_fallback_enabled: true
 
 log:
-  level: "info"
-  format: "json"
-  output: "file"
-  file_path: "./logs/course-registration.log"
+  level: "debug"
+  format: "text"
+  output: "stdout"
+  file_path: ""

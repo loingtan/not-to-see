@@ -47,3 +47,17 @@ func (r *StudentRepository) GetByStudentNumber(ctx context.Context, studentNumbe
 	}
 	return &student, nil
 }
+
+func (r *StudentRepository) GetRecentlyActive(ctx context.Context, limit int) ([]*domain.Student, error) {
+	var students []*domain.Student
+	err := r.db.WithContext(ctx).
+		Limit(limit).
+		Order("updated_at DESC").
+		Find(&students).Error
+
+	if err != nil {
+		return nil, err
+	}
+
+	return students, nil
+}

@@ -24,8 +24,6 @@ func (Registration) TableName() string {
 	return "registrations"
 }
 
-// BeforeCreate is called before creating a Registration record
-// This ensures unique constraint on (student_id, section_id)
 func (r *Registration) BeforeCreate(db *gorm.DB) error {
 	return nil
 }
@@ -94,8 +92,6 @@ func (Section) TableName() string {
 	return "sections"
 }
 
-// BeforeCreate is called before creating a Section record
-// This ensures unique constraint on (course_id, semester_id, section_number)
 func (s *Section) BeforeCreate(db *gorm.DB) error {
 	return nil
 }
@@ -163,4 +159,19 @@ func GetCheckConstraints() []string {
 	return []string{
 		"ALTER TABLE sections ADD CONSTRAINT check_total_seats_positive CHECK (total_seats > 0);",
 	}
+}
+
+type IdempotencyKey struct {
+	Key          string    `json:"key"`
+	StudentID    uuid.UUID `json:"student_id"`
+	RequestHash  string    `json:"request_hash"`
+	ResponseData string    `json:"response_data"`
+	StatusCode   int       `json:"status_code"`
+	ProcessedAt  time.Time `json:"processed_at"`
+	ExpiresAt    time.Time `json:"expires_at"`
+	CreatedAt    time.Time `json:"created_at"`
+}
+
+func (i *IdempotencyKey) IsExpired() bool {
+	return time.Now().After(i.ExpiresAt)
 }

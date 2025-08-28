@@ -1,7 +1,8 @@
+# Production Configuration
 app:
   name: "course-registration-system"
   version: "1.0.0"
-  environment: "docker"
+  environment: "production"
   description: "University Course Registration System"
 
 server:
@@ -13,24 +14,24 @@ server:
 
 database:
   driver: "postgres"
-  host: "postgres" # docker-compose service name
-  port: 5432
+  host: "pgbouncer"
+  port: 6432
   username: "postgres"
-  password: "password123"
+  password: "${DB_PASSWORD}"
   name: "course_registration"
-  ssl_mode: "disable"
-  max_open_conns: 25
-  max_idle_conns: 5
-  conn_max_lifetime_minutes: 30
+  ssl_mode: "require"
+  max_open_conns: 50
+  max_idle_conns: 10
+  conn_max_lifetime_minutes: 60
 
 cache:
   type: "redis"
-  host: "redis-master" # docker-compose service name
+  host: "redis-master"
   port: 6379
-  password: ""
+  password: "${REDIS_PASSWORD}"
   db: 0
   max_retries: 3
-  pool_size: 10
+  pool_size: 20
   pool_timeout: 30
   idle_timeout: 300
   ttl_minutes: 60
@@ -41,18 +42,21 @@ cache:
     sentinel_password: ""
 
 queue:
-  type: "memory"
-  buffer_size: 1000
-  worker_count: 10
+  type: "redis"
+  buffer_size: 2000
+  worker_count: 5
   retry_attempts: 3
 
 registration:
   max_courses_per_student: 6
-  waitlist_max_size: 50
+  waitlist_max_size: 100
   registration_timeout_minutes: 5
-  concurrent_registrations_limit: 100
+  concurrent_registrations_limit: 200
+  waitlist_repository: "redis"
+  waitlist_fallback_enabled: true
 
 log:
-  level: "info"
+  level: "warn"
   format: "json"
-  output: "stdout"
+  output: "file"
+  file_path: "/var/log/course-registration/production.log"

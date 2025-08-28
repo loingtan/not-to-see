@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>COMPLETE_SYSTEM_ARCHITECTURE.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="complete-course-registration-system-architecture">Complete Course Registration System Architecture</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document provides a comprehensive overview of the <strong>Course Registration System</strong>, a high-performance, scalable microservices architecture built with Go, featuring <strong>Redis Sentinel High Availability</strong>, <strong>idempotency controls</strong>, <strong>asynchronous queue processing</strong>, and <strong>real-time seat management</strong>. The system is designed to handle concurrent registrations from thousands of students while maintaining data consistency and providing sub-second response times.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#system-overview">System Overview</a></li>
+<li><a href="#complete-architecture-diagram">Complete Architecture Diagram</a></li>
+<li><a href="#redis-sentinel-high-availability">Redis Sentinel High Availability</a></li>
+<li><a href="#idempotency-implementation">Idempotency Implementation</a></li>
+<li><a href="#queue-processing-system">Queue Processing System</a></li>
+<li><a href="#api-endpoints">API Endpoints</a></li>
+<li><a href="#sequence-diagrams">Sequence Diagrams</a></li>
+<li><a href="#performance-characteristics">Performance Characteristics</a></li>
+<li><a href="#deployment-architecture">Deployment Architecture</a></li>
+<li><a href="#monitoring--observability">Monitoring &amp; Observability</a></li>
+</ol>
+<h2 id="system-overview">System Overview</h2>
+<h3 id="key-features">Key Features</h3>
+<ul>
+<li>✅ <strong>High Availability</strong>: Redis Sentinel with 1 master + 2 slaves configuration</li>
+<li>✅ <strong>Idempotency</strong>: Redis-based idempotency keys prevent duplicate registrations</li>
+<li>✅ <strong>Asynchronous Processing</strong>: Multi-queue system for database synchronization</li>
+<li>✅ <strong>Concurrency Control</strong>: Atomic operations with optimistic locking</li>
+<li>✅ <strong>Real-time Waitlist</strong>: Automatic waitlist processing when seats become available</li>
+<li>✅ <strong>Performance</strong>: Tested with 6,978 concurrent users, sub-second response times</li>
+<li>✅ <strong>Data Consistency</strong>: min-slaves-to-write=2 ensures write safety</li>
+</ul>
+<h3 id="technology-stack">Technology Stack</h3>
+<ul>
+<li><strong>Backend</strong>: Go 1.21+ with Gin framework</li>
+<li><strong>Database</strong>: PostgreSQL 15 with GORM ORM</li>
+<li><strong>Cache</strong>: Redis 7 with Sentinel clustering</li>
+<li><strong>Container</strong>: Docker &amp; Docker Compose</li>
+<li><strong>Architecture</strong>: Clean Architecture with Domain-Driven Design</li>
+<li><strong>Testing</strong>: K6 for load testing, integrated test data generation</li>
+</ul>
+<h2 id="complete-architecture-diagram">Complete Architecture Diagram</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph TB
+    subgraph "Client Layer"
+        Web[Web Client<br/>React/Vue/Angular]
+        Mobile[Mobile App<br/>iOS/Android]
+        API_Client[API Client<br/>External Systems]
+    end
+    
+    subgraph "Load Balancing & API Gateway"
+        LB[Load Balancer<br/>Nginx/HAProxy<br/>Port: 80/443]
+        API[API Gateway<br/>Gin Router<br/>Port: 8080]
+    end
+    
+    subgraph "Application Layer"
+        subgraph "Handlers"
+            RegHandler[Registration Handler<br/>Register/Drop/GetStatus]
+            HealthHandler[Health Handler<br/>Health/Ready/Live]
+        end
+        
+        subgraph "Middleware"
+            IdempMiddleware[Idempotency Middleware<br/>Duplicate Prevention]
+            LogMiddleware[Logging Middleware<br/>Request/Response Logging]
+            CORSMiddleware[CORS Middleware<br/>Cross-Origin Support]
+        end
+        
+        subgraph "Services"
+            RegService[Registration Service<br/>Core Business Logic]
+            IdempService[Idempotency Service<br/>Key Management]
+        end
+        
+        subgraph "Repositories"
+            StudentRepo[Student Repository<br/>CRUD Operations]
+            SectionRepo[Section Repository<br/>Seat Management]
+            RegRepo[Registration Repository<br/>Enrollment Records]
+            WaitlistRepo[Waitlist Repository<br/>Queue Management]
+            IdempRepo[Idempotency Repository<br/>Redis-based Storage]
+        end
+    end
+    
+    subgraph "Queue & Cache Layer"
+        subgraph "Redis Sentinel Cluster"
+            RedisMaster[Redis Master<br/>Port: 6379<br/>min-slaves-to-write: 2]
+            RedisSlave1[Redis Slave 1<br/>Port: 6380<br/>Read Replica]
+            RedisSlave2[Redis Slave 2<br/>Port: 6381<br/>Read Replica]
+            
+            Sentinel1[Redis Sentinel 1<br/>Port: 26379<br/>Monitor & Failover]
+            Sentinel2[Redis Sentinel 2<br/>Port: 26380<br/>Monitor & Failover]
+            Sentinel3[Redis Sentinel 3<br/>Port: 26381<br/>Monitor & Failover]
+        end
+        
+        subgraph "Queue System"
+            DBQueue[Database Sync Queue<br/>Create/Update Operations]
+            WaitlistQueue[Waitlist Queue<br/>Position Management]
+            WLEntryQueue[Waitlist Entry Queue<br/>Entry Processing]
+            
+            DBWorkers[DB Sync Workers<br/>Pool of 10 Workers]
+            WLWorkers[Waitlist Workers<br/>Pool of 10 Workers]
+            WLEntryWorkers[Waitlist Entry Workers<br/>Pool of 10 Workers]
+        end
+        
+        subgraph "Cache Data"
+            SeatCache[Seat Availability Cache<br/>Atomic Counters]
+            IdempKeys[Idempotency Keys<br/>TTL: 24 hours]
+            WaitlistData[Waitlist Positions<br/>Sorted Sets]
+        end
+    end
+    
+    subgraph "Data Layer"
+        DB[PostgreSQL Database<br/>Port: 5432<br/>Primary Data Store]
+        
+        subgraph "Database Tables"
+            Students[Students Table<br/>User Information]
+            Courses[Courses Table<br/>Course Catalog]
+            Sections[Sections Table<br/>Class Sections]
+            Registrations[Registrations Table<br/>Enrollment Records]
+            Waitlist[Waitlist Table<br/>Queue Entries]
+            Semesters[Semesters Table<br/>Academic Periods]
+        end
+    end
+    
+    subgraph "Infrastructure Layer"
+        subgraph "Health Monitoring"
+            HealthEndpoint[/health Endpoint<br/>System Status/]
+            ReadyEndpoint[/ready Endpoint<br/>Readiness Check/]
+            LiveEndpoint[/live Endpoint<br/>Liveness Check/]
+        end
+        
+        subgraph "Observability"
+            Logs[Application Logs<br/>Structured Logging]
+            Metrics[Performance Metrics<br/>Queue & Response Times]
+            Monitoring[System Monitoring<br/>Resource Usage]
+        end
+    end
+    
+    %% Client connections
+    Web --> LB
+    Mobile --> LB
+    API_Client --> LB
+    
+    %% Load balancer to API Gateway
+    LB --> API
+    
+    %% API Gateway to Middleware
+    API --> IdempMiddleware
+    API --> LogMiddleware
+    API --> CORSMiddleware
+    
+    %% Middleware to Handlers
+    IdempMiddleware --> RegHandler
+    IdempMiddleware --> HealthHandler
+    LogMiddleware --> RegHandler
+    LogMiddleware --> HealthHandler
+    CORSMiddleware --> RegHandler
+    
+    %% Handlers to Services
+    RegHandler --> RegService
+    RegHandler --> IdempService
+    HealthHandler --> HealthEndpoint
+    HealthHandler --> ReadyEndpoint
+    HealthHandler --> LiveEndpoint
+    
+    %% Services to Repositories
+    RegService --> StudentRepo
+    RegService --> SectionRepo
+    RegService --> RegRepo
+    RegService --> WaitlistRepo
+    IdempService --> IdempRepo
+    
+    %% Repository to Cache/DB
+    StudentRepo --> DB
+    SectionRepo --> DB
+    SectionRepo --> SeatCache
+    RegRepo --> DB
+    WaitlistRepo --> DB
+    WaitlistRepo --> WaitlistData
+    IdempRepo --> IdempKeys
+    
+    %% Queue Processing
+    RegService --> DBQueue
+    RegService --> WaitlistQueue
+    
+    DBQueue --> DBWorkers
+    WaitlistQueue --> WLWorkers
+    WLEntryQueue --> WLEntryWorkers
+    
+    DBWorkers --> DB
+    WLWorkers --> WLEntryQueue
+    WLEntryWorkers --> DB
+    
+    %% Redis Sentinel Relationships
+    Sentinel1 -.->|Monitor| RedisMaster
+    Sentinel2 -.->|Monitor| RedisMaster
+    Sentinel3 -.->|Monitor| RedisMaster
+    
+    Sentinel1 -.->|Monitor| RedisSlave1
+    Sentinel2 -.->|Monitor| RedisSlave1
+    Sentinel3 -.->|Monitor| RedisSlave1
+    
+    Sentinel1 -.->|Monitor| RedisSlave2
+    Sentinel2 -.->|Monitor| RedisSlave2
+    Sentinel3 -.->|Monitor| RedisSlave2
+    
+    RedisMaster -->|Replicate| RedisSlave1
+    RedisMaster -->|Replicate| RedisSlave2
+    
+    %% Database relationships
+    DB --> Students
+    DB --> Courses
+    DB --> Sections
+    DB --> Registrations
+    DB --> Waitlist
+    DB --> Semesters
+    
+    %% Cache relationships
+    RedisMaster --> SeatCache
+    RedisMaster --> IdempKeys
+    RedisMaster --> WaitlistData
+    
+    %% Infrastructure monitoring
+    RegService --> Logs
+    RegService --> Metrics
+    API --> Monitoring
+    
+    %% Styling
+    classDef clientLayer fill:#e3f2fd
+    classDef loadBalancer fill:#f3e5f5
+    classDef application fill:#e8f5e8
+    classDef cache fill:#fff3e0
+    classDef database fill:#fce4ec
+    classDef infrastructure fill:#f1f8e9
+    classDef sentinel fill:#ffecb3
+    
+    class Web,Mobile,API_Client clientLayer
+    class LB,API loadBalancer
+    class RegHandler,HealthHandler,IdempMiddleware,LogMiddleware,CORSMiddleware,RegService,IdempService,StudentRepo,SectionRepo,RegRepo,WaitlistRepo,IdempRepo application
+    class RedisMaster,RedisSlave1,RedisSlave2,DBQueue,WaitlistQueue,WLEntryQueue,DBWorkers,WLWorkers,WLEntryWorkers,SeatCache,IdempKeys,WaitlistData cache
+    class DB,Students,Courses,Sections,Registrations,Waitlist,Semesters database
+    class HealthEndpoint,ReadyEndpoint,LiveEndpoint,Logs,Metrics,Monitoring infrastructure
+    class Sentinel1,Sentinel2,Sentinel3 sentinel
+</div></code></pre>
+<h2 id="redis-sentinel-high-availability">Redis Sentinel High Availability</h2>
+<h3 id="architecture-overview">Architecture Overview</h3>
+<p>Our Redis Sentinel implementation provides <strong>automatic failover</strong> and <strong>write safety</strong> through a carefully configured cluster:</p>
+<pre><code class="language-mermaid"><div class="mermaid">graph TB
+    subgraph "Redis Sentinel Cluster"
+        subgraph "Data Nodes"
+            Master[Redis Master<br/>redis-master:6379<br/>Handles all writes]
+            Slave1[Redis Slave 1<br/>redis-slave-1:6380<br/>Read replica]
+            Slave2[Redis Slave 2<br/>redis-slave-2:6381<br/>Read replica]
+        end
+        
+        subgraph "Sentinel Nodes"
+            S1[Sentinel 1<br/>Port: 26379<br/>Quorum: 2/3]
+            S2[Sentinel 2<br/>Port: 26380<br/>Quorum: 2/3]
+            S3[Sentinel 3<br/>Port: 26381<br/>Quorum: 2/3]
+        end
+        
+        subgraph "Application Layer"
+            App[Go Application<br/>Sentinel-aware client]
+        end
+    end
+    
+    %% Data replication
+    Master -->|Sync Replication| Slave1
+    Master -->|Sync Replication| Slave2
+    
+    %% Sentinel monitoring
+    S1 -.->|Monitor| Master
+    S1 -.->|Monitor| Slave1
+    S1 -.->|Monitor| Slave2
+    
+    S2 -.->|Monitor| Master
+    S2 -.->|Monitor| Slave1
+    S2 -.->|Monitor| Slave2
+    
+    S3 -.->|Monitor| Master
+    S3 -.->|Monitor| Slave1
+    S3 -.->|Monitor| Slave2
+    
+    %% Application connection
+    App -->|Connect via Sentinel| S1
+    App -->|Connect via Sentinel| S2
+    App -->|Connect via Sentinel| S3
+    
+    App -->|Read/Write| Master
+    App -.->|Read Only| Slave1
+    App -.->|Read Only| Slave2
+    
+    style Master fill:#ffcdd2
+    style Slave1 fill:#c8e6c9
+    style Slave2 fill:#c8e6c9
+    style S1 fill:#fff3e0
+    style S2 fill:#fff3e0
+    style S3 fill:#fff3e0
+    style App fill:#e1f5fe
+</div></code></pre>
+<h3 id="why-min-slaves-to-write--2">Why min-slaves-to-write = 2?</h3>
+<p>We configured <code>min-slaves-to-write = 2</code> for <strong>maximum data safety</strong>:</p>
+<h4 id="%E2%9C%85-advantages">✅ <strong>Advantages</strong></h4>
+<ol>
+<li><strong>Zero Data Loss</strong>: Writes only succeed when data is replicated to both slaves</li>
+<li><strong>Split-Brain Prevention</strong>: Master cannot accept writes during network partitions</li>
+<li><strong>Consistency Guarantee</strong>: All successful writes are safely replicated</li>
+<li><strong>Automatic Rollback</strong>: Failed writes don't leave the system in inconsistent state</li>
+</ol>
+<h4 id="%E2%9A%A0%EF%B8%8F-trade-offs">⚠️ <strong>Trade-offs</strong></h4>
+<ol>
+<li><strong>Reduced Availability</strong>: Writes fail if &lt;2 slaves are connected</li>
+<li><strong>Increased Latency</strong>: ~2-5ms additional latency for slave acknowledgment</li>
+<li><strong>Network Sensitivity</strong>: Temporary network issues can block writes</li>
+</ol>
+<h4 id="%F0%9F%8E%AF-why-we-chose-this-configuration">🎯 <strong>Why We Chose This Configuration</strong></h4>
+<p>For a <strong>course registration system</strong>, data consistency is <strong>more important</strong> than raw availability:</p>
+<ul>
+<li><strong>Lost registrations</strong> = angry students and administrative issues</li>
+<li><strong>Brief downtime</strong> during failover is acceptable (typically &lt;10 seconds)</li>
+<li><strong>Course registration</strong> is typically time-bounded (registration periods)</li>
+<li><strong>Read operations</strong> (checking availability) can continue via slaves</li>
+</ul>
+<h3 id="failover-process">Failover Process</h3>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+    participant App as Application
+    participant S1 as Sentinel 1
+    participant S2 as Sentinel 2  
+    participant S3 as Sentinel 3
+    participant Master as Redis Master
+    participant Slave1 as Redis Slave 1
+    participant Slave2 as Redis Slave 2
+    
+    Note over Master: Master fails/becomes unreachable
+    
+    S1->>S1: Detect master down (5s timeout)
+    S2->>S2: Detect master down (5s timeout)
+    S3->>S3: Detect master down (5s timeout)
+    
+    S1->>S2: Propose failover
+    S1->>S3: Propose failover
+    
+    alt Quorum reached (2/3 sentinels agree)
+        S1->>Slave1: Promote to master
+        
+        Note over Slave1: Becomes new master
+        
+        S1->>S2: Update master info
+        S1->>S3: Update master info
+        S1->>App: Notify new master
+        
+        Slave1->>Slave2: Start replicating as master
+        
+        App->>Slave1: Reconnect to new master
+        
+        Note over App,Slave2: System restored (typically <10s)
+    else Quorum not reached
+        Note over S1,S3: Wait for quorum or manual intervention
+    end
+</div></code></pre>
+<h3 id="redis-data-structures-used">Redis Data Structures Used</h3>
+<p>Our system leverages specific Redis data structures for optimal performance:</p>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'flowchart': {'htmlLabels': true}}}%%
+graph LR
+    subgraph "Seat Management"
+        SeatKeys[seat:section:&#123;id&#125;<br/>Integer - Atomic counter<br/>DECR/INCR operations]
+    end
+    
+    subgraph "Idempotency"
+        IdempKeys[idempotency_key:&#123;key&#125;<br/>Hash - JSON serialized data<br/>TTL: 24 hours]
+    end
+    
+    subgraph "Queue System"
+        DBSync[queue:database_sync<br/>List - FIFO queue<br/>LPUSH/RPOP operations]
+        Waitlist[queue:waitlist<br/>List - FIFO queue<br/>LPUSH/RPOP operations]
+        WLEntry[queue:waitlist_entry<br/>List - FIFO queue<br/>LPUSH/RPOP operations]
+    end
+    
+    subgraph "Waitlist Positions"
+        WLPos[waitlist:section:&#123;id&#125;<br/>Sorted Set - Position tracking<br/>ZADD/ZREM/ZRANGE operations]
+    end
+    
+    style SeatKeys fill:#ffcdd2
+    style IdempKeys fill:#c8e6c9
+    style DBSync fill:#fff3e0
+    style Waitlist fill:#fff3e0
+    style WLEntry fill:#fff3e0
+    style WLPos fill:#e1f5fe
+</div></code></pre>
+<h4 id="data-structure-details">Data Structure Details</h4>
+<ol>
+<li>
+<p><strong>Seat Counters</strong> (<code>seat:section:{id}</code>)</p>
+<ul>
+<li><strong>Type</strong>: Integer</li>
+<li><strong>Operations</strong>: <code>DECR</code> (reserve), <code>INCR</code> (release), <code>GET</code> (check)</li>
+<li><strong>Atomic</strong>: Thread-safe operations prevent race conditions</li>
+<li><strong>TTL</strong>: None (persistent until manually cleared)</li>
+</ul>
+</li>
+<li>
+<p><strong>Idempotency Keys</strong> (<code>idempotency_key:{key}</code>)</p>
+<ul>
+<li><strong>Type</strong>: Hash (JSON serialized)</li>
+<li><strong>Operations</strong>: <code>HSET</code>, <code>HGET</code>, <code>EXISTS</code>, <code>EXPIRE</code></li>
+<li><strong>TTL</strong>: 24 hours (configurable)</li>
+<li><strong>Contains</strong>: Request hash, response data, student ID, timestamps</li>
+</ul>
+</li>
+<li>
+<p><strong>Queue Lists</strong> (<code>queue:{type}</code>)</p>
+<ul>
+<li><strong>Type</strong>: List</li>
+<li><strong>Operations</strong>: <code>LPUSH</code> (enqueue), <code>BRPOP</code> (dequeue with blocking)</li>
+<li><strong>Workers</strong>: Multiple consumers with blocking operations</li>
+<li><strong>Persistence</strong>: Survives Redis restarts</li>
+</ul>
+</li>
+<li>
+<p><strong>Waitlist Positions</strong> (<code>waitlist:section:{id}</code>)</p>
+<ul>
+<li><strong>Type</strong>: Sorted Set</li>
+<li><strong>Score</strong>: Position number (1, 2, 3...)</li>
+<li><strong>Member</strong>: Student ID</li>
+<li><strong>Operations</strong>: <code>ZADD</code>, <code>ZREM</code>, <code>ZRANGE</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="idempotency-implementation">Idempotency Implementation</h2>
+<h3 id="overview">Overview</h3>
+<p>Our idempotency system prevents duplicate registrations and ensures consistent responses during network issues or client retries.</p>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'flowchart': {'htmlLabels': true}}}%%
+graph TB
+    subgraph "Idempotency Flow"
+        Request[Client Request<br/>with Idempotency Key]
+        KeyCheck{Check Key<br/>Exists?}
+        HashCheck{Same Request<br/>Hash?}
+        ProcessRequest[Process New Request]
+        ReturnCached[Return Cached Response]
+        ReturnError[Return Error<br/>Key Mismatch]
+        StoreResponse[Store Response<br/>TTL: 24h]
+        
+        Request --> KeyCheck
+        KeyCheck -->|No| ProcessRequest
+        KeyCheck -->|Yes| HashCheck
+        HashCheck -->|Yes| ReturnCached
+        HashCheck -->|No| ReturnError
+        ProcessRequest --> StoreResponse
+        StoreResponse --> ReturnCached
+    end
+    
+    subgraph "Redis Storage"
+        IdempKey[idempotency_key:&#123;key&#125;]
+        IdempKey --> KeyData
+    end
+    
+    Request -.-> IdempKey
+    StoreResponse -.-> IdempKey
+    ReturnCached -.-> IdempKey
+    
+    style ProcessRequest fill:#c8e6c9
+    style ReturnCached fill:#e1f5fe
+    style ReturnError fill:#ffcdd2
+    style IdempKey fill:#fff3e0
+
+</div></code></pre>
+<h3 id="key-features">Key Features</h3>
+<ol>
+<li>
+<p><strong>Flexible Key Sources</strong></p>
+<ul>
+<li>Request body: <code>&quot;idempotency_key&quot;: &quot;unique-key&quot;</code></li>
+<li>HTTP header: <code>Idempotency-Key: unique-key</code></li>
+<li>Auto-generation available if needed</li>
+</ul>
+</li>
+<li>
+<p><strong>Request Fingerprinting</strong></p>
+<ul>
+<li>SHA-256 hash of student ID + section IDs</li>
+<li>Ensures only identical requests are considered duplicates</li>
+<li>Prevents key reuse with different data</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Caching</strong></p>
+<ul>
+<li>Full response data stored in Redis</li>
+<li>24-hour TTL (configurable)</li>
+<li>Instant return for duplicate requests</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Handling</strong></p>
+<ul>
+<li>Same key with different data = HTTP 400 error</li>
+<li>Non-existent keys = normal processing</li>
+<li>Redis failures = graceful degradation</li>
+</ul>
+</li>
+</ol>
+<h3 id="implementation-flow">Implementation Flow</h3>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+    participant Client
+    participant API as API Handler
+    participant Middleware as Idempotency Middleware
+    participant Service as Registration Service
+    participant Redis as Redis Cache
+    participant DB as Database
+    
+    Client->>API: POST /api/v1/register<br/>Idempotency-Key: key123
+    API->>Middleware: Extract idempotency key
+    Middleware->>Service: Register(request, key)
+    
+    Service->>Service: Generate request hash<br/>SHA256(studentID + sections)
+    Service->>Redis: GET idempotency_key:key123
+    
+    alt Key exists
+        Redis-->>Service: Return cached data
+        Service->>Service: Compare request hashes
+        
+        alt Same hash (duplicate request)
+            Service-->>API: Return cached response
+            API-->>Client: Cached result (instant)
+        else Different hash (key reuse)
+            Service-->>API: Error: Key mismatch
+            API-->>Client: HTTP 400 - Invalid key reuse
+        end
+    else Key doesn't exist
+        Service->>Service: Process registration
+        Service->>Redis: Reserve seats (DECR)
+        Service->>DB: Async database sync
+        
+        Service->>Redis: HSET idempotency_key:key123<br/>{hash, response, timestamp}
+        Redis->>Redis: EXPIRE key123 86400<br/>(24 hours)
+        
+        Service-->>API: Registration result
+        API-->>Client: Success response
+    end
+</div></code></pre>
+<hr>
+<h2 id="queue-processing-system">Queue Processing System</h2>
+<h3 id="multi-queue-architecture">Multi-Queue Architecture</h3>
+<p>Our asynchronous processing system uses <strong>three specialized queues</strong> to handle different types of operations:</p>
+<pre><code class="language-mermaid"><div class="mermaid">graph TB
+    subgraph "Queue Processing Architecture"
+        subgraph "Request Processing"
+            RegRequest[Registration Request<br/>Immediate Response]
+            SeatCheck[Redis Seat Check<br/>Atomic DECR]
+            QueueDecision{Seats<br/>Available?}
+        end
+        
+        subgraph "Queue System"
+            DBSyncQueue[Database Sync Queue<br/>High Priority]
+            WaitlistQueue[Waitlist Queue<br/>Medium Priority]
+            WLEntryQueue[Waitlist Entry Queue<br/>Low Priority]
+            
+            DBWorkers[DB Sync Workers<br/>Pool: 10 workers]
+            WLWorkers[Waitlist Workers<br/>Pool: 10 workers]
+            WLEntryWorkers[WL Entry Workers<br/>Pool: 10 workers]
+        end
+        
+        subgraph "Database Operations"
+            CreateReg[Create Registration]
+            UpdateSeats[Update Section Seats]
+            CreateWaitlist[Create Waitlist Entry]
+            ProcessNext[Process Next in Line]
+        end
+        
+        subgraph "Feedback Loop"
+            SeatRelease[Seat Released<br/>Via Drop/Timeout]
+            WaitlistCheck[Check Waitlist<br/>For Available Seat]
+            AutoPromote[Auto-promote<br/>Next Student]
+        end
+    end
+    
+    %% Flow connections
+    RegRequest --> SeatCheck
+    SeatCheck --> QueueDecision
+    
+    QueueDecision -->|Yes| DBSyncQueue
+    QueueDecision -->|No| WaitlistQueue
+    
+    DBSyncQueue --> DBWorkers
+    WaitlistQueue --> WLWorkers
+    WLEntryQueue --> WLEntryWorkers
+    
+    DBWorkers --> CreateReg
+    DBWorkers --> UpdateSeats
+    WLWorkers --> WLEntryQueue
+    WLEntryWorkers --> CreateWaitlist
+    
+    SeatRelease --> WaitlistCheck
+    WaitlistCheck --> ProcessNext
+    ProcessNext --> AutoPromote
+    AutoPromote --> DBSyncQueue
+    
+    style RegRequest fill:#e3f2fd
+    style DBSyncQueue fill:#c8e6c9
+    style WaitlistQueue fill:#fff3e0
+    style WLEntryQueue fill:#ffecb3
+    style CreateReg fill:#f3e5f5
+    style AutoPromote fill:#e8f5e8
+</div></code></pre>
+<h3 id="queue-types-and-purposes">Queue Types and Purposes</h3>
+<ol>
+<li>
+<p><strong>Database Sync Queue</strong> (<code>queue:database_sync</code>)</p>
+<ul>
+<li><strong>Purpose</strong>: Synchronize successful seat reservations with database</li>
+<li><strong>Priority</strong>: High (processed immediately)</li>
+<li><strong>Operations</strong>: Create registration records, update seat counts</li>
+<li><strong>Workers</strong>: 10 concurrent workers</li>
+<li><strong>Retry</strong>: Exponential backoff for failures</li>
+</ul>
+</li>
+<li>
+<p><strong>Waitlist Queue</strong> (<code>queue:waitlist</code>)</p>
+<ul>
+<li><strong>Purpose</strong>: Process students who couldn't get seats</li>
+<li><strong>Priority</strong>: Medium (processed after DB sync)</li>
+<li><strong>Operations</strong>: Create waitlist entries, manage positions</li>
+<li><strong>Workers</strong>: 10 concurrent workers</li>
+<li><strong>Logic</strong>: Creates entries in waitlist_entry queue</li>
+</ul>
+</li>
+<li>
+<p><strong>Waitlist Entry Queue</strong> (<code>queue:waitlist_entry</code>)</p>
+<ul>
+<li><strong>Purpose</strong>: Actually create waitlist database records</li>
+<li><strong>Priority</strong>: Low (processed last)</li>
+<li><strong>Operations</strong>: Insert waitlist records with positions</li>
+<li><strong>Workers</strong>: 10 concurrent workers</li>
+<li><strong>Position</strong>: Auto-calculated based on existing entries</li>
+</ul>
+</li>
+</ol>
+<h3 id="worker-pool-configuration">Worker Pool Configuration</h3>
+<pre class="hljs"><code><div><span class="hljs-comment">// Worker pool configuration</span>
+<span class="hljs-keyword">type</span> QueueConfig <span class="hljs-keyword">struct</span> {
+    DatabaseSyncWorkers:   <span class="hljs-number">10</span>  <span class="hljs-comment">// High-priority operations</span>
+    WaitlistWorkers:       <span class="hljs-number">10</span>  <span class="hljs-comment">// Medium-priority operations  </span>
+    WaitlistEntryWorkers:  <span class="hljs-number">10</span>  <span class="hljs-comment">// Low-priority operations</span>
+    RetryAttempts:         <span class="hljs-number">3</span>   <span class="hljs-comment">// Max retry attempts</span>
+    RetryDelayMs:          <span class="hljs-number">100</span> <span class="hljs-comment">// Initial retry delay</span>
+    MaxRetryDelayMs:       <span class="hljs-number">5000</span> <span class="hljs-comment">// Maximum retry delay</span>
+}
+</div></code></pre>
+<h3 id="queue-processing-flow">Queue Processing Flow</h3>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+    participant Client
+    participant API as Registration API
+    participant Redis as Redis Cache
+    participant DBQueue as DB Sync Queue
+    participant WLQueue as Waitlist Queue  
+    participant WLEntryQueue as WL Entry Queue
+    participant DB as PostgreSQL
+    
+    Note over Client,DB: Successful Registration Flow
+    
+    Client->>API: Register for section
+    API->>Redis: DECR seat:section:123
+    Redis-->>API: New count: 15 (success)
+    
+    API->>DBQueue: Enqueue create_registration job
+    API-->>Client: Status: "enrolled" (immediate)
+    
+    Note over DBQueue,DB: Async Processing
+    
+    DBQueue->>DB: Create registration record
+    DBQueue->>DB: Update section seat count
+    DB-->>DBQueue: Success
+    
+    Note over Client,DB: No Seats Available Flow
+    
+    Client->>API: Register for section  
+    API->>Redis: DECR seat:section:456
+    Redis-->>API: Error: Would go negative
+    
+    API->>WLQueue: Enqueue waitlist job
+    API-->>Client: Status: "waitlisted" (immediate)
+    
+    WLQueue->>WLEntryQueue: Enqueue create_waitlist_entry
+    WLEntryQueue->>DB: Create waitlist record with position
+    DB-->>WLEntryQueue: Success
+    
+    Note over Client,DB: Seat Release & Auto-promotion
+    
+    Client->>API: Drop course (section:456)
+    API->>Redis: INCR seat:section:456
+    API->>WLQueue: Enqueue process_waitlist
+    
+    WLQueue->>DB: Get next waitlist student
+    WLQueue->>Redis: DECR seat:section:456 (re-reserve)
+    WLQueue->>DBQueue: Enqueue create_registration
+    WLQueue->>DB: Remove from waitlist
+    
+    DBQueue->>DB: Create registration for promoted student
+</div></code></pre>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="complete-endpoint-overview">Complete Endpoint Overview</h3>
+<p>Our REST API provides <strong>6 main endpoints</strong> for course registration operations:</p>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'flowchart': {'htmlLabels': true}}}%%
+graph LR
+    subgraph "API Endpoints"
+        subgraph "Registration Operations"
+            Register[POST /api/v1/register<br/>Register for courses]
+            Drop[POST /api/v1/register/drop<br/>Drop a course]
+        end
+        
+        subgraph "Student Information"
+            GetReg[GET /api/v1/students/&#123;id&#125;/registrations<br/>Get student registrations]
+            GetWait[GET /api/v1/students/&#123;id&#125;/waitlist<br/>Get waitlist status]
+        end
+        
+        subgraph "Course Information" 
+            GetSections[GET /api/v1/sections/available<br/>Get available sections]
+        end
+        
+        subgraph "System Health"
+            Health[GET /health<br/>System health check]
+            Ready[GET /ready<br/>Readiness probe]
+            Live[GET /live<br/>Liveness probe]
+        end
+    end
+    
+    style Register fill:#c8e6c9
+    style Drop fill:#ffcdd2
+    style GetReg fill:#e1f5fe
+    style GetWait fill:#e1f5fe
+    style GetSections fill:#fff3e0
+    style Health fill:#f3e5f5
+    style Ready fill:#f3e5f5
+    style Live fill:#f3e5f5
+
+</div></code></pre>
+<h3 id="detailed-endpoint-specifications">Detailed Endpoint Specifications</h3>
+<h4 id="1-course-registration">1. Course Registration</h4>
+<p><strong>Endpoint</strong>: <code>POST /api/v1/register</code></p>
+<p><strong>Request</strong>:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"student_id"</span>: <span class="hljs-string">"123e4567-e89b-12d3-a456-426614174000"</span>,
+  <span class="hljs-attr">"section_ids"</span>: [
+    <span class="hljs-string">"789e0123-e45b-67c8-d901-234567890123"</span>,
+    <span class="hljs-string">"456e7890-e12b-34c5-f678-901234567890"</span>
+  ],
+  <span class="hljs-attr">"idempotency_key"</span>: <span class="hljs-string">"reg-2025-08-26-unique-001"</span> <span class="hljs-comment">// Optional</span>
+}
+</div></code></pre>
+<p><strong>Headers</strong> (Alternative to body key):</p>
+<pre class="hljs"><code><div>Idempotency-Key: reg-2025-08-26-unique-001
+Content-Type: application/json
+</div></code></pre>
+<p><strong>Response</strong>:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Registration processed successfully"</span>,
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"results"</span>: [
+      {
+        <span class="hljs-attr">"section_id"</span>: <span class="hljs-string">"789e0123-e45b-67c8-d901-234567890123"</span>,
+        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"enrolled"</span>,
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Successfully registered"</span>,
+        <span class="hljs-attr">"registration_id"</span>: <span class="hljs-string">"reg-uuid-here"</span>
+      },
+      {
+        <span class="hljs-attr">"section_id"</span>: <span class="hljs-string">"456e7890-e12b-34c5-f678-901234567890"</span>, 
+        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"waitlisted"</span>,
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Added to waitlist - position 3"</span>,
+        <span class="hljs-attr">"waitlist_position"</span>: <span class="hljs-number">3</span>
+      }
+    ],
+    <span class="hljs-attr">"summary"</span>: {
+      <span class="hljs-attr">"total_requested"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"enrolled"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"waitlisted"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"already_registered"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"errors"</span>: <span class="hljs-number">0</span>
+    }
+  }
+}
+</div></code></pre>
+<h4 id="2-drop-course">2. Drop Course</h4>
+<p><strong>Endpoint</strong>: <code>POST /api/v1/register/drop</code></p>
+<p><strong>Request</strong>:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"student_id"</span>: <span class="hljs-string">"123e4567-e89b-12d3-a456-426614174000"</span>,
+  <span class="hljs-attr">"section_id"</span>: <span class="hljs-string">"789e0123-e45b-67c8-d901-234567890123"</span>
+}
+</div></code></pre>
+<p><strong>Response</strong>:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Course dropped successfully"</span>,
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"section_id"</span>: <span class="hljs-string">"789e0123-e45b-67c8-d901-234567890123"</span>,
+    <span class="hljs-attr">"student_id"</span>: <span class="hljs-string">"123e4567-e89b-12d3-a456-426614174000"</span>,
+    <span class="hljs-attr">"dropped_at"</span>: <span class="hljs-string">"2025-08-26T10:30:00Z"</span>,
+    <span class="hljs-attr">"seat_released"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"waitlist_processed"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"promoted_student_id"</span>: <span class="hljs-string">"456e7890-e12b-34c5-f678-901234567890"</span>
+  }
+}
+</div></code></pre>
+<h4 id="3-get-available-sections">3. Get Available Sections</h4>
+<p><strong>Endpoint</strong>: <code>GET /api/v1/sections/available</code></p>
+<p><strong>Query Parameters</strong>:</p>
+<ul>
+<li><code>semester_id</code> (required): UUID of the semester</li>
+<li><code>course_id</code> (optional): Filter by specific course</li>
+</ul>
+<p><strong>Example</strong>: <code>GET /api/v1/sections/available?semester_id=sem-uuid&amp;course_id=course-uuid</code></p>
+<p><strong>Response</strong>:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Available sections retrieved successfully"</span>,
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"sections"</span>: [
+      {
+        <span class="hljs-attr">"section_id"</span>: <span class="hljs-string">"789e0123-e45b-67c8-d901-234567890123"</span>,
+        <span class="hljs-attr">"course"</span>: {
+          <span class="hljs-attr">"course_id"</span>: <span class="hljs-string">"course-uuid"</span>,
+          <span class="hljs-attr">"course_code"</span>: <span class="hljs-string">"CS101"</span>,
+          <span class="hljs-attr">"course_name"</span>: <span class="hljs-string">"Introduction to Computer Science"</span>
+        },
+        <span class="hljs-attr">"section_number"</span>: <span class="hljs-string">"001"</span>,
+        <span class="hljs-attr">"total_seats"</span>: <span class="hljs-number">30</span>,
+        <span class="hljs-attr">"available_seats"</span>: <span class="hljs-number">15</span>,
+        <span class="hljs-attr">"instructor"</span>: <span class="hljs-string">"Dr. Smith"</span>,
+        <span class="hljs-attr">"schedule"</span>: {
+          <span class="hljs-attr">"days"</span>: [<span class="hljs-string">"Monday"</span>, <span class="hljs-string">"Wednesday"</span>, <span class="hljs-string">"Friday"</span>],
+          <span class="hljs-attr">"time"</span>: <span class="hljs-string">"10:00-11:00 AM"</span>,
+          <span class="hljs-attr">"location"</span>: <span class="hljs-string">"Room 101"</span>
+        }
+      }
+    ],
+    <span class="hljs-attr">"total_sections"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"total_available_seats"</span>: <span class="hljs-number">15</span>
+  }
+}
+</div></code></pre>
+<h4 id="4-get-student-registrations">4. Get Student Registrations</h4>
+<p><strong>Endpoint</strong>: <code>GET /api/v1/students/{student_id}/registrations</code></p>
+<p><strong>Response</strong>:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Student registrations retrieved successfully"</span>,
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"registrations"</span>: [
+      {
+        <span class="hljs-attr">"registration_id"</span>: <span class="hljs-string">"reg-uuid"</span>,
+        <span class="hljs-attr">"section"</span>: {
+          <span class="hljs-attr">"section_id"</span>: <span class="hljs-string">"section-uuid"</span>, 
+          <span class="hljs-attr">"course_code"</span>: <span class="hljs-string">"CS101"</span>,
+          <span class="hljs-attr">"course_name"</span>: <span class="hljs-string">"Introduction to Computer Science"</span>,
+          <span class="hljs-attr">"section_number"</span>: <span class="hljs-string">"001"</span>
+        },
+        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"enrolled"</span>,
+        <span class="hljs-attr">"registration_date"</span>: <span class="hljs-string">"2025-08-26T09:15:00Z"</span>,
+        <span class="hljs-attr">"grade"</span>: <span class="hljs-literal">null</span>
+      }
+    ],
+    <span class="hljs-attr">"total_registrations"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"enrolled_credits"</span>: <span class="hljs-number">3</span>
+  }
+}
+</div></code></pre>
+<h4 id="5-get-waitlist-status">5. Get Waitlist Status</h4>
+<p><strong>Endpoint</strong>: <code>GET /api/v1/students/{student_id}/waitlist</code></p>
+<p><strong>Response</strong>:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Waitlist status retrieved successfully"</span>, 
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"waitlist_entries"</span>: [
+      {
+        <span class="hljs-attr">"waitlist_id"</span>: <span class="hljs-string">"wl-uuid"</span>,
+        <span class="hljs-attr">"section"</span>: {
+          <span class="hljs-attr">"section_id"</span>: <span class="hljs-string">"section-uuid"</span>,
+          <span class="hljs-attr">"course_code"</span>: <span class="hljs-string">"CS201"</span>, 
+          <span class="hljs-attr">"course_name"</span>: <span class="hljs-string">"Data Structures"</span>,
+          <span class="hljs-attr">"section_number"</span>: <span class="hljs-string">"002"</span>
+        },
+        <span class="hljs-attr">"position"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"estimated_wait_time"</span>: <span class="hljs-string">"2-3 days"</span>,
+        <span class="hljs-attr">"added_at"</span>: <span class="hljs-string">"2025-08-26T08:30:00Z"</span>,
+        <span class="hljs-attr">"expires_at"</span>: <span class="hljs-string">"2025-09-15T23:59:59Z"</span>
+      }
+    ],
+    <span class="hljs-attr">"total_waitlist_entries"</span>: <span class="hljs-number">1</span>
+  }
+}
+</div></code></pre>
+<h4 id="6-health-endpoints">6. Health Endpoints</h4>
+<p><strong>Health Check</strong>: <code>GET /health</code></p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"healthy"</span>,
+  <span class="hljs-attr">"timestamp"</span>: <span class="hljs-string">"2025-08-26T10:30:00Z"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
+  <span class="hljs-attr">"services"</span>: {
+    <span class="hljs-attr">"database"</span>: <span class="hljs-string">"healthy"</span>,
+    <span class="hljs-attr">"cache"</span>: <span class="hljs-string">"healthy"</span>,
+    <span class="hljs-attr">"queue"</span>: <span class="hljs-string">"healthy"</span>
+  }
+}
+</div></code></pre>
+<p><strong>Readiness Check</strong>: <code>GET /ready</code></p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"ready"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"timestamp"</span>: <span class="hljs-string">"2025-08-26T10:30:00Z"</span>
+}
+</div></code></pre>
+<p><strong>Liveness Check</strong>: <code>GET /live</code></p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"alive"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"timestamp"</span>: <span class="hljs-string">"2025-08-26T10:30:00Z"</span>
+}
+</div></code></pre>
+<h2 id="sequence-diagrams">Sequence Diagrams</h2>
+<h3 id="1-complete-registration-flow">1. Complete Registration Flow</h3>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+    participant Client
+    participant API as API Gateway
+    participant Middleware as Idempotency Middleware
+    participant Service as Registration Service
+    participant Cache as Redis Cache
+    participant Queue as Queue System
+    participant DB as PostgreSQL
+    participant Sentinel as Redis Sentinel
+    
+    Note over Client,Sentinel: Full Registration Sequence
+    
+    Client->>API: POST /api/v1/register<br/>Idempotency-Key: key123
+    API->>Middleware: Extract & validate idempotency key
+    
+    alt Invalid request format
+        Middleware-->>Client: HTTP 400 - Validation Error
+    else Valid request
+        Middleware->>Service: Register(studentID, sectionIDs, key)
+        
+        Service->>Service: Generate request hash<br/>SHA256(studentID + sections)
+        Service->>Cache: GET idempotency_key:key123
+        
+        alt Key exists
+            Cache-->>Service: Return existing data
+            Service->>Service: Compare request hashes
+            
+            alt Same hash (duplicate)
+                Service-->>API: Return cached response
+                API-->>Client: HTTP 200 - Cached Result
+            else Different hash (key reuse)
+                Service-->>API: Error - Key mismatch  
+                API-->>Client: HTTP 400 - Key Reuse Error
+            end
+        else Key doesn't exist (new request)
+            loop For each section
+                Service->>Service: Check existing registration
+                
+                alt Already registered
+                    Service->>Service: Mark as "already_registered"
+                else Not registered
+                    Service->>Cache: DECR seat:section:{id}
+                    
+                    alt Seats available
+                        Cache-->>Service: New count (>= 0)
+                        Service->>Queue: Enqueue DB sync job
+                        Service->>Service: Mark as "enrolled"
+                    else No seats available  
+                        Cache-->>Service: Would go negative
+                        Service->>Queue: Enqueue waitlist job
+                        Service->>Service: Mark as "waitlisted"
+                    end
+                end
+            end
+            
+            Service->>Service: Compile registration results
+            Service->>Cache: Store idempotency response<br/>TTL: 24h
+            Service-->>API: Registration results
+            API-->>Client: HTTP 200 - Registration Results
+        end
+    end
+    
+    Note over Queue,DB: Asynchronous Processing
+    
+    par Database Sync Jobs
+        Queue->>DB: Create registration records
+        Queue->>DB: Update section seat counts  
+        DB-->>Queue: Success/Failure
+    and Waitlist Jobs  
+        Queue->>DB: Create waitlist entries
+        Queue->>DB: Calculate positions
+        DB-->>Queue: Success/Failure
+    end
+    
+    Note over Cache,Sentinel: High Availability Monitoring
+    
+    loop Continuous monitoring
+        Sentinel->>Cache: Health check master
+        Sentinel->>Sentinel: Coordinate with other sentinels
+        
+        alt Master failure detected
+            Sentinel->>Sentinel: Initiate failover
+            Sentinel->>Cache: Promote slave to master
+            Sentinel->>Service: Update master address
+        end
+    end
+</div></code></pre>
+<h3 id="2-waitlist-processing-flow">2. Waitlist Processing Flow</h3>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+    participant Student1 as Student 1
+    participant Student2 as Student 2  
+    participant API as API Gateway
+    participant Service as Registration Service
+    participant Cache as Redis Cache
+    participant Queue as Queue System
+    participant DB as PostgreSQL
+    
+    Note over Student1,DB: Student 1 drops course, Student 2 gets promoted
+    
+    Student1->>API: POST /api/v1/register/drop<br/>section_id: CS101-001
+    API->>Service: DropCourse(student1, section)
+    
+    Service->>DB: Verify student is enrolled
+    DB-->>Service: Confirmed - enrolled
+    
+    Service->>DB: Delete registration record
+    Service->>Cache: INCR seat:section:CS101-001
+    Cache-->>Service: New count: 1
+    
+    Service->>Queue: Enqueue waitlist processing job
+    Service-->>API: Drop successful
+    API-->>Student1: HTTP 200 - Course dropped
+    
+    Note over Queue,DB: Automatic Waitlist Processing
+    
+    Queue->>DB: Get next student in waitlist<br/>ORDER BY position ASC LIMIT 1
+    DB-->>Queue: Student 2 (position 1)
+    
+    Queue->>Cache: DECR seat:section:CS101-001
+    Cache-->>Queue: New count: 0 (success)
+    
+    Queue->>Queue: Enqueue registration job for Student 2
+    Queue->>DB: Delete waitlist entry for Student 2
+    
+    par Async Registration Creation
+        Queue->>DB: Create registration for Student 2
+        DB-->>Queue: Registration created
+    and Optional Notification
+        Queue->>Queue: Enqueue notification job
+        Note right of Queue: Could send email/SMS<br/>to Student 2 about promotion
+    end
+    
+    Note over Student2,DB: Student 2 is now enrolled automatically
+</div></code></pre>
+<h3 id="3-high-availability-failover-sequence">3. High Availability Failover Sequence</h3>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+    participant App as Application
+    participant S1 as Sentinel 1
+    participant S2 as Sentinel 2
+    participant S3 as Sentinel 3
+    participant Master as Redis Master
+    participant Slave1 as Redis Slave 1
+    participant Slave2 as Redis Slave 2
+    
+    Note over Master: Simulated master failure
+    
+    App->>Master: Normal operations
+    Master->>Slave1: Replicate data
+    Master->>Slave2: Replicate data
+    
+    rect rgb(255, 200, 200)
+        Note over Master: Master becomes unavailable
+        Master->>Master: Network partition/crash
+    end
+    
+    par Sentinel Detection (5s timeout)
+        S1->>Master: Health check (timeout)
+        S2->>Master: Health check (timeout)  
+        S3->>Master: Health check (timeout)
+    end
+    
+    S1->>S1: Mark master as SDOWN<br/>(Subjectively Down)
+    S2->>S2: Mark master as SDOWN
+    S3->>S3: Mark master as SDOWN
+    
+    S1->>S2: Ask opinion about master
+    S1->>S3: Ask opinion about master
+    
+    S2-->>S1: Master is down
+    S3-->>S1: Master is down
+    
+    Note over S1,S3: Quorum reached (3/3 agree)
+    
+    S1->>S1: Mark master as ODOWN<br/>(Objectively Down)
+    S1->>S2: Start leader election
+    S1->>S3: Start leader election
+    
+    alt S1 becomes leader
+        S1->>Slave1: SLAVEOF NO ONE<br/>(Promote to master)
+        Slave1->>Slave1: Become new master
+        
+        S1->>S2: Update config<br/>New master: Slave1
+        S1->>S3: Update config<br/>New master: Slave1
+        
+        Slave1->>Slave2: Start replication<br/>as new master
+        
+        S1->>App: Publish new master address
+        App->>Slave1: Reconnect to new master
+        
+        Note over App,Slave2: System recovered<br/>Total downtime: ~8-12 seconds
+    end
+    
+    rect rgb(200, 255, 200)
+        Note over App,Slave2: Normal operations resumed
+        App->>Slave1: Continue operations
+        Slave1->>Slave2: Normal replication
+    end
+</div></code></pre>
+<h3 id="4-idempotency-handling-sequence">4. Idempotency Handling Sequence</h3>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+    participant Client
+    participant API as API Gateway
+    participant Service as Registration Service
+    participant Redis as Redis Cache
+    
+    Note over Client,Redis: First Request (Normal Processing)
+    
+    Client->>API: POST /api/v1/register<br/>Idempotency-Key: key123<br/>sections: [A, B]
+    API->>Service: Register with key123
+    
+    Service->>Service: Hash = SHA256("student123" + "[A,B]")
+    Service->>Redis: GET idempotency_key:key123
+    Redis-->>Service: Key not found
+    
+    Service->>Service: Process registration normally
+    Service->>Redis: Store result with hash<br/>TTL: 24 hours
+    Service-->>API: Registration result
+    API-->>Client: HTTP 200 - Success
+    
+    Note over Client,Redis: Duplicate Request (Same Data)
+    
+    Client->>API: POST /api/v1/register<br/>Idempotency-Key: key123<br/>sections: [A, B] (SAME)
+    API->>Service: Register with key123
+    
+    Service->>Service: Hash = SHA256("student123" + "[A,B]")
+    Service->>Redis: GET idempotency_key:key123
+    Redis-->>Service: Found cached data
+    
+    Service->>Service: Compare hashes<br/>Stored: ABC123<br/>Request: ABC123 ✓
+    Service-->>API: Return cached response
+    API-->>Client: HTTP 200 - Cached Result<br/>(Instant response)
+    
+    Note over Client,Redis: Key Reuse (Different Data)
+    
+    Client->>API: POST /api/v1/register<br/>Idempotency-Key: key123<br/>sections: [C, D] (DIFFERENT)
+    API->>Service: Register with key123
+    
+    Service->>Service: Hash = SHA256("student123" + "[C,D]")
+    Service->>Redis: GET idempotency_key:key123
+    Redis-->>Service: Found cached data
+    
+    Service->>Service: Compare hashes<br/>Stored: ABC123<br/>Request: XYZ789 ✗
+    Service-->>API: Error - Key reuse
+    API-->>Client: HTTP 400 - Invalid Key Reuse
+</div></code></pre>
+
+</body>
+</html>

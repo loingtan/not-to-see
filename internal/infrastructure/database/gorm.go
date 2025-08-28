@@ -20,7 +20,11 @@ type Config struct {
 }
 
 func NewConnection(config Config) (*gorm.DB, error) {
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=%s",
+	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=%s connect_timeout=10",
+		config.Host, config.User, config.Password, config.DBName, config.Port, config.SSLMode)
+
+	log.Printf("DEBUG: Attempting to connect with DSN: %s", dsn)
+	log.Printf("DEBUG: Config values - Host: %s, User: %s, Password: %s, DBName: %s, Port: %d, SSLMode: %s",
 		config.Host, config.User, config.Password, config.DBName, config.Port, config.SSLMode)
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{

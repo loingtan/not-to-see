@@ -8,6 +8,7 @@ import (
 	"cobra-template/internal/api/handlers"
 	"cobra-template/internal/api/middleware"
 	"cobra-template/internal/config"
+	domain "cobra-template/internal/domain/registration"
 	"cobra-template/internal/infrastructure/cache"
 	"cobra-template/internal/infrastructure/queue"
 	"cobra-template/internal/infrastructure/repository"
@@ -16,6 +17,7 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
 
@@ -31,22 +33,38 @@ func NewRegistrationRouter(db *gorm.DB) *gin.Engine {
 
 func NewRegistrationRouterWithQueue(db *gorm.DB) *RouterComponents {
 	gin.SetMode(gin.ReleaseMode)
-
 	r := gin.New()
-
 	r.Use(middleware.Logger())
 	r.Use(cors.Default())
 	r.Use(gin.Recovery())
+
 	studentRepo := repository.NewStudentRepository(db)
 	sectionRepo := repository.NewSectionRepository(db)
+	semesterRepo := repository.NewSemesterRepository(db)
+
 	registrationRepo := repository.NewRegistrationRepository(db)
-	waitlistRepo := repository.NewWaitlistRepository(db)
 
 	cfg := config.Get()
-	redisAddr := fmt.Sprintf("%s:%d", cfg.Cache.Host, cfg.Cache.Port)
-	cacheService := cache.NewRedisCache(redisAddr, cfg.Cache.Password, cfg.Cache.DB)
+	cacheService := cache.NewRedisCacheWithConfig(&cfg.Cache)
 
-	queueService := queue.NewInMemoryQueue(1000, 10)
+	var waitlistRepo interfaces.WaitlistRepository
+	if cfg.Registration.WaitlistRepository == "redis" {
+		waitlistRepo = repository.NewRedisWaitlistRepository(cacheService.GetClient())
+		fmt.Println("Using Redis waitlist repository")
+	} else {
+		waitlistRepo = repository.NewWaitlistRepository(db)
+		fmt.Println("Using database waitlist repository")
+	}
+	idempotencyRepo := repository.NewRedisIdempotencyRepository(cacheService.GetClient())
+	var queueService interfaces.QueueService
+	if cfg.Queue.Type == "redis" {
+		queueService = queue.NewRedisQueue(&cfg.Cache, 3)
+		fmt.Println("Using Redis queue service")
+	} else {
+		queueService = queue.NewInMemoryQueue(cfg.Queue.BufferSize, 3)
+		fmt.Println("Using in-memory queue service")
+	}
+
 	registrationService := service.NewRegistrationService(
 		studentRepo,
 		sectionRepo,
@@ -54,18 +72,19 @@ func NewRegistrationRouterWithQueue(db *gorm.DB) *RouterComponents {
 		waitlistRepo,
 		cacheService,
 		queueService,
+		idempotencyRepo,
+		cfg.Registration.WaitlistFallbackEnabled,
 	)
 
-	if err := initializeSectionCache(cacheService, sectionRepo); err != nil {
-
-		fmt.Printf("Warning: Failed to initialize section cache: %v\n", err)
+	if err := initializeMinimalCache(cacheService, sectionRepo, semesterRepo); err != nil {
+		fmt.Printf("Warning: Failed to initialize minimal cache: %v\n", err)
 	}
 
 	queueService.SetRegistrationService(registrationService)
 	queueService.StartWorkers()
-
 	registrationHandler := handlers.NewRegistrationHandler(registrationService)
 	healthHandler := handlers.NewHealthHandler()
+	r.Use(middleware.IdempotencyMiddleware())
 	r.GET("/health", healthHandler.HealthCheck)
 	r.GET("/ready", healthHandler.ReadinessCheck)
 	r.GET("/live", healthHandler.LivenessCheck)
@@ -87,6 +106,7 @@ func NewRegistrationRouterWithQueue(db *gorm.DB) *RouterComponents {
 		{
 			sections.GET("/available", registrationHandler.GetAvailableSections)
 		}
+
 	}
 
 	return &RouterComponents{
@@ -95,22 +115,74 @@ func NewRegistrationRouterWithQueue(db *gorm.DB) *RouterComponents {
 	}
 }
 
-func initializeSectionCache(cacheService interfaces.CacheService, sectionRepo interfaces.SectionRepository) error {
+// initializeMinimalCache implements minimal pre-caching for seat availability and semester sections availability only
+func initializeMinimalCache(
+	cacheService interfaces.CacheService,
+	sectionRepo interfaces.SectionRepository,
+	semesterRepo interfaces.SemesterRepository,
+) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
 
+	fmt.Println("Starting minimal cache initialization...")
+	startTime := time.Now()
+
+	if err := cacheActiveSectionsMinimal(ctx, cacheService, sectionRepo); err != nil {
+		return fmt.Errorf("failed to cache active sections: %w", err)
+	}
+
+	if err := cacheSpecificSemesterSections(ctx, cacheService, sectionRepo); err != nil {
+		return fmt.Errorf("failed to cache semester sections availability: %w", err)
+	}
+
+	duration := time.Since(startTime)
+	fmt.Printf("✅ Minimal cache initialization completed in %v\n", duration)
+	return nil
+}
+
+func cacheActiveSectionsMinimal(ctx context.Context, cacheService interfaces.CacheService, sectionRepo interfaces.SectionRepository) error {
 	sections, err := sectionRepo.GetAllActive(ctx)
 	if err != nil {
 		return fmt.Errorf("failed to get active sections: %w", err)
 	}
 
+	cached := 0
 	for _, section := range sections {
 		if err := cacheService.SetAvailableSeats(ctx, section.SectionID, section.AvailableSeats, 24*time.Hour); err != nil {
-
 			fmt.Printf("Warning: Failed to cache seats for section %s: %v\n", section.SectionID, err)
+			continue
+		}
+		cached++
+	}
+
+	fmt.Printf("📊 Cached seat availability for %d active sections\n", cached)
+	return nil
+}
+
+func cacheSpecificSemesterSections(ctx context.Context, cacheService interfaces.CacheService, sectionRepo interfaces.SectionRepository) error {
+	semesterID := uuid.MustParse("e093bb58-78e2-4985-bb7f-7a9b36c9102d")
+
+	sections, err := sectionRepo.GetBySemester(ctx, semesterID)
+	if err != nil {
+		return fmt.Errorf("failed to get sections for semester %s: %w", semesterID, err)
+	}
+
+	availableSections := make([]*domain.Section, 0)
+	for _, section := range sections {
+
+		if cachedSeats, cacheErr := cacheService.GetAvailableSeats(ctx, section.SectionID); cacheErr == nil {
+			section.AvailableSeats = cachedSeats
+		}
+
+		if section.AvailableSeats > 0 {
+			availableSections = append(availableSections, section)
 		}
 	}
 
-	fmt.Printf("Successfully initialized cache with %d sections\n", len(sections))
+	if err := cacheService.SetAvailableSections(ctx, semesterID, availableSections, 8*time.Hour); err != nil {
+		return fmt.Errorf("failed to cache available sections for semester %s: %w", semesterID, err)
+	}
+
+	fmt.Printf("📊 Cached %d available sections for semester %s\n", len(availableSections), semesterID)
 	return nil
 }

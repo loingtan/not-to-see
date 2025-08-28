@@ -1,4 +1,61 @@
 services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: course_registration_postgres
+    environment:
+      POSTGRES_DB: course_registration
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./scripts/database_schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    command:
+      [
+        "postgres",
+        "-c",
+        "shared_buffers=512MB",
+        "-c",
+        "effective_cache_size=1536MB",
+        "-c",
+        "work_mem=16MB",
+        "-c",
+        "maintenance_work_mem=256MB",
+        "-c",
+        "max_connections=200",
+        "-c",
+        "checkpoint_timeout=15min",
+        "-c",
+        "max_wal_size=2GB",
+        "-c",
+        "min_wal_size=512MB",
+        "-c",
+        "max_worker_processes=2",
+        "-c",
+        "max_parallel_workers=2",
+        "-c",
+        "max_parallel_workers_per_gather=1",
+        "-c",
+        "log_min_duration_statement=100ms",
+      ]
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "course_registration"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2G
+        reservations:
+          cpus: "0.25"
+          memory: 256M
+
   redis-master:
     image: redis:7-alpine
     container_name: course_registration_redis_master
@@ -168,131 +225,10 @@ services:
         reservations:
           cpus: "0.05"
           memory: 32M
-  nginx:
-    image: nginx:alpine
-    container_name: lb-nginx
-    depends_on: [api1, api2, api3, api4]
-    ports: ["80:80"]
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-    networks: [app-network]
-
-  api1:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: api1
-    environment:
-      - CONFIG_ENV=production
-      - DATABASE_URL=postgres://postgres:password123@pgbouncer:6432/course_registration?sslmode=disable
-      - DB_PASSWORD=password123
-      - REDIS_PASSWORD=
-    depends_on:
-      - pgbouncer
-      - redis-master
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "wget",
-          "--no-verbose",
-          "--tries=1",
-          "--spider",
-          "http://localhost:8080/health",
-        ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
-    networks: [app-network]
-  api2:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: api2
-    environment:
-      - CONFIG_ENV=production
-      - DATABASE_URL=postgres://postgres:password123@pgbouncer:6432/course_registration?sslmode=disable
-      - DB_PASSWORD=password123
-      - REDIS_PASSWORD=
-    depends_on:
-      - pgbouncer
-      - redis-master
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "wget",
-          "--no-verbose",
-          "--tries=1",
-          "--spider",
-          "http://localhost:8080/health",
-        ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
-    networks: [app-network]
-  api3:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: api3
-    environment:
-      - CONFIG_ENV=production
-      - DATABASE_URL=postgres://postgres:password123@pgbouncer:6432/course_registration?sslmode=disable
-      - DB_PASSWORD=password123
-      - REDIS_PASSWORD=
-    depends_on:
-      - pgbouncer
-      - redis-master
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "wget",
-          "--no-verbose",
-          "--tries=1",
-          "--spider",
-          "http://localhost:8080/health",
-        ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
-    networks: [app-network]
-  api4:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: api4
-    environment:
-      - CONFIG_ENV=production
-      - DATABASE_URL=postgres://postgres:password123@pgbouncer:6432/course_registration?sslmode=disable
-      - DB_PASSWORD=password123
-      - REDIS_PASSWORD=
-    depends_on:
-      - pgbouncer
-      - redis-master
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "wget",
-          "--no-verbose",
-          "--tries=1",
-          "--spider",
-          "http://localhost:8080/health",
-        ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
-    networks: [app-network]
 
 networks:
   app-network:
-    external: true
+    driver: bridge
 
 volumes:
   pgdata:
